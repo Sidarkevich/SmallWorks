@@ -2,13 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class Ball : MonoBehaviour
 {
-    public UnityEvent BallDeathEvent;
-    public UnityEvent<int> BallGetHitEvent;
-    public UnityEvent<int> BallGetBuffEvent;
-    public UnityEvent BallFullOfBuffEvent;
+    [NonSerialized] public UnityEvent BallDeathEvent;
+    [NonSerialized] public UnityEvent BallFullOfBuffEvent;
+
+    /// <summary>
+    /// BallGetHitEvent(int currentValue, int delta)
+    /// </summary>
+    [NonSerialized] public UnityEvent<int, int> BallGetHitEvent;
+
+    /// <summary>
+    /// BallGetBuffEvent(int currentValue, int delta)
+    /// </summary>
+    [NonSerialized] public UnityEvent<int, int> BallGetBuffEvent;
 
     [SerializeField] private int _startLifeCount;
     [SerializeField] private int _maxBuffCount;
@@ -29,7 +38,7 @@ public class Ball : MonoBehaviour
         if (_lifeCount - damage > 0)
         {
             _lifeCount -= damage;
-            BallGetHitEvent?.Invoke(damage);
+            BallGetHitEvent?.Invoke(_lifeCount, damage);
 
             return;
         }
@@ -42,7 +51,7 @@ public class Ball : MonoBehaviour
         if (_buffCount + buff < _maxBuffCount)
         {
             _buffCount += buff;
-            BallGetBuffEvent?.Invoke(buff);
+            BallGetBuffEvent?.Invoke(_buffCount, buff);
 
             return;
         }

@@ -537,6 +537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240555439}
+  - component: {fileID: 240555440}
   m_Layer: 5
   m_Name: SpawnZone
   m_TagString: Untagged
@@ -563,6 +564,24 @@ Transform:
   m_Father: {fileID: 684611191}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240555440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240555438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece0c8199b4bd1442874e4f125a9d68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leftCorner: {fileID: 1637327189}
+  _rightCorner: {fileID: 2118792286}
+  _spawnTime: 2
+  _dropTypes:
+  - {fileID: 6645257061354110780, guid: 3b519ffdefa44d24dad2695f8d93fd20, type: 3}
+  - {fileID: 1309997527000374608, guid: b161933de00dadf438fabf4325e78fe7, type: 3}
 --- !u!1 &272753948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,6 +1943,7 @@ GameObject:
   - component: {fileID: 684611191}
   - component: {fileID: 684611193}
   - component: {fileID: 684611192}
+  - component: {fileID: 684611194}
   m_Layer: 5
   m_Name: GamePanel
   m_TagString: Untagged
@@ -1992,6 +2012,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684611190}
   m_CullTransparentMesh: 1
+--- !u!114 &684611194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684611190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a1d18ffab47c44b8e8e92f48b42414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerTouchedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 240555440}
+        m_TargetAssemblyTypeName: DropSpawner, Assembly-CSharp
+        m_MethodName: StartSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &698322848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,7 +2662,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.05}
   serializedVersion: 2
   m_Radius: 0.30999997
 --- !u!114 &801389705
@@ -2631,6 +2678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startLifeCount: 0
+  _maxBuffCount: 0
   _maxHorizontalOffset: 2.1
   _maxVerticalOffset: 3.5
 --- !u!1 &903708806
@@ -3439,7 +3487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637327189}
   m_Layer: 0
-  m_Name: BloodPoint_1
+  m_Name: BloodLeftCorner
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3453,7 +3501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637327188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -200, y: 430, z: 0}
+  m_LocalPosition: {x: -180, y: 430, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4449,7 +4497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118792286}
   m_Layer: 0
-  m_Name: BloodPoint_2
+  m_Name: BloodRightCorner
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4463,7 +4511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118792285}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 200, y: 430, z: 0}
+  m_LocalPosition: {x: 180, y: 430, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
