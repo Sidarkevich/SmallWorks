@@ -5,22 +5,21 @@ using TMPro;
 
 public class ScoreView : MonoBehaviour
 {
-    [SerializeField] private Ball _ball;
+    [SerializeField] private ScoreTracker _tracker;
     [SerializeField] private TMP_Text _text;
 
-    private int _score;
+    private void OnEnable()
+    {
+        _text.text = _tracker.Score.ToString();
+    }
 
     private void Start()
     {
-        _ball.BallFullOfBuffEvent.AddListener(OnFullOfBuffEvent);
-
-        _score = 0;
-        _text.text = _score.ToString();
+        _tracker.ScoreUpdateEvent.AddListener(OnScoreUpdateEvent);
     }
 
-    private void OnFullOfBuffEvent()
+    private void OnScoreUpdateEvent(int value)
     {
-        _score++;
-        _text.text = _score.ToString();
+        _text.text = value.ToString();
     }
 }

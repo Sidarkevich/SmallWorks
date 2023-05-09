@@ -10,10 +10,16 @@ public class BallView : MonoBehaviour
     private void Start()
     {
         _ball.BallGetBuffEvent.AddListener(OnBallGetBuffEvent);
+        _ball.BallFullOfBuffEvent.AddListener(OnBallFullOfBuffEvent);
     }
 
     private void OnBallGetBuffEvent(int value, int buff)
     {
         _animator.SetInteger("_stage", value);
+    }
+
+    private void OnBallFullOfBuffEvent()
+    {
+        _animator.SetInteger("_stage", 0);
     }
 }

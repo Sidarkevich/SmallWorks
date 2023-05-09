@@ -1944,6 +1944,7 @@ GameObject:
   - component: {fileID: 684611193}
   - component: {fileID: 684611192}
   - component: {fileID: 684611194}
+  - component: {fileID: 684611195}
   m_Layer: 5
   m_Name: GamePanel
   m_TagString: Untagged
@@ -2039,6 +2040,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &684611195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684611190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0f5627c7a292744a8e3bdf7eb59a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreUpdateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _ball: {fileID: 801389705}
 --- !u!1 &698322848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,7 +2697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c7d88cf91f49e41a33d11872592115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BallDeathEvent:
+  BallLoseEvent:
     m_PersistentCalls:
       m_Calls: []
   BallFullOfBuffEvent:
@@ -2925,6 +2942,7 @@ GameObject:
   - component: {fileID: 929820344}
   - component: {fileID: 929820346}
   - component: {fileID: 929820345}
+  - component: {fileID: 929820347}
   m_Layer: 5
   m_Name: ResultText (TMP)
   m_TagString: Untagged
@@ -3049,6 +3067,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929820343}
   m_CullTransparentMesh: 1
+--- !u!114 &929820347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929820343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39168a68c16477845ba176cb87f46042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tracker: {fileID: 684611195}
+  _text: {fileID: 929820345}
 --- !u!1 &932330556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3745,7 +3777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39168a68c16477845ba176cb87f46042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ball: {fileID: 801389705}
+  _tracker: {fileID: 684611195}
   _text: {fileID: 90416012}
 --- !u!1 &1725489481
 GameObject:

@@ -6,7 +6,7 @@ using System;
 
 public class Ball : MonoBehaviour
 {
-    [HideInInspector] public UnityEvent BallDeathEvent;
+    [HideInInspector] public UnityEvent BallLoseEvent;
     [HideInInspector] public UnityEvent BallFullOfBuffEvent;
 
     /// <summary>
@@ -43,7 +43,7 @@ public class Ball : MonoBehaviour
             return;
         }
         
-        BallDeathEvent?.Invoke();
+        BallLoseEvent?.Invoke();
     }
 
     public void GetBuff(int buff)
