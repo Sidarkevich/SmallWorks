@@ -2561,8 +2561,10 @@ GameObject:
   - component: {fileID: 801389702}
   - component: {fileID: 801389703}
   - component: {fileID: 801389705}
+  - component: {fileID: 801389708}
   - component: {fileID: 801389704}
   - component: {fileID: 801389706}
+  - component: {fileID: 801389707}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -2690,7 +2692,7 @@ MonoBehaviour:
   BallGetBuffEvent:
     m_PersistentCalls:
       m_Calls: []
-  _startLifeCount: 3
+  _startHP: 3
   _maxBuffCount: 3
   _maxHorizontalOffset: 2.1
   _maxVerticalOffset: 3.5
@@ -2715,6 +2717,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &801389707
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801389700}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56e2f88adfa78764db55f1b19831034d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &801389708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801389700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23bc236962aa9374eb3d56e0f447338f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 801389707}
+  _ball: {fileID: 801389705}
 --- !u!1 &903708806
 GameObject:
   m_ObjectHideFlags: 0
@@ -4578,8 +4615,10 @@ GameObject:
   - component: {fileID: 2135720563}
   - component: {fileID: 2135720565}
   - component: {fileID: 2135720564}
+  - component: {fileID: 2135720566}
+  - component: {fileID: 2135720567}
   m_Layer: 5
-  m_Name: FillPanel
+  m_Name: HPPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4643,6 +4682,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135720562}
   m_CullTransparentMesh: 1
+--- !u!95 &2135720566
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135720562}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7d5d710aa76d2445affd244ff9162c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2135720567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135720562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1e98a07d83a664c8d99e277d05db97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 2135720566}
+  _ball: {fileID: 801389705}
 --- !u!1 &2137222530
 GameObject:
   m_ObjectHideFlags: 0

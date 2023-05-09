@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BallView : MonoBehaviour
 {
-    [SerializeField] private Sprite[] _visualStates;
-
+    [SerializeField] private Animator _animator;
     [SerializeField] private Ball _ball;
 
     private void Start()
@@ -15,6 +14,6 @@ public class BallView : MonoBehaviour
 
     private void OnBallGetBuffEvent(int value, int buff)
     {
-        GetComponent<SpriteRenderer>().sprite = _visualStates[value];
+        _animator.SetInteger("_stage", value);
     }
 }

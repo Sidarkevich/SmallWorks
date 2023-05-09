@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class HPView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Animator _animator;
+    [SerializeField] private Ball _ball;
+
+    private void Start()
     {
-        
+        _ball.BallGetHitEvent.AddListener(OnBallGetHitEvent);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnBallGetHitEvent(int value, int delta)
     {
-        
+        _animator.SetInteger("_hp", value);
     }
 }
