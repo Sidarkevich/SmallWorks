@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallUI : MonoBehaviour
+public class BallView : MonoBehaviour
 {
     [SerializeField] private Sprite[] _visualStates;
 

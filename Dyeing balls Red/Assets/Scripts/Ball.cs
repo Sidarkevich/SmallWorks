@@ -19,26 +19,26 @@ public class Ball : MonoBehaviour
     /// </summary>
     [HideInInspector] public UnityEvent<int, int> BallGetBuffEvent;
 
-    [SerializeField] private int _startLifeCount;
+    [SerializeField] private int _startHP;
     [SerializeField] private int _maxBuffCount;
     [SerializeField] private float _maxHorizontalOffset;
     [SerializeField] private float _maxVerticalOffset;
 
-    private int _lifeCount;
+    private int _healthPoints;
     private int _buffCount;
     private Vector3 _nextPosition;
 
     private void Start()
     {
-        _lifeCount = _startLifeCount;
+        _healthPoints = _startHP;
     }
 
     public void GetHit(int damage)
     {
-        if (_lifeCount - damage > 0)
+        if (_healthPoints - damage > 0)
         {
-            _lifeCount -= damage;
-            BallGetHitEvent?.Invoke(_lifeCount, damage);
+            _healthPoints -= damage;
+            BallGetHitEvent?.Invoke(_healthPoints, damage);
 
             return;
         }
