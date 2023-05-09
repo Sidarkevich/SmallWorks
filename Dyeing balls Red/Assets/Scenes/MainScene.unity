@@ -578,7 +578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leftCorner: {fileID: 1637327189}
   _rightCorner: {fileID: 2118792286}
-  _spawnTime: 2
+  _spawnTime: 0.8
   _dropTypes:
   - {fileID: 6645257061354110780, guid: 3b519ffdefa44d24dad2695f8d93fd20, type: 3}
   - {fileID: 1309997527000374608, guid: b161933de00dadf438fabf4325e78fe7, type: 3}

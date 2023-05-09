@@ -4,9 +4,16 @@ using UnityEngine;
 
 public abstract class Drop : MonoBehaviour
 {
-    [SerializeField] private float _fallSpeed;
+    [SerializeField] private Vector2 _speedExtremums;
+
+    private float _fallSpeed;
 
     public abstract void UseEffect(Ball ball);
+
+    private void OnEnable()
+    {
+        _fallSpeed = UnityEngine.Random.Range(_speedExtremums.x, _speedExtremums.y);
+    }
 
     private void Update()
     {

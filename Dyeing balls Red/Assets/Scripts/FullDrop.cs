@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class FullDrop : Drop
 {
+    [SerializeField] private int _buffValue;
+
     public override void UseEffect(Ball ball)
     {
-        Debug.Log("Buff!");
+        ball.GetBuff(_buffValue);
     }
 }
