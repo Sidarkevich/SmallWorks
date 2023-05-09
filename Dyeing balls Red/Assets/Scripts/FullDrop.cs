@@ -6,6 +6,6 @@ public class FullDrop : Drop
 {
     public override void UseEffect(Ball ball)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Buff!");
     }
 }

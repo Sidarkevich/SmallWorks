@@ -12,4 +12,16 @@ public abstract class Drop : MonoBehaviour
     {
         transform.Translate(Vector3.down*Time.deltaTime*_fallSpeed);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var ball = collision.gameObject.GetComponent<Ball>();
+
+        if (ball)
+        {
+            UseEffect(ball);
+        }
+
+        Destroy(gameObject);
+    }
 }

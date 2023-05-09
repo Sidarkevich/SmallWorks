@@ -2562,7 +2562,8 @@ GameObject:
   - component: {fileID: 801389703}
   - component: {fileID: 801389705}
   - component: {fileID: 801389704}
-  m_Layer: 5
+  - component: {fileID: 801389706}
+  m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2681,6 +2682,27 @@ MonoBehaviour:
   _maxBuffCount: 0
   _maxHorizontalOffset: 2.1
   _maxVerticalOffset: 3.5
+--- !u!50 &801389706
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801389700}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &903708806
 GameObject:
   m_ObjectHideFlags: 0
