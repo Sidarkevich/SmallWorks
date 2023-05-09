@@ -15,10 +15,10 @@ public class ScoreView : MonoBehaviour
 
     private void Start()
     {
-        _tracker.ScoreUpdateEvent.AddListener(OnScoreUpdateEvent);
+        _tracker.ScoreUpdatedEvent.AddListener(OnScoreUpdated);
     }
 
-    private void OnScoreUpdateEvent(int value)
+    private void OnScoreUpdated(int value)
     {
         _text.text = value.ToString();
     }

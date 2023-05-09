@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class ScoreTracker : MonoBehaviour
 {
-    [HideInInspector] public UnityEvent<int> ScoreUpdateEvent;
+    [HideInInspector] public UnityEvent<int> ScoreUpdatedEvent;
     public int Score => _score;
 
     [SerializeField] private Ball _ball;
@@ -13,12 +13,12 @@ public class ScoreTracker : MonoBehaviour
 
     private void Start()
     {
-        _ball.BallFullOfBuffEvent.AddListener(OnFullOfBuffEvent);
+        _ball.BallFullOfBuffEvent.AddListener(OnFullOfBuff);
     }
 
-    private void OnFullOfBuffEvent()
+    private void OnFullOfBuff()
     {
         _score++;
-        ScoreUpdateEvent?.Invoke(_score);
+        ScoreUpdatedEvent?.Invoke(_score);
     }
 }

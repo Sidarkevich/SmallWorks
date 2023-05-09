@@ -6,18 +6,18 @@ using System;
 
 public class Ball : MonoBehaviour
 {
-    [HideInInspector] public UnityEvent BallLoseEvent;
+    [HideInInspector] public UnityEvent BallLostEvent;
     [HideInInspector] public UnityEvent BallFullOfBuffEvent;
 
     /// <summary>
     /// BallGetHitEvent(int currentValue, int delta)
     /// </summary>
-    [HideInInspector] public UnityEvent<int, int> BallGetHitEvent;
+    [HideInInspector] public UnityEvent<int, int> BallGotHitEvent;
 
     /// <summary>
     /// BallGetBuffEvent(int currentValue, int delta)
     /// </summary>
-    [HideInInspector] public UnityEvent<int, int> BallGetBuffEvent;
+    [HideInInspector] public UnityEvent<int, int> BallGotBuffEvent;
 
     [SerializeField] private int _startHP;
     [SerializeField] private int _maxBuffCount;

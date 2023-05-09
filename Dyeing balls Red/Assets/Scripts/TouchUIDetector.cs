@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
-public class TouchUIDetector : MonoBehaviour, IPointerClickHandler
+public class TouchUIDetector : MonoBehaviour, IPointerDownHandler
 {
     public UnityEvent PlayerTouchedEvent;
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Player clicked!");
         PlayerTouchedEvent?.Invoke();

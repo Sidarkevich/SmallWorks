@@ -9,10 +9,10 @@ public class HPView : MonoBehaviour
 
     private void Start()
     {
-        _ball.BallGetHitEvent.AddListener(OnBallGetHitEvent);
+        _ball.BallGotHitEvent.AddListener(OnBallGotHit);
     }
 
-    private void OnBallGetHitEvent(int value, int delta)
+    private void OnBallGotHit(int value, int delta)
     {
         _animator.SetInteger("_hp", value);
     }
