@@ -23,6 +23,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private int _maxBuffCount;
     [SerializeField] private float _maxHorizontalOffset;
     [SerializeField] private float _maxVerticalOffset;
+    [SerializeField] private GameTracker _tracker;
 
     private int _healthPoints;
     private int _buffCount;
@@ -30,7 +31,7 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        _healthPoints = _startHP;
+        _tracker.GameStartEvent.AddListener(OnGameStarted);
     }
 
     public void GetHit(int damage)
@@ -38,12 +39,14 @@ public class Ball : MonoBehaviour
         if (_healthPoints - damage > 0)
         {
             _healthPoints -= damage;
-            BallGetHitEvent?.Invoke(_healthPoints, damage);
+            BallGotHitEvent?.Invoke(_healthPoints, damage);
 
             return;
         }
         
-        BallLoseEvent?.Invoke();
+        _healthPoints = 0;
+        BallGotHitEvent?.Invoke(_healthPoints, damage);
+        BallLostEvent?.Invoke();
     }
 
     public void GetBuff(int buff)
@@ -51,12 +54,13 @@ public class Ball : MonoBehaviour
         if (_buffCount + buff < _maxBuffCount)
         {
             _buffCount += buff;
-            BallGetBuffEvent?.Invoke(_buffCount, buff);
+            BallGotBuffEvent?.Invoke(_buffCount, buff);
 
             return;
         }
 
         _buffCount = 0;
+        BallGotBuffEvent?.Invoke(_buffCount, buff);
         BallFullOfBuffEvent?.Invoke();
     }
 
@@ -75,5 +79,14 @@ public class Ball : MonoBehaviour
             _nextPosition.y = (position.y < -_maxVerticalOffset ? -_maxVerticalOffset : position.y);
 
         transform.position = _nextPosition;
+    }
+
+    private void OnGameStarted()
+    {
+        _healthPoints = _startHP;
+        BallGotHitEvent?.Invoke(_healthPoints, 3);
+
+        _buffCount = 0;
+        BallGotBuffEvent?.Invoke(_buffCount, 0);
     }
 }

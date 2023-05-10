@@ -576,6 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece0c8199b4bd1442874e4f125a9d68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tracker: {fileID: 684611196}
   _leftCorner: {fileID: 1637327189}
   _rightCorner: {fileID: 2118792286}
   _spawnTime: 0.8
@@ -1945,6 +1946,7 @@ GameObject:
   - component: {fileID: 684611192}
   - component: {fileID: 684611194}
   - component: {fileID: 684611195}
+  - component: {fileID: 684611196}
   m_Layer: 5
   m_Name: GamePanel
   m_TagString: Untagged
@@ -2027,19 +2029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerTouchedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 240555440}
-        m_TargetAssemblyTypeName: DropSpawner, Assembly-CSharp
-        m_MethodName: StartSpawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &684611195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2052,9 +2042,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0f5627c7a292744a8e3bdf7eb59a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreUpdateEvent:
+  ScoreUpdatedEvent:
     m_PersistentCalls:
       m_Calls: []
+  _ball: {fileID: 801389705}
+--- !u!114 &684611196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684611190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb91d3bea52de34eaba6d17fcd90c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  GameEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _gamePanel: {fileID: 684611194}
   _ball: {fileID: 801389705}
 --- !u!1 &698322848
 GameObject:
@@ -2669,6 +2679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ball: {fileID: 801389705}
+  _collider: {fileID: 801389704}
+  _tracker: {fileID: 684611196}
 --- !u!58 &801389704
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2697,22 +2709,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c7d88cf91f49e41a33d11872592115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BallLoseEvent:
+  BallLostEvent:
     m_PersistentCalls:
       m_Calls: []
   BallFullOfBuffEvent:
     m_PersistentCalls:
       m_Calls: []
-  BallGetHitEvent:
+  BallGotHitEvent:
     m_PersistentCalls:
       m_Calls: []
-  BallGetBuffEvent:
+  BallGotBuffEvent:
     m_PersistentCalls:
       m_Calls: []
   _startHP: 3
   _maxBuffCount: 3
   _maxHorizontalOffset: 2.1
   _maxVerticalOffset: 3.5
+  _tracker: {fileID: 684611196}
 --- !u!50 &801389706
 Rigidbody2D:
   serializedVersion: 4

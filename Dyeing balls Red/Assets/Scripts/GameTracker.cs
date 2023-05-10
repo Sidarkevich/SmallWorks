@@ -11,6 +11,8 @@ public class GameTracker : MonoBehaviour
     [SerializeField] private TouchUIDetector _gamePanel;
     [SerializeField] private Ball _ball;
 
+    private bool _isGameActive;
+
     private void Start()
     {
         _gamePanel.PlayerTouchedEvent.AddListener(OnPlayerTouched);
@@ -19,11 +21,18 @@ public class GameTracker : MonoBehaviour
 
     private void OnPlayerTouched()
     {
+        if (_isGameActive)
+        {
+            return;
+        }
+
+        _isGameActive = true;
         GameStartEvent?.Invoke();
     }
 
     private void OnBallLost()
     {
+        _isGameActive = false;
         GameEndEvent?.Invoke();
     }
 }

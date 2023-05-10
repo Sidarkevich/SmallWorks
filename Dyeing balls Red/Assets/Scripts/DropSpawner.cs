@@ -4,27 +4,25 @@ using UnityEngine;
 
 public class DropSpawner : MonoBehaviour
 {
+    [SerializeField] private GameTracker _tracker;
     [SerializeField] private Transform _leftCorner;
     [SerializeField] private Transform _rightCorner;
     [SerializeField] private float _spawnTime;
     [SerializeField] private GameObject[] _dropTypes;
 
-    private bool _isSpawning;
-
-    public void StartSpawn()
+    private void Start()
     {
-        if (_isSpawning)
-        {
-            return;
-        }
+        _tracker.GameStartEvent.AddListener(StartSpawn);
+        _tracker.GameEndEvent.AddListener(StopSpawn);
+    }
 
-        _isSpawning = true;
+    private void StartSpawn()
+    {
         StartCoroutine(SpawnCoroutine());
     }
 
     private void StopSpawn()
     {
-        _isSpawning = false;
         StopAllCoroutines();
     }
 
