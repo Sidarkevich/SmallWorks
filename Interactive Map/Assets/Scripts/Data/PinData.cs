@@ -14,4 +14,5 @@ public abstract class PinData : ScriptableObject
     [SerializeField] private float _square;
 
     public abstract string TypeName();
+    public abstract int TypeId();
 }

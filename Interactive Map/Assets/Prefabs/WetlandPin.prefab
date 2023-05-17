@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2226281983334667274
+--- !u!1001 &4210256757355814666
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9209847511689204056, guid: f537cfec5c8851747ad4b0d400631bfd, type: 3}
       propertyPath: m_Name
-      value: BiologicalPin
+      value: WetlandPin
       objectReference: {fileID: 0}
     - target: {fileID: 9209847511689204062, guid: f537cfec5c8851747ad4b0d400631bfd, type: 3}
       propertyPath: m_RootOrder
@@ -57,15 +57,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9209847511689204063, guid: f537cfec5c8851747ad4b0d400631bfd, type: 3}
       propertyPath: m_Color.b
-      value: 0.12691349
+      value: 0.101326115
       objectReference: {fileID: 0}
     - target: {fileID: 9209847511689204063, guid: f537cfec5c8851747ad4b0d400631bfd, type: 3}
       propertyPath: m_Color.g
-      value: 0.56289154
+      value: 0.862127
       objectReference: {fileID: 0}
     - target: {fileID: 9209847511689204063, guid: f537cfec5c8851747ad4b0d400631bfd, type: 3}
       propertyPath: m_Color.r
-      value: 0.8679245
+      value: 0.9339623
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f537cfec5c8851747ad4b0d400631bfd, type: 3}

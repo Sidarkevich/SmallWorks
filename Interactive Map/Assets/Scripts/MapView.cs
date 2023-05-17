@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MapView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Map _map;
+    [SerializeField] private Transform _pinParent;
+    [SerializeField] private Pin[] _pins;
+    [SerializeField] private PinData[] _testData;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        foreach (var data in _testData)
+        {
+            var pin = Instantiate(_pins[data.TypeId()], _pinParent.transform);
+            pin.transform.position = _map.GetPosition(data);
+        }
     }
 }
