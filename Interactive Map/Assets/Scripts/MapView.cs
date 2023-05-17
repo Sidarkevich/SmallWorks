@@ -11,10 +11,10 @@ public class MapView : MonoBehaviour
 
     private void Start()
     {
-        foreach (var data in _testData)
+        /*foreach (var data in _testData)
         {
             var pin = Instantiate(_pins[data.TypeId()], _pinParent.transform);
             pin.transform.position = _map.GetPosition(data);
-        }
+        }*/
     }
 }

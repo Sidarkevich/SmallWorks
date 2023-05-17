@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8302684905866414010, guid: f537cfec5c8851747ad4b0d400631bfd, type: 3}
+      propertyPath: _reserveIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9209847511689204056, guid: f537cfec5c8851747ad4b0d400631bfd, type: 3}
       propertyPath: m_Name
       value: HydrologicalPin
