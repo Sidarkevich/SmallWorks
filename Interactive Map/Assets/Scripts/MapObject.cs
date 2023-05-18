@@ -18,4 +18,11 @@ public class MapObject : MonoBehaviour
     [SerializeField] private Sprite _label;
     [SerializeField] private int _square;
     [SerializeField] private int _yearFoundation;
+
+    [SerializeField] private Focus _focus;
+
+    private void OnMouseUpAsButton()
+    {
+        _focus.ChangeFocus(this);
+    }
 }
