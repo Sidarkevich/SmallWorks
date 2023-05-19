@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 87945790}
   - component: {fileID: 87945792}
   - component: {fileID: 87945791}
+  - component: {fileID: 87945793}
   m_Layer: 5
   m_Name: ScorePanel
   m_TagString: Untagged
@@ -503,6 +504,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87945789}
   m_CullTransparentMesh: 1
+--- !u!114 &87945793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87945789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c0e40d3f6943e4e8d98945ef98a97c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 314116415}
+  _tracker: {fileID: 167226724}
 --- !u!1001 &93336054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1138,6 +1153,7 @@ MonoBehaviour:
   BotMovedEvent:
     m_PersistentCalls:
       m_Calls: []
+  _bot: {fileID: 8061599144848063432}
 --- !u!1 &181670808
 GameObject:
   m_ObjectHideFlags: 0
@@ -9897,3 +9913,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+--- !u!114 &8061599144848063432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+  m_PrefabInstance: {fileID: 8061599144848063431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7760ce31f6f99343a1dbf53ca17cc32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -8,6 +8,8 @@ public class MoveTracker : MonoBehaviour
     public UnityEvent<int> PlayerMovedEvent;
     public UnityEvent BotMovedEvent;
 
+    [SerializeField] private Bot _bot;
+
     public int Moves
     {
         get => _moves;
@@ -36,6 +38,9 @@ public class MoveTracker : MonoBehaviour
             PlayerMovedEvent.AddListener(cell.Lock);
             BotMovedEvent.AddListener(cell.Unlock);
         }
+
+        PlayerMovedEvent.AddListener(_bot.Move);
+        _bot.OnMovedEvent.AddListener(() => BotMovedEvent?.Invoke());
     }
 
     private void OnStateChanged(Cell.CellState state)
