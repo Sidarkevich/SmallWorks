@@ -6,4 +6,9 @@ public class Ball : MonoBehaviour
 {
     public int TypeIndex => _typeIndex;
     [SerializeField] private int _typeIndex;
+
+    private void OnMouseUpAsButton()
+    {
+        Destroy(gameObject);
+    }
 }

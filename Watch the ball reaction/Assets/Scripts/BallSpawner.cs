@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class BallSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int _spawnTime;
+    [SerializeField] private Ball[] _balls;
+    [SerializeField] private Transform _topPoint;
+    [SerializeField] private Transform _bottomPoint;
+    [SerializeField] private Transform _borderPoint;
+    [SerializeField] private Transform _ballsParent;
+
+    private void OnEnable()
     {
-        
+        StartCoroutine(SpawnCoroutine());
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        StopAllCoroutines();
+    }
+
+    private IEnumerator SpawnCoroutine()
+    {
+        while (true)
+        {
+            Vector3 rndPosition = new Vector3(_topPoint.transform.position.x, Random.Range(_bottomPoint.transform.position.y, _topPoint.transform.position.y), 0);
+            var ball = Instantiate(_balls[Random.Range(0, _balls.Length)], rndPosition, Quaternion.identity);
+            ball.GetComponent<BallMovement>().SetBorder(_borderPoint.position.x);
+            
+            yield return new WaitForSeconds(_spawnTime);
+        }
     }
 }
