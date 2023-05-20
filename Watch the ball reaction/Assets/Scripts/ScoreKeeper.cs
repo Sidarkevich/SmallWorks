@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Score : MonoBehaviour
+public class ScoreKeeper : MonoBehaviour
 {
     public UnityEvent<int> ScoreUpdatedEvent;
 
@@ -13,9 +13,15 @@ public class Score : MonoBehaviour
         set
         {
             _score = value;
+            BallMovement.Speed += 0.1f;
             ScoreUpdatedEvent?.Invoke(_score);
         }
     }
 
     private int _score;
+
+    private void OnEnable()
+    {
+        ScoreValue = 0;
+    }
 }

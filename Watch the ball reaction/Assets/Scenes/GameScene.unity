@@ -256,6 +256,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 414688302}
+        m_TargetAssemblyTypeName: Example, Assembly-CSharp
+        m_MethodName: SetNewExample
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &16443743
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,13 +476,14 @@ GameObject:
   m_Component:
   - component: {fileID: 194152325}
   - component: {fileID: 194152326}
+  - component: {fileID: 194152327}
   m_Layer: 5
   m_Name: GameScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &194152325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -486,7 +499,6 @@ RectTransform:
   - {fileID: 541807500}
   - {fileID: 414688299}
   - {fileID: 288565147}
-  - {fileID: 369745686}
   m_Father: {fileID: 14299095}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -503,6 +515,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194152324}
   m_CullTransparentMesh: 1
+--- !u!114 &194152327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194152324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d423abe6f5dfc5f488d3d076e538ac18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameStartedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 414688302}
+        m_TargetAssemblyTypeName: Example, Assembly-CSharp
+        m_MethodName: SetNewExample
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 288565148}
+        m_TargetAssemblyTypeName: BallSpawner, Assembly-CSharp
+        m_MethodName: StartSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  GameFinishedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 288565148}
+        m_TargetAssemblyTypeName: BallSpawner, Assembly-CSharp
+        m_MethodName: StopSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _keeper: {fileID: 14299096}
+  _example: {fileID: 414688302}
 --- !u!1 &270508546
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +648,6 @@ Transform:
   m_Children:
   - {fileID: 2097492689}
   - {fileID: 1808355548}
-  - {fileID: 1205740166}
   m_Father: {fileID: 194152325}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -596,7 +663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b9435cc726dde4ebeb4c3d0ffce07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnTime: 1
+  _tracker: {fileID: 194152327}
+  _spawnTime: 0.8
   _balls:
   - {fileID: 2779683366162594610, guid: 4b036d6288bd4e944980feae57c960e8, type: 3}
   - {fileID: 2722135949721646974, guid: bd963b9f1f088fb4fbc74559266581b6, type: 3}
@@ -606,12 +674,8 @@ MonoBehaviour:
   - {fileID: 4204186498867502001, guid: 9f881632276914e4e97ffd42d69ba737, type: 3}
   - {fileID: 6497597170896956038, guid: cdf9eacffe4d0784185ccc97b95a3935, type: 3}
   - {fileID: 954975050516787878, guid: d5d0a001a786c4b47baa070d74388576, type: 3}
-  _example: {fileID: 414688302}
-  _score: {fileID: 14299096}
   _topPoint: {fileID: 2097492689}
   _bottomPoint: {fileID: 1808355548}
-  _borderPoint: {fileID: 1205740166}
-  _ballsParent: {fileID: 369745686}
 --- !u!1 &331388874
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 331388875}
+  - component: {fileID: 331388876}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -650,6 +715,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 250, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &331388876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331388874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608986de3e3f5af45b5c3316eef10272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 767662844}
+  _score: {fileID: 14299096}
 --- !u!1 &338610406
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,37 +927,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362025454}
   m_CullTransparentMesh: 1
---- !u!1 &369745685
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 369745686}
-  m_Layer: 5
-  m_Name: BallsParent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &369745686
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369745685}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 194152325}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390393616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,15 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6cde80d06844f44b5cb89d68f8a77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprites:
-  - {fileID: 21300000, guid: 6ad818acd3b4819498360277743ce271, type: 3}
-  - {fileID: 21300000, guid: c1cb0629c2562f44085717c1306bc30c, type: 3}
-  - {fileID: 21300000, guid: 77ae11f6580d6ee44b34201c44a11eec, type: 3}
-  - {fileID: 21300000, guid: dd09d905d0363c54e960fc76588f081e, type: 3}
-  - {fileID: 21300000, guid: 530f12aac09d4f44fa64731a91e33b16, type: 3}
-  - {fileID: 21300000, guid: b954d3df6e47959469440fb6c7c32c53, type: 3}
-  - {fileID: 21300000, guid: f0c256a4594a8dd4a8d01d1b4ae0bcf6, type: 3}
-  - {fileID: 21300000, guid: aecc7a85d0fc1a141a516bebfdbe5f19, type: 3}
+  _spawner: {fileID: 288565148}
   _image: {fileID: 1117305533}
 --- !u!1 &519420028
 GameObject:
@@ -2693,37 +2733,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192132586}
   m_CullTransparentMesh: 1
---- !u!1 &1205740165
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1205740166}
-  m_Layer: 5
-  m_Name: BorderLine
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1205740166
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205740165}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -360, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 288565147}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214064167
 GameObject:
   m_ObjectHideFlags: 0

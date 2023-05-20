@@ -6,7 +6,7 @@ using TMPro;
 public class ScoreTracker : MonoBehaviour
 {
     [SerializeField] private TMP_Text _text;
-    [SerializeField] private Score _score;
+    [SerializeField] private ScoreKeeper _score;
 
     public void OnScoreUpdated(int value)
     {

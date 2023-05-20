@@ -5,20 +5,15 @@ using UnityEngine.UI;
 
 public class Example : MonoBehaviour
 {
-    [SerializeField] private Sprite[] _sprites;
+    [SerializeField] private BallSpawner _spawner;
     [SerializeField] private Image _image;
 
-    public int CurrentExample => _currentExample;
-    private int _currentExample;
-
-    private void OnEnable()
-    {
-        SetNewExample();
-    }
+    public Ball CurrentExample => _currentExample;
+    private Ball _currentExample;
 
     public void SetNewExample()
     {
-        _currentExample = Random.Range(1,9);
-        _image.sprite = _sprites[_currentExample-1];
+        _currentExample = _spawner.Balls[Random.Range(0, _spawner.Balls.Length)];
+        _image.sprite = _currentExample.GetComponent<SpriteRenderer>().sprite;
     }
 }
