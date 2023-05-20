@@ -81,7 +81,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.86, y: 0.85}
+  m_Size: {x: 1.15, y: 1.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -115,8 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c816aa3ea4c1d9459ae07b271bf8fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BallClickedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _typeIndex: 7
-  _movement: {fileID: 575598383111914218}
 --- !u!114 &575598383111914218
 MonoBehaviour:
   m_ObjectHideFlags: 0

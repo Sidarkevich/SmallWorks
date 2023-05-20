@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2779683366162594613}
   - component: {fileID: 2779683366162594612}
-  - component: {fileID: 2779683366162594611}
   - component: {fileID: 2779683366162594610}
   - component: {fileID: 8447641721111348600}
+  - component: {fileID: 8004041878644494113}
   m_Layer: 0
   m_Name: ball_1
   m_TagString: Untagged
@@ -81,52 +81,12 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.86, y: 0.85}
+  m_Size: {x: 1.15, y: 1.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2779683366162594611
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2779683366162594609}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.86, y: 0.85}
-    newSize: {x: 0.86, y: 0.85}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.42999998, y: 0.255}
-      - {x: 0.41, y: 0.355}
-      - {x: 0.38, y: 0.385}
-      - {x: 0.29999998, y: 0.42499998}
-      - {x: 0.06, y: 0.42499998}
-      - {x: -0.049999997, y: 0.415}
-      - {x: -0.21, y: 0.33499998}
-      - {x: -0.42999998, y: 0.044999998}
-      - {x: -0.42999998, y: -0.325}
-      - {x: -0.39999998, y: -0.405}
-      - {x: -0.29999998, y: -0.42499998}
-      - {x: 0.03, y: -0.42499998}
-      - {x: 0.099999994, y: -0.39499998}
-      - {x: 0.39, y: -0.145}
-      - {x: 0.42999998, y: -0.035}
 --- !u!114 &2779683366162594610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,8 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c816aa3ea4c1d9459ae07b271bf8fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BallClickedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _typeIndex: 1
-  _movement: {fileID: 8447641721111348600}
 --- !u!114 &8447641721111348600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,3 +115,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f828c4c238432e84abb78bfa54598b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &8004041878644494113
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2779683366162594609}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
