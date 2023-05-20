@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _typeIndex: 7
+  _movement: {fileID: 575598383111914218}
 --- !u!114 &575598383111914218
 MonoBehaviour:
   m_ObjectHideFlags: 0
