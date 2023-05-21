@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerGroup _soundOn;
     [SerializeField] private AudioMixerGroup _soundOff;
 
-    private void OnEnable()
+    private void Awake()
     {
         var audioSettings = PlayerPrefs.GetInt("AudioSettings", 1);
         if (audioSettings < 1)
