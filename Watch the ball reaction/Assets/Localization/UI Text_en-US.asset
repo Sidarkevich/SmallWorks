@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI Text_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: eef4874bd3cd24245985616ea9e7f8f3, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 5446066295955259417
+  m_TableData:
+  - m_Id: 16709365760
+    m_Localized: 'Best score:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 211580923904
+    m_Localized: GAME OVER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 317965250560
+    m_Localized: 'Score:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404216918016
+    m_Localized: 'Best score:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 509347147776
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5446066295955259417
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00b0f460cc000000
