@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52007c30dcc2db748a99c75c53915179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _toggle: {fileID: 1301542771}
   _soundSource: {fileID: 1966453542}
   _musicSource: {fileID: 1652802030}
 --- !u!1 &66848977
