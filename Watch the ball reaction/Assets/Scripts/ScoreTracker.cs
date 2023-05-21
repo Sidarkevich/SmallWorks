@@ -5,16 +5,34 @@ using TMPro;
 
 public class ScoreTracker : MonoBehaviour
 {
+    private enum ScoreType
+    {
+        CurrentScore,
+        BestScore
+    }
+
     [SerializeField] private TMP_Text _text;
     [SerializeField] private ScoreKeeper _score;
+    [SerializeField] private ScoreType _type;
+    [SerializeField] private string _format;
 
     public void OnScoreUpdated(int value)
     {
-        _text.text = value.ToString();
+        if (_type == ScoreType.CurrentScore)
+        {
+            _text.text = value.ToString();
+        }
     }
 
     private void OnEnable()
     {
-        _text.text = _score.ScoreValue.ToString();
+        if (_type == ScoreType.CurrentScore)
+        {
+            _text.text = _score.ScoreValue.ToString(_format);
+        }
+        else
+        {
+            _text.text = PlayerPrefs.GetInt("BestScore", 0).ToString(_format);
+        }
     }
 }
