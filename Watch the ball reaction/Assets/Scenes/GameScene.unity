@@ -302,6 +302,8 @@ MonoBehaviour:
   _toggle: {fileID: 1301542771}
   _soundSource: {fileID: 1966453542}
   _musicSource: {fileID: 1652802030}
+  _soundOn: {fileID: 24300002, guid: d7d3600bf5bbadb4bb201794323b225a, type: 2}
+  _soundOff: {fileID: 24300002, guid: 63877776ee164f64a921fb9885dc9250, type: 2}
 --- !u!114 &14299099
 MonoBehaviour:
   m_ObjectHideFlags: 0
