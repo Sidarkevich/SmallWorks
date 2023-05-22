@@ -14,9 +14,10 @@ public class ScoreKeeper : MonoBehaviour
         get => _score;
         set
         {
+            _score = value;
+
             if (value > _score)
             {
-                _score = value;
                 BallMovement.Speed += 0.1f;
 
                 var bestScore = PlayerPrefs.GetInt("BestScore", 0);
@@ -27,6 +28,7 @@ public class ScoreKeeper : MonoBehaviour
 
                 _source.Play();
             }
+
             ScoreUpdatedEvent?.Invoke(_score);
         }
     }
