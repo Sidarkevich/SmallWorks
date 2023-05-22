@@ -273,6 +273,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _source: {fileID: 1966453542}
 --- !u!114 &14299097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,7 +480,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 66848980}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 14299097}
+        m_TargetAssemblyTypeName: ScreenSwapper, Assembly-CSharp
+        m_MethodName: SwapScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1192132586}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1966453542}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &66848980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,6 +702,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: BallSpawner, Assembly-CSharp
         m_MethodName: StartSpawn
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 14299096}
+        m_TargetAssemblyTypeName: ScoreKeeper, Assembly-CSharp
+        m_MethodName: set_ScoreValue
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2171,7 +2208,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 799420763}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 14299097}
+        m_TargetAssemblyTypeName: ScreenSwapper, Assembly-CSharp
+        m_MethodName: SwapScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 270508546}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1966453542}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &799420763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2426,7 +2487,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e54a9313122dfba4fb3c2d42f696b5ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b0c5934b9dacbd43af8cf5d4560f710, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
