@@ -7,28 +7,23 @@ public class ScoreKeeper : MonoBehaviour
 {
     public UnityEvent<int> ScoreUpdatedEvent;
 
-    [SerializeField] private AudioSource _source;
-
     public int ScoreValue
     {
         get => _score;
         set
         {
-            _score = value;
-
             if (value > _score)
             {
                 BallMovement.Speed += 0.1f;
 
                 var bestScore = PlayerPrefs.GetInt("BestScore", 0);
-                if (_score > bestScore)
+                if (value > bestScore)
                 {
-                    PlayerPrefs.SetInt("BestScore", _score);
+                    PlayerPrefs.SetInt("BestScore", value);
                 }
-
-                _source.Play();
             }
 
+            _score = value;
             ScoreUpdatedEvent?.Invoke(_score);
         }
     }

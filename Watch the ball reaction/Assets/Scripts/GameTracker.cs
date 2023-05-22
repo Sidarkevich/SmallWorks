@@ -10,9 +10,12 @@ public class GameTracker : MonoBehaviour
 
     [SerializeField] private ScoreKeeper _keeper;
     [SerializeField] private Example _example;
-    
+    [SerializeField] private AudioSource _source;
+
     public void OnBallClicked(Ball clicked)
     {
+        _source.Play();
+
         if (clicked.TypeIndex == _example.CurrentExample.TypeIndex)
         {
             _keeper.ScoreValue++;
