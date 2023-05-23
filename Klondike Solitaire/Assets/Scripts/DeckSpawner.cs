@@ -20,7 +20,7 @@ public class DeckSpawner : MonoBehaviour
         foreach (var cardData in deck)
         {
             var card = Instantiate(_cardPrefab, gameObject.GetComponent<RectTransform>());
-            card.GetComponent<RectTransform>().SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            card.GetComponent<RectTransform>().SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(0, 180, 0));
             card.Init(_deckData, cardData);
         }
     }
