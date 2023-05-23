@@ -18,4 +18,14 @@ public class Tableau : MonoBehaviour
         _cards.Remove(card);
         _view.SetupView(_cards);   
     }
+
+    public void RemoveCards(Card[] cards)
+    {
+        foreach (var card in cards)
+        {
+            _cards.Remove(card);
+        }
+
+        _view.SetupView(_cards);
+    }
 }

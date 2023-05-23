@@ -15,7 +15,8 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     {
         if (_lastTableau)
         {
-            _lastTableau.RemoveCard(_card);
+            var cards = GetComponentsInChildren<Card>();
+            _lastTableau.RemoveCards(cards);
         }
     }
 
@@ -26,21 +27,34 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        var cards = GetComponentsInChildren<Card>();
+
         if (_lastTableau)
         {
             if (_card.CurrentTableau)
             {
-                _card.CurrentTableau.RemoveCard(_card);
-                _card.CurrentTableau = null;
+                _card.CurrentTableau.RemoveCards(cards);
+
+                foreach (var card in cards)
+                {
+                    card.CurrentTableau = null;
+                }
             }
 
-            _lastTableau.AddCard(_card);
-            _card.CurrentTableau = _lastTableau;
+            foreach (var card in cards)
+            {
+                _lastTableau.AddCard(card);
+                card.CurrentTableau = _lastTableau;
+            }
         }
         else if (_card.CurrentTableau)
         {
-            _card.CurrentTableau.RemoveCard(_card);
-            _card.CurrentTableau = null;
+            _card.CurrentTableau.RemoveCards(cards);
+
+            foreach (var card in cards)
+            {
+                card.CurrentTableau = null;
+            }
         }
     }
 
@@ -55,7 +69,6 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         var tableau = collider.GetComponent<Tableau>();
         if (tableau)
         {
-            Debug.Log($"In {tableau.gameObject.name}");
             _lastTableau = tableau;
             return;
         }
@@ -74,7 +87,6 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         if ((tableau) && (_lastTableau == tableau))
         {
-            Debug.Log($"Out of tableau");
             _lastTableau = null;
         }
     }
