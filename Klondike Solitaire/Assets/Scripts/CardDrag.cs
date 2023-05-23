@@ -28,8 +28,19 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     {
         if (_lastTableau)
         {
+            if (_card.CurrentTableau)
+            {
+                _card.CurrentTableau.RemoveCard(_card);
+                _card.CurrentTableau = null;
+            }
+
             _lastTableau.AddCard(_card);
             _card.CurrentTableau = _lastTableau;
+        }
+        else if (_card.CurrentTableau)
+        {
+            _card.CurrentTableau.RemoveCard(_card);
+            _card.CurrentTableau = null;
         }
     }
 
@@ -46,12 +57,14 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         {
             Debug.Log($"In {tableau.gameObject.name}");
             _lastTableau = tableau;
+            return;
         }
 
-        var card = collider.GetComponent<CardDrag>();
-        if (_card.CurrentTableau)
+        var cardDrag = collider.GetComponent<CardDrag>();
+        if ((cardDrag) && (_card.CurrentTableau))
         {
-            card._lastTableau = _card.CurrentTableau;
+            cardDrag._lastTableau = _card.CurrentTableau;
+            return;
         }
     }
 
@@ -59,7 +72,7 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     {
         var tableau = collider.GetComponent<Tableau>();
 
-        if (_lastTableau == tableau)
+        if ((tableau) && (_lastTableau == tableau))
         {
             Debug.Log($"Out of tableau");
             _lastTableau = null;
