@@ -15,5 +15,13 @@ public class DeckSpawner : MonoBehaviour
     public void SpawnDeck()
     {
         var deck = new List<CardData>(_deckData.Cards);
+        deck.Shuffle();
+
+        foreach (var cardData in deck)
+        {
+            var card = Instantiate(_cardPrefab, gameObject.GetComponent<RectTransform>());
+            card.GetComponent<RectTransform>().SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            card.Init(_deckData, cardData);
+        }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [SerializeField] private Canvas _canvas;
+    private Canvas _canvas;
     private RectTransform _rect;
     private Card _card;
 
@@ -62,6 +62,8 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     {
         _rect = GetComponent<RectTransform>();
         _card = GetComponent<Card>();
+
+        _canvas = FindObjectOfType<Canvas>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
