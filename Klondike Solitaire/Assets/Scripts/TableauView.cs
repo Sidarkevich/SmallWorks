@@ -12,6 +12,7 @@ public class TableauView : MonoBehaviour
         if (cards.Count > 0)
         {
             var rect = cards[0].gameObject.GetComponent<RectTransform>();
+
             rect.SetParent(_tableauTransform);
             rect.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
         }
