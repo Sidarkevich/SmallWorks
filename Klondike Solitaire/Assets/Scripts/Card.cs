@@ -5,4 +5,6 @@ using UnityEngine;
 public class Card : MonoBehaviour
 {
     public Tableau CurrentTableau;
+
+    private CardData _data;
 }
