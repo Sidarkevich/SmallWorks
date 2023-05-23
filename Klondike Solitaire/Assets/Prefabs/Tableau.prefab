@@ -40,7 +40,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -450, y: 60}
-  m_SizeDelta: {x: 112.5275, y: 157.5}
+  m_SizeDelta: {x: 112, y: 157}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7265068694805962221
 CanvasRenderer:
@@ -90,7 +90,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.75408936, y: -0.1885376}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}

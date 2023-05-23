@@ -11,12 +11,14 @@ public class Tableau : MonoBehaviour
     {
         _cards.Add(card);
         _view.SetupView(_cards);
+        //CheckCount();
     }
 
     public void RemoveCard(Card card)
     {
         _cards.Remove(card);
-        _view.SetupView(_cards);   
+        _view.SetupView(_cards);
+        CheckCount(); 
     }
 
     public void RemoveCards(Card[] cards)
@@ -27,5 +29,14 @@ public class Tableau : MonoBehaviour
         }
 
         _view.SetupView(_cards);
+        CheckCount();
+    }
+
+    private void CheckCount()
+    {
+        if (_cards.Count == 1)
+        {
+            _cards[0].Open();
+        }
     }
 }

@@ -29,4 +29,9 @@ public class CardView : MonoBehaviour
         _cardImage.material.SetTexture("_FrontTexture", newTex);
         _cardImage.material.SetTexture("_BackTexture", deckData.BackTexture);
     }
+
+    public void Open()
+    {
+        transform.localRotation = Quaternion.Euler(0,0,0);
+    }
 }

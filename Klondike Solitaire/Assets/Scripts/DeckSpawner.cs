@@ -23,7 +23,7 @@ public class DeckSpawner : MonoBehaviour
         foreach (var cardData in deck)
         {
             var card = Instantiate(_cardPrefab, gameObject.GetComponent<RectTransform>());
-            card.GetComponent<RectTransform>().SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(0, 180, 0));
+            card.GetComponent<RectTransform>().SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
             card.Init(_deckData, cardData);
 
             _cards.Add(card);
@@ -35,10 +35,12 @@ public class DeckSpawner : MonoBehaviour
             {
                 var card = _cards[0];
                 _cards.Remove(card);
-
-                Debug.Log("i: " + i);
-
                 _tableaus[i].AddCard(card);
+
+                if (j == i)
+                {
+                    card.Open();
+                }
             }
         }
     }

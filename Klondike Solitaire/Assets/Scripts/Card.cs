@@ -15,4 +15,9 @@ public class Card : MonoBehaviour
         _data = cardData;
         _view.Setup(deckData, cardData);
     }
+
+    public void Open()
+    {
+        _view.Open();
+    }
 }
