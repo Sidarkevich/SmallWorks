@@ -6,8 +6,8 @@ using UnityEngine;
 public class DeckData : ScriptableObject
 {
     public List<CardData> Cards => _cards;
-    public Sprite BackSprite => _backSprite;
+    public Texture2D BackTexture => _backTexture;
 
     [SerializeField] private List<CardData> _cards;
-    [SerializeField] private Sprite _backSprite;
+    [SerializeField] private Texture2D _backTexture;
 }

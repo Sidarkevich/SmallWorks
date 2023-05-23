@@ -15,9 +15,9 @@ public class CardData : ScriptableObject
 
     public CardSuit Suit => _suit;
     public byte Value => _value;
-    public Sprite FaceSprite => _faceSprite;
+    public Texture2D FaceTexture => _faceTexture;
 
     [SerializeField] private CardSuit _suit;
     [SerializeField] private byte _value;
-    [SerializeField] private Sprite _faceSprite;
+    [SerializeField] private Texture2D _faceTexture;
 }
