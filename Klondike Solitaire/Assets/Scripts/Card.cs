@@ -4,10 +4,5 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    [SerializeField] private Tableau _tableau;
-
-    private void OnMouseUpAsButton()
-    {
-        _tableau.AddCard(this);
-    }
+    public Tableau CurrentTableau;
 }
