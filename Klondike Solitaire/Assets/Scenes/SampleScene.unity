@@ -240,7 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3778e632e142340998f8044ea21f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deckData: {fileID: 11400000, guid: 226d54b9ee844ac47b108c6288bb9ef8, type: 2}
   _cardPrefab: {fileID: 625586397272065569, guid: 8b2c9a238fe4bc04cb2bea4e3e48ed27, type: 3}
 --- !u!114 &357557671
 MonoBehaviour:
@@ -263,6 +262,7 @@ MonoBehaviour:
   - {fileID: 2085362456}
   - {fileID: 1360975434}
   - {fileID: 582015716}
+  _deckData: {fileID: 11400000, guid: 226d54b9ee844ac47b108c6288bb9ef8, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

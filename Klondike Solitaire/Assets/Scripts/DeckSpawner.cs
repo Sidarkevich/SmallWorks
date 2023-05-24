@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class DeckSpawner : MonoBehaviour
 {
-    [SerializeField] private DeckData _deckData;
     [SerializeField] private Card _cardPrefab;
 
-    public List<Card> SpawnDeck()
+    public List<Card> SpawnDeck(List<CardData> cardsData, DeckData deckData)
     {
         var cards = new List<Card>();
-        var deck = new List<CardData>(_deckData.Cards);
-        deck.Shuffle();
 
-        foreach (var cardData in deck)
+        foreach (var cardData in cardsData)
         {
             var card = Instantiate(_cardPrefab, gameObject.GetComponent<RectTransform>());
             card.GetComponent<RectTransform>().SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
-            card.Init(_deckData, cardData);
+            card.Init(deckData, cardData);
 
             cards.Add(card);
         }
