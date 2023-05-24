@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Stores the stack of cards and is responsible for checking the rules of the game.
+/// </summary>
 public class Tableau : MonoBehaviour
 {
     [SerializeField] private byte _kingValue;
@@ -42,7 +45,6 @@ public class Tableau : MonoBehaviour
         card.ChangeTableau(this);
         _cards.Add(card);
         _view.SetupView(_cards);
-        //CheckCount();
     }
 
     public void RemoveCard(Card card)

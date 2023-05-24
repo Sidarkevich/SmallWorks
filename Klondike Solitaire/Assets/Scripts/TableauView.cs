@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// responsible for displaying and positioning cards inside the table.
+/// </summary>
 public class TableauView : MonoBehaviour
 {
     [SerializeField] private float _yOffset;

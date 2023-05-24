@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Stores the logical states and properties of the card.
+/// </summary>
 public class Card : MonoBehaviour
 {
     [SerializeField] private CardView _view;
@@ -10,13 +13,6 @@ public class Card : MonoBehaviour
     public bool IsOpen => _isOpen;
     public CardData Data => _data;
     public Tableau CurrentTableau => _currentTableau;
-    // {
-    //     get => _currentTableau;
-    //     set
-    //     {
-    //         _currentTableau = value;
-    //     }
-    // }
 
     private Tableau _currentTableau;
     private CardData _data;

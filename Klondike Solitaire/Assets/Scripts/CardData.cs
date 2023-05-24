@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Data stored about the game card.
+/// </summary>
 [CreateAssetMenu(menuName = "ScriptableObjects/Card")]
 public class CardData : ScriptableObject
 {

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Creating Cards GameObjects.
+/// </summary>
 public class DeckSpawner : MonoBehaviour
 {
     [SerializeField] private Card _cardPrefab;

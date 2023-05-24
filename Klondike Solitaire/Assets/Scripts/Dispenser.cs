@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-using System.Linq;
 
+/// <summary>
+/// Forms a deck and distributes cards between tableaus.
+/// </summary>
 public class Dispenser : MonoBehaviour
 {
     [SerializeField] DeckSpawner _spawner;
@@ -35,15 +36,15 @@ public class Dispenser : MonoBehaviour
 
     private List<CardData> GetPreparedDeck()
     {
-        var luckyCards = new List<CardData>();
+        var luckyCards = new List<CardData>();                                      // Cards that guarantee an advantage
         var deck = new List<CardData>(_deckData.Cards);
         deck.Shuffle();
         var otherCards = new List<CardData>(deck);
 
-        var minValue = GetMinDeckValue();
+        var minValue = GetMinDeckValue();                                           // Max and Min values of the deck (f.e. Ace - 1, King - 13)
         var maxValue = GetMaxDeckValue();
 
-        for (var i = minValue; i <= maxValue; i++)
+        for (var i = minValue; i <= maxValue; i++)                                  // Collect 2 win combination of different colors
         {
             foreach (var cardData in deck)
             {
@@ -69,7 +70,7 @@ public class Dispenser : MonoBehaviour
         luckyCards.Shuffle();
         otherCards.Shuffle();
 
-        var preparedDeck = new List<CardData>();
+        var preparedDeck = new List<CardData>();                                       // Fill the deck with ordinary cards
         for (int i = 0; i < _tableaus.Length; i++)
         {
             for (int j = 0; j <= i; j++)
@@ -92,11 +93,11 @@ public class Dispenser : MonoBehaviour
         otherCards.AddRange(luckyCards);
         otherCards.Shuffle();
 
-        for (int i = 0; i < preparedDeck.Count; i++)
+        for (int i = 0; i < preparedDeck.Count; i++)                                    // Fill in the missing items
         {
             if (preparedDeck[i] == null)
             {
-                preparedDeck[i] = otherCards[UnityEngine.Random.Range(0, otherCards.Count-1)];
+                preparedDeck[i] = otherCards[Random.Range(0, otherCards.Count-1)];
                 otherCards.Remove(preparedDeck[i]);
             }
         }

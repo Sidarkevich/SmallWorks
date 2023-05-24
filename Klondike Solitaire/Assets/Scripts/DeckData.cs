@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Data stored about the cards deck.
+/// </summary>
 [CreateAssetMenu(menuName = "ScriptableObjects/Deck")]
 public class DeckData : ScriptableObject
 {

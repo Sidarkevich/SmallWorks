@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Responsible for displaying the map on the screen.
+/// </summary>
 public class CardView : MonoBehaviour
 {
     private Image _cardImage;
