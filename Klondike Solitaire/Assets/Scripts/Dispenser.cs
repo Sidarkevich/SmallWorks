@@ -33,43 +33,36 @@ public class Dispenser : MonoBehaviour
         }
     }
 
-    private (int, int) GetTwoDifferentIndexes()
-    {
-        var result = (0, 0);
-        var length = Enum.GetNames(typeof(CardData.CardSuit)).Length;
-        var rnd = UnityEngine.Random.Range(0, length);
-
-        if (rnd == length-1)
-        {
-            result.Item1 = length-1;
-            result.Item2 = 0;
-        }
-        else
-        {
-            result.Item1 = rnd;
-            result.Item2 = rnd + 1;
-        }
-
-        return result;
-    }
-
     private List<CardData> GetPreparedDeck()
     {
         var luckyCards = new List<CardData>();
-        var otherCards = new List<CardData>();
-        var indexes = GetTwoDifferentIndexes();
+        var deck = new List<CardData>(_deckData.Cards);
+        deck.Shuffle();
+        var otherCards = new List<CardData>(deck);
 
-        for (int i = 0; i < _deckData.Cards.Count; i++)
+        var minValue = GetMinDeckValue();
+        var maxValue = GetMaxDeckValue();
+
+        for (var i = minValue; i <= maxValue; i++)
         {
-            int suitIndex = (int)_deckData.Cards[i].Suit;
-
-            if ((suitIndex == indexes.Item1) || (suitIndex == indexes.Item2))
+            foreach (var cardData in deck)
             {
-                luckyCards.Add(_deckData.Cards[i]);
+                if ((cardData.Value == i) && ((int)cardData.Suit % 2 == 0))
+                {
+                    otherCards.Remove(cardData);
+                    luckyCards.Add(cardData);
+                    break;
+                }
             }
-            else
+
+            foreach (var cardData in deck)
             {
-                otherCards.Add(_deckData.Cards[i]);
+                if ((cardData.Value == i) && ((int)cardData.Suit % 2 != 0))
+                {
+                    otherCards.Remove(cardData);
+                    luckyCards.Add(cardData);
+                    break;
+                }
             }
         }
 
@@ -85,8 +78,7 @@ public class Dispenser : MonoBehaviour
 
                 if (j == i)
                 {
-                    nextCard = luckyCards[0];
-                    luckyCards.RemoveAt(0);
+                    nextCard = null;
                 }
                 else
                 {
@@ -100,7 +92,44 @@ public class Dispenser : MonoBehaviour
         otherCards.AddRange(luckyCards);
         otherCards.Shuffle();
 
+        for (int i = 0; i < preparedDeck.Count; i++)
+        {
+            if (preparedDeck[i] == null)
+            {
+                preparedDeck[i] = otherCards[UnityEngine.Random.Range(0, otherCards.Count-1)];
+                otherCards.Remove(preparedDeck[i]);
+            }
+        }
+
         preparedDeck.AddRange(otherCards);
         return preparedDeck;
+    }
+
+    private int GetMinDeckValue()
+    {
+        var minValue = _deckData.Cards[0];
+        foreach (var data in _deckData.Cards)
+        {
+            if (data.Value < minValue.Value)
+            {
+                minValue = data;
+            }
+        }
+
+        return minValue.Value;
+    }
+
+    private int GetMaxDeckValue()
+    {
+        var maxValue = _deckData.Cards[0];
+        foreach (var data in _deckData.Cards)
+        {
+            if (data.Value > maxValue.Value)
+            {
+                maxValue = data;
+            }
+        }
+
+        return maxValue.Value;
     }
 }
