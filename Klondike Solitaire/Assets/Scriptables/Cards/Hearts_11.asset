@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5f539545eef32c42b2ce50013ba077f, type: 3}
   m_Name: Hearts_11
   m_EditorClassIdentifier: 
-  _suit: 2
+  _suit: 3
   _value: 11
   _faceSprite: {fileID: 1066050108, guid: bf9b7e2ea81e7fb4095aad7fe80e0196, type: 3}

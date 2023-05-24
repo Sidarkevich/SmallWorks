@@ -25,10 +25,11 @@ public class Tableau : MonoBehaviour
             return false;
         }
 
-        var lastCard = _cards[_cards.Count-1];
-        bool isOdd = ((lastCard.Data.Value % 2) == 0 ? false : true); 
+        var lastCardData = _cards[_cards.Count-1].Data;
+        bool isLastEven = (((int)lastCardData.Suit % 2) == 0); 
+        bool isNextEven = (((int)lastCardData.Suit % 2) == 0);
 
-        if (card.Data.Value == lastCard.Data.Value-1)
+        if ((card.Data.Value == lastCardData.Value-1) && (isLastEven != isNextEven))
         {
             return true;
         }

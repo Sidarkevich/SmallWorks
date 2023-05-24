@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5f539545eef32c42b2ce50013ba077f, type: 3}
   m_Name: Spades_6
   m_EditorClassIdentifier: 
-  _suit: 3
+  _suit: 2
   _value: 6
   _faceSprite: {fileID: 1067874731, guid: bf9b7e2ea81e7fb4095aad7fe80e0196, type: 3}

@@ -9,8 +9,8 @@ public class CardData : ScriptableObject
     {
         Clubs,
         Diamonds,
-        Hearts,
-        Spades
+        Spades,
+        Hearts
     }
 
     public CardSuit Suit => _suit;
