@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
+    public bool IsOpen => _isOpen;
+    public CardData Data => _data;
+
     public Tableau CurrentTableau;
+
+
+
     private CardData _data;
     private bool _isOpen;
 
@@ -18,6 +24,7 @@ public class Card : MonoBehaviour
 
     public void Open()
     {
+        _isOpen = true;
         _view.Open();
     }
 }

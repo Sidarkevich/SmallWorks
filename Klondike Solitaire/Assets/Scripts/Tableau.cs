@@ -4,8 +4,28 @@ using UnityEngine;
 
 public class Tableau : MonoBehaviour
 {
+    [SerializeField] private byte _kingValue;
     [SerializeField] private TableauView _view;
     private List<Card> _cards = new List<Card>();
+
+    public bool CanBeAdded(Card card)
+    {
+        if (_cards.Count == 0)
+        {
+            if ((card.Data.Value == _kingValue) || (!card.IsOpen))
+            {
+                return true;
+            }
+        }
+
+        var lastCard = _cards[_cards.Count-1];
+        if (card.Data.Value == lastCard.Data.Value-1)
+        {
+            return true;
+        }
+
+        return false;
+    }
 
     public void AddCard(Card card)
     {

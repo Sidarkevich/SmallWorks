@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 357557668}
   - component: {fileID: 357557667}
   - component: {fileID: 357557670}
+  - component: {fileID: 357557671}
   m_Layer: 5
   m_Name: Stock
   m_TagString: Untagged
@@ -241,6 +242,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _deckData: {fileID: 11400000, guid: 226d54b9ee844ac47b108c6288bb9ef8, type: 2}
   _cardPrefab: {fileID: 625586397272065569, guid: 8b2c9a238fe4bc04cb2bea4e3e48ed27, type: 3}
+--- !u!114 &357557671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357557665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a750840eb95d5974cb2e839ac7a721cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawner: {fileID: 357557670}
   _tableaus:
   - {fileID: 1396384892}
   - {fileID: 1824118520}

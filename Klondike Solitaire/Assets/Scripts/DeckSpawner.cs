@@ -6,17 +6,10 @@ public class DeckSpawner : MonoBehaviour
 {
     [SerializeField] private DeckData _deckData;
     [SerializeField] private Card _cardPrefab;
-    [SerializeField] private Tableau[] _tableaus;
 
-    private List<Card> _cards = new List<Card>();
-
-    private void Start()
+    public List<Card> SpawnDeck()
     {
-        SpawnDeck();
-    }
-
-    public void SpawnDeck()
-    {
+        var cards = new List<Card>();
         var deck = new List<CardData>(_deckData.Cards);
         deck.Shuffle();
 
@@ -26,22 +19,9 @@ public class DeckSpawner : MonoBehaviour
             card.GetComponent<RectTransform>().SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
             card.Init(_deckData, cardData);
 
-            _cards.Add(card);
+            cards.Add(card);
         }
 
-        for (int i = 0; i < _tableaus.Length; i++)
-        {
-            for (int j = 0; j <= i; j++)
-            {
-                var card = _cards[0];
-                _cards.Remove(card);
-                _tableaus[i].AddCard(card);
-
-                if (j == i)
-                {
-                    card.Open();
-                }
-            }
-        }
+        return cards;
     }
 }
