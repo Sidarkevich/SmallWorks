@@ -27,7 +27,7 @@ public class Tableau : MonoBehaviour
 
         var lastCardData = _cards[_cards.Count-1].Data;
         bool isLastEven = (((int)lastCardData.Suit % 2) == 0); 
-        bool isNextEven = (((int)lastCardData.Suit % 2) == 0);
+        bool isNextEven = (((int)card.Data.Suit % 2) == 0);
 
         if ((card.Data.Value == lastCardData.Value-1) && (isLastEven != isNextEven))
         {
