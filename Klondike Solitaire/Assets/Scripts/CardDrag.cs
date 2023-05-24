@@ -14,6 +14,7 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         _lastTableau = null;
+        _rect.SetParent(_canvas.transform);
     }
 
     public void OnDrag(PointerEventData eventData)

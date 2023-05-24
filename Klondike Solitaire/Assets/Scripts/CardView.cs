@@ -8,6 +8,7 @@ public class CardView : MonoBehaviour
     private Image _cardImage;
 
     [SerializeField] private Shader _cardShader;
+    [SerializeField] private Animation _animation;
 
     private void Awake()
     {
@@ -32,6 +33,6 @@ public class CardView : MonoBehaviour
 
     public void Open()
     {
-        transform.localRotation = Quaternion.Euler(0,0,0);
+        _animation.Play();
     }
 }

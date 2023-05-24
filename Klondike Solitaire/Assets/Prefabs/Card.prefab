@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -7104812277640500874}
   - component: {fileID: 625586397272065569}
   - component: {fileID: 625586397272065570}
+  - component: {fileID: 6340434333458994473}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -109,7 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03566bb4a1d4dd844839110a78279d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentTableau: {fileID: 0}
   _view: {fileID: 736054127120521047}
   _drag: {fileID: 625586397272065570}
 --- !u!114 &625586397272065570
@@ -124,6 +124,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c522c901edc500409ac03b5f6d973b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &6340434333458994473
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625586397272065580}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 84ba1b31f6a8cd24db057c3d3ad943d1, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 84ba1b31f6a8cd24db057c3d3ad943d1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3757439371758054537
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,3 +230,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cardShader: {fileID: -6465566751694194690, guid: 9d1d70bdb383979489db17770f50a653, type: 3}
+  _animation: {fileID: 6340434333458994473}
