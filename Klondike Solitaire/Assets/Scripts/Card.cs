@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    public bool IsOpen => _isOpen;
-    public CardData Data => _data;
-
-    public Tableau CurrentTableau;
-
-
-
-    private CardData _data;
-    private bool _isOpen;
-
     [SerializeField] private CardView _view;
     [SerializeField] private CardDrag _drag;
+
+    public bool IsOpen => _isOpen;
+    public CardData Data => _data;
+    public Tableau CurrentTableau => _currentTableau;
+    // {
+    //     get => _currentTableau;
+    //     set
+    //     {
+    //         _currentTableau = value;
+    //     }
+    // }
+
+    private Tableau _currentTableau;
+    private CardData _data;
+    private bool _isOpen;
 
     public void Init(DeckData deckData, CardData cardData)
     {
@@ -28,5 +33,10 @@ public class Card : MonoBehaviour
         _isOpen = true;
         _drag.enabled = true;
         _view.Open();
+    }
+
+    public void ChangeTableau(Tableau tableau)
+    {
+        _currentTableau = tableau;
     }
 }

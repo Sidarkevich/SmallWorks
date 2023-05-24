@@ -26,6 +26,8 @@ public class Tableau : MonoBehaviour
         }
 
         var lastCard = _cards[_cards.Count-1];
+        bool isOdd = ((lastCard.Data.Value % 2) == 0 ? false : true); 
+
         if (card.Data.Value == lastCard.Data.Value-1)
         {
             return true;
@@ -36,7 +38,7 @@ public class Tableau : MonoBehaviour
 
     public void AddCard(Card card)
     {
-        card.CurrentTableau = this;
+        card.ChangeTableau(this);
         _cards.Add(card);
         _view.SetupView(_cards);
         //CheckCount();
@@ -44,7 +46,7 @@ public class Tableau : MonoBehaviour
 
     public void RemoveCard(Card card)
     {
-        card.CurrentTableau = null;
+        card.ChangeTableau(null);
         _cards.Remove(card);
         _view.SetupView(_cards);
         CheckCount(); 
@@ -54,7 +56,7 @@ public class Tableau : MonoBehaviour
     {
         foreach (var card in cards)
         {
-            card.CurrentTableau = null;
+            card.ChangeTableau(null);
             _cards.Remove(card);
         }
 

@@ -5,8 +5,6 @@ using UnityEngine.EventSystems;
 
 public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    public Card Card => _card;
-
     private Canvas _canvas;
     private RectTransform _rect;
     private Card _card;
@@ -32,17 +30,11 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             if (_card.CurrentTableau)
             {
                 _card.CurrentTableau.RemoveCards(cards);
-
-                foreach (var card in cards)
-                {
-                    card.CurrentTableau = null;
-                }
             }
 
             foreach (var card in cards)
             {
                 _lastTableau.AddCard(card);
-                card.CurrentTableau = _lastTableau;
             }
         }
         else
@@ -61,7 +53,7 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     private void Start()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
