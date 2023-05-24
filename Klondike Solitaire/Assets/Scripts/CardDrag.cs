@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
+    public Card Card => _card;
+
     private Canvas _canvas;
     private RectTransform _rect;
     private Card _card;
@@ -13,11 +15,7 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (_lastTableau)
-        {
-            var cards = GetComponentsInChildren<Card>();
-            _lastTableau.RemoveCards(cards);
-        }
+        _lastTableau = null;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -47,14 +45,9 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                 card.CurrentTableau = _lastTableau;
             }
         }
-        else if (_card.CurrentTableau)
+        else
         {
-            _card.CurrentTableau.RemoveCards(cards);
-
-            foreach (var card in cards)
-            {
-                card.CurrentTableau = null;
-            }
+            _card.CurrentTableau.UpdateView();
         }
     }
 
@@ -66,20 +59,31 @@ public class CardDrag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         _canvas = FindObjectOfType<Canvas>();
     }
 
+    private void Start()
+    {
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         var tableau = collider.GetComponent<Tableau>();
         if (tableau)
         {
-            _lastTableau = tableau;
-            return;
+            if (tableau.CanBeAdded(_card))
+            {
+                _lastTableau = tableau;
+                return;
+            }
         }
 
-        var cardDrag = collider.GetComponent<CardDrag>();
-        if ((cardDrag) && (_card.CurrentTableau))
+        var card = collider.GetComponent<Card>();
+        if ((card) && (card.CurrentTableau))
         {
-            cardDrag._lastTableau = _card.CurrentTableau;
-            return;
+            if (card.CurrentTableau.CanBeAdded(_card))
+            {
+                _lastTableau = card.CurrentTableau;
+                return;
+            }
         }
     }
 

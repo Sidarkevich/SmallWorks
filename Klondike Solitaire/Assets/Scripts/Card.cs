@@ -15,6 +15,7 @@ public class Card : MonoBehaviour
     private bool _isOpen;
 
     [SerializeField] private CardView _view;
+    [SerializeField] private CardDrag _drag;
 
     public void Init(DeckData deckData, CardData cardData)
     {
@@ -25,6 +26,7 @@ public class Card : MonoBehaviour
     public void Open()
     {
         _isOpen = true;
+        _drag.enabled = true;
         _view.Open();
     }
 }

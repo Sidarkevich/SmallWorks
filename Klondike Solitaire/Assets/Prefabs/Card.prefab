@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentTableau: {fileID: 0}
   _view: {fileID: 736054127120521047}
+  _drag: {fileID: 625586397272065570}
 --- !u!114 &625586397272065570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625586397272065580}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c522c901edc500409ac03b5f6d973b0, type: 3}
   m_Name: 

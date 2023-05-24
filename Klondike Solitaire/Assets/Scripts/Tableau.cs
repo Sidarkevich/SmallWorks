@@ -8,6 +8,11 @@ public class Tableau : MonoBehaviour
     [SerializeField] private TableauView _view;
     private List<Card> _cards = new List<Card>();
 
+    public void UpdateView()
+    {
+        _view.SetupView(_cards);
+    }
+
     public bool CanBeAdded(Card card)
     {
         if (_cards.Count == 0)
@@ -16,6 +21,8 @@ public class Tableau : MonoBehaviour
             {
                 return true;
             }
+
+            return false;
         }
 
         var lastCard = _cards[_cards.Count-1];
@@ -29,6 +36,7 @@ public class Tableau : MonoBehaviour
 
     public void AddCard(Card card)
     {
+        card.CurrentTableau = this;
         _cards.Add(card);
         _view.SetupView(_cards);
         //CheckCount();
@@ -36,6 +44,7 @@ public class Tableau : MonoBehaviour
 
     public void RemoveCard(Card card)
     {
+        card.CurrentTableau = null;
         _cards.Remove(card);
         _view.SetupView(_cards);
         CheckCount(); 
@@ -45,6 +54,7 @@ public class Tableau : MonoBehaviour
     {
         foreach (var card in cards)
         {
+            card.CurrentTableau = null;
             _cards.Remove(card);
         }
 
@@ -54,9 +64,14 @@ public class Tableau : MonoBehaviour
 
     private void CheckCount()
     {
-        if (_cards.Count == 1)
+        if (_cards.Count > 0)
         {
-            _cards[0].Open();
+            var lastCard = _cards[_cards.Count-1];
+
+            if (!lastCard.IsOpen)
+            {
+                lastCard.Open();
+            }
         }
     }
 }
