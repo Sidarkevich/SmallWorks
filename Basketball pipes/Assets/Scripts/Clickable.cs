@@ -8,14 +8,13 @@ public class Clickable : MonoBehaviour
 {
     public UnityEvent ClickedEvent;
 
-    private ClickBlock _block;
+    [SerializeField] private ClickBlock _block;
+    
     private Collider2D _collider;
 
     private void Awake()
     {
-        _block = GetComponentInParent<ClickBlock>();
         _block.BlockStateChangedEvent.AddListener(ChangeBlock);
-
         _collider = GetComponent<Collider2D>();
     }
 
