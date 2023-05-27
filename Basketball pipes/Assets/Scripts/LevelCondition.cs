@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class LevelCondition : MonoBehaviour
 {
-    public UnityEvent LevelCompletedEvent;
-    public UnityEvent LevelFailedEvent;
+    [HideInInspector] public UnityEvent LevelCompletedEvent;
+    [HideInInspector] public UnityEvent LevelFailedEvent;
 
     [SerializeField] private Ball[] _balls;
 

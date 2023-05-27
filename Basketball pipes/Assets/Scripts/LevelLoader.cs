@@ -1,21 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelLoader : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _levels;
+    [SerializeField] private LevelCondition[] _levels;
+    [SerializeField] private Sprite[] _levelIcons;
     [SerializeField] private Transform _levelsParent;
 
-    private GameObject _currentLevel;
+    [SerializeField] private Image _levelImage;
+
+    private LevelCondition _currentLevel;
+    private int _currentIndex;
+
+    private void Start()
+    {
+        LoadLevel(0);
+    }
 
     public void LoadLevel(int index)
     {
         if (_currentLevel)
         {
-            Destroy(_currentLevel);
+            _currentLevel.LevelCompletedEvent.RemoveListener(OnLevelCompleted);
+            _currentLevel.LevelFailedEvent.RemoveListener(OnLevelFailed);
+
+            Destroy(_currentLevel.gameObject);
         }
 
-        Instantiate(_levels[index], Vector3.zero, Quaternion.identity, _levelsParent);
+        _currentLevel = Instantiate(_levels[index], Vector3.zero, Quaternion.identity, _levelsParent);
+
+        _currentLevel.LevelCompletedEvent.AddListener(OnLevelCompleted);
+        _currentLevel.LevelFailedEvent.AddListener(OnLevelFailed);
+
+        _levelImage.sprite = _levelIcons[index];
+    }
+
+    private void OnLevelCompleted()
+    {
+        _currentIndex++;
+
+        if (_currentIndex == _levels.Length)
+        {
+            Debug.Log("To menu!");
+            // END GAME TO MENU
+            return;
+        }
+
+        LoadLevel(_currentIndex);
+    }
+
+    private void OnLevelFailed()
+    {
+        LoadLevel(_currentIndex);
     }
 }
