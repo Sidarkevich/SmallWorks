@@ -75,6 +75,8 @@ GameObject:
   - component: {fileID: 3685255403800968134}
   - component: {fileID: 3685255403800968135}
   - component: {fileID: 6248706683462016036}
+  - component: {fileID: -7527327595033408186}
+  - component: {fileID: 6453492628645663312}
   m_Layer: 0
   m_Name: Turn
   m_TagString: Untagged
@@ -89,7 +91,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3685255403800968132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
@@ -177,6 +179,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.58, y: 0.58}
   m_EdgeRadius: 0
+--- !u!114 &-7527327595033408186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3685255403800968132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32271b3abdfdb048b7a144e83be7dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6453492628645663312}
+        m_TargetAssemblyTypeName: Rotatable, Assembly-CSharp
+        m_MethodName: RotateAroundZ
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 90
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6453492628645663312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3685255403800968132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333a1e24d22eb0d4cb1c4f001c6fc18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3685255404781705093
 GameObject:
   m_ObjectHideFlags: 0

@@ -2478,10 +2478,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Start
       objectReference: {fileID: 0}
-    - target: {fileID: 2764386103182092622, guid: c07b9e203df901b40ba1fa89de3b9782, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2764386103182092623, guid: c07b9e203df901b40ba1fa89de3b9782, type: 3}
       propertyPath: m_RootOrder
       value: 1

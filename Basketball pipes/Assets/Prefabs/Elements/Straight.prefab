@@ -69,6 +69,8 @@ GameObject:
   - component: {fileID: 3147192364369132024}
   - component: {fileID: 3147192364369132025}
   - component: {fileID: 6162578977908862876}
+  - component: {fileID: -5265066741908795250}
+  - component: {fileID: 6614971551528049686}
   m_Layer: 0
   m_Name: Straight
   m_TagString: Untagged
@@ -171,6 +173,45 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.58, y: 0.58}
   m_EdgeRadius: 0
+--- !u!114 &-5265066741908795250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147192364369132026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32271b3abdfdb048b7a144e83be7dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6614971551528049686}
+        m_TargetAssemblyTypeName: Rotatable, Assembly-CSharp
+        m_MethodName: RotateAroundZ
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 90
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6614971551528049686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147192364369132026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333a1e24d22eb0d4cb1c4f001c6fc18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3147192364561503636
 GameObject:
   m_ObjectHideFlags: 0
