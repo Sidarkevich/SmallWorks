@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2764386102420770780}
   - component: {fileID: 2764386102420770781}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2764386102838576420}
   - component: {fileID: 2764386102838576421}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 3334209833350831027}
   - component: {fileID: 3334209833350831026}
   - component: {fileID: 3334209833350831025}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

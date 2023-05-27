@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2787166138540119399}
   - component: {fileID: 6214142531475553787}
   - component: {fileID: 6833744675763933521}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,9 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa695c31533640747881e42c9125be74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BallInBasketEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &5455700262206388748
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5455700262550804069}
   - component: {fileID: 8940094552015090582}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wall (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
