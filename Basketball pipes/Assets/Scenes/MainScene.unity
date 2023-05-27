@@ -582,7 +582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levels:
   - {fileID: 303323552952246171, guid: a0e33d6078e262b43b13e3b516233280, type: 3}
-  - {fileID: 303323552952246171, guid: a0e33d6078e262b43b13e3b516233280, type: 3}
+  - {fileID: 303323552952246171, guid: d39ef78f0f642f943b966bdc0ce46716, type: 3}
+  - {fileID: 303323552952246171, guid: 81fb43100f195864085783215fbd65f2, type: 3}
   _levelIcons:
   - {fileID: 21300000, guid: 9ea4d1dab3e7e3b4181f3e07962fdf86, type: 3}
   - {fileID: 21300000, guid: d76b3237a1252c04ea47b503c2bcc73e, type: 3}

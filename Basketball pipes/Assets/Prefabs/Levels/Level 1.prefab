@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 809239275998849685}
   - component: {fileID: 809239275998849684}
   m_Layer: 0
-  m_Name: Back_3x3
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5118992950057958888}
   - component: {fileID: 303323552952246171}
   m_Layer: 5
-  m_Name: Level (0)
+  m_Name: Level 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,6 @@ MonoBehaviour:
   - {fileID: 7777702949778412716}
   - {fileID: 7777702948802838832}
   - {fileID: 7777702949589388589}
-  _basket: {fileID: 6191508609473241030}
 --- !u!1001 &808517949619227803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,11 +163,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 721414259345002, guid: 5427f77d55eb5964fa29d817996d6c6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 721414259345002, guid: 5427f77d55eb5964fa29d817996d6c6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 721414259345002, guid: 5427f77d55eb5964fa29d817996d6c6a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -611,14 +610,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5455700262206388750, guid: c93a29b09f38e7a4eb3f2f874950c291, type: 3}
   m_PrefabInstance: {fileID: 809239277468421783}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6191508609473241030 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6833744675763933521, guid: c93a29b09f38e7a4eb3f2f874950c291, type: 3}
-  m_PrefabInstance: {fileID: 809239277468421783}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa695c31533640747881e42c9125be74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
