@@ -14,9 +14,9 @@ public class LevelLoader : MonoBehaviour
     private LevelCondition _currentLevel;
     private int _currentIndex;
 
-    private void Start()
+    public void LoadCurrentLevel()
     {
-        LoadLevel(0);
+        LoadLevel(_currentIndex);
     }
 
     public void LoadLevel(int index)
@@ -37,6 +37,11 @@ public class LevelLoader : MonoBehaviour
         _levelImage.sprite = _levelIcons[index];
     }
 
+    private void Start()
+    {
+        LoadLevel(0);
+    }
+
     private void OnLevelCompleted()
     {
         _currentIndex++;
@@ -53,6 +58,6 @@ public class LevelLoader : MonoBehaviour
 
     private void OnLevelFailed()
     {
-        LoadLevel(_currentIndex);
+        LoadCurrentLevel();
     }
 }
