@@ -21,6 +21,8 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevel(int index)
     {
+        _currentIndex = index;
+
         if (_currentLevel)
         {
             _currentLevel.LevelCompletedEvent.RemoveListener(OnLevelCompleted);
