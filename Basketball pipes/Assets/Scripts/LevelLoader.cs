@@ -37,11 +37,6 @@ public class LevelLoader : MonoBehaviour
         _levelImage.sprite = _levelIcons[index];
     }
 
-    private void Start()
-    {
-        LoadLevel(0);
-    }
-
     private void OnLevelCompleted()
     {
         _currentIndex++;
