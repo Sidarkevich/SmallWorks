@@ -56,6 +56,7 @@ public class LevelLoader : MonoBehaviour
         if (_currentIndex > maxIndx)
         {
             PlayerPrefs.SetInt("MaxLevel", _currentIndex);
+            PlayerPrefs.Save();
         }
 
         LoadLevel(_currentIndex);

@@ -56,6 +56,7 @@ public class AudioPlayer : MonoBehaviour
         if (newSettings != _soundSettings)
         {
             PlayerPrefs.SetInt("SoundSettings", newSettings);
+            PlayerPrefs.Save();
         }
     }
 
