@@ -13,6 +13,7 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] private AudioMixerGroup _mixerOff;
 
     [SerializeField] private Toggle _soundToggle;
+    [SerializeField] private Toggle _soundGameToggle;
 
     [SerializeField] private AudioClip _clickClip;
 
@@ -49,6 +50,7 @@ public class AudioPlayer : MonoBehaviour
         _musicSource.outputAudioMixerGroup = mixer;
 
         _soundToggle.isOn = value;
+        _soundGameToggle.isOn = value;
 
         var newSettings = value ? 1 : 0;
         if (newSettings != _soundSettings)

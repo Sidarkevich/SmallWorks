@@ -11,11 +11,13 @@ public class Clickable : MonoBehaviour
     [SerializeField] private ClickBlock _block;
     
     private Collider2D _collider;
+    private AudioPlayer _player;
 
     private void Awake()
     {
         _block.BlockStateChangedEvent.AddListener(ChangeBlock);
         _collider = GetComponent<Collider2D>();
+        _player = FindObjectOfType<AudioPlayer>();
     }
 
     private void OnDestroy()
@@ -31,5 +33,6 @@ public class Clickable : MonoBehaviour
     private void OnMouseUpAsButton()
     {
         ClickedEvent?.Invoke();
+        _player.PlayClick();
     }
 }

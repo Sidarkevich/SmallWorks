@@ -55,7 +55,6 @@ public class Ball : MonoBehaviour
 
         if (element.Type == LevelElement.ElementType.Booster)
         {
-            Debug.Log("Booster: " + element.GetBoosterDirection());
             _rigidbody.AddForce(element.GetBoosterDirection() * 100, ForceMode2D.Force);
         }
     }

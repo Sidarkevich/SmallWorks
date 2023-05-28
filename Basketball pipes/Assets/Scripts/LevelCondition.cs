@@ -11,9 +11,12 @@ public class LevelCondition : MonoBehaviour
     [SerializeField] private Ball[] _balls;
 
     private int _currentScore;
+    private AudioPlayer _player;
 
     private void Awake()
     {
+        _player = FindObjectOfType<AudioPlayer>();
+
         foreach (var ball in _balls)
         {
             ball.BallInvisibleEvent.AddListener(OnBallInvisible);
@@ -34,16 +37,16 @@ public class LevelCondition : MonoBehaviour
     {
         _currentScore++;
 
+        _player.PlayClick();
+
         if (_currentScore >= _balls.Length)
         {
-            Debug.Log("Level completed!");
             LevelCompletedEvent?.Invoke();
         }
     }
 
     private void OnBallInvisible()
     {
-        Debug.Log("Level failed!");
         LevelFailedEvent?.Invoke();
     }
 }

@@ -630,7 +630,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameCompletedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 942234777}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 460720341}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _levels:
   - {fileID: 303323552952246171, guid: a0e33d6078e262b43b13e3b516233280, type: 3}
   - {fileID: 303323552952246171, guid: d39ef78f0f642f943b966bdc0ce46716, type: 3}
@@ -1654,6 +1666,7 @@ MonoBehaviour:
   _mixerOn: {fileID: 24300002, guid: d0223585a7c303645a569c60f82692cc, type: 2}
   _mixerOff: {fileID: 24300002, guid: b6aff7c458dc21a42947371e860ebb20, type: 2}
   _soundToggle: {fileID: 460329565}
+  _soundGameToggle: {fileID: 1106422938}
   _clickClip: {fileID: 8300000, guid: eabc5d04e73c61f4d8b657e3235c9fe5, type: 3}
 --- !u!1 &940102376
 GameObject:
@@ -2303,6 +2316,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 855483091}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1026827954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2638,7 +2663,31 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 855483091}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: ChangeSoundState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 855483091}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &1113627309
 GameObject:
