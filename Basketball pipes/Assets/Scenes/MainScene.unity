@@ -628,6 +628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c78edfef9c4a664fb8b810aa5aa499f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameCompletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _levels:
   - {fileID: 303323552952246171, guid: a0e33d6078e262b43b13e3b516233280, type: 3}
   - {fileID: 303323552952246171, guid: d39ef78f0f642f943b966bdc0ce46716, type: 3}
@@ -3765,6 +3768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1961490805}
   - component: {fileID: 1961490806}
+  - component: {fileID: 1961490807}
   m_Layer: 5
   m_Name: LevelsPanel
   m_TagString: Untagged
@@ -3803,6 +3807,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961490804}
   m_CullTransparentMesh: 1
+--- !u!114 &1961490807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961490804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d55c67d12846c94aafc52840b22dd65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttons:
+  - {fileID: 2105970767}
+  - {fileID: 784960320}
+  - {fileID: 159738625}
+  - {fileID: 2122087239}
+  - {fileID: 630709542}
+  - {fileID: 1064311190}
+  - {fileID: 1608402209}
+  - {fileID: 1537454278}
+  - {fileID: 1161397855}
+  - {fileID: 2107575501}
 --- !u!1 &2068797548
 GameObject:
   m_ObjectHideFlags: 0
