@@ -20,15 +20,18 @@ public class Bot : MonoBehaviour
 
         if (paths.Count > 0)
         {
+            paths.Shuffle();
             paths.Sort((a, b) => a.Count.CompareTo(b.Count));
-            // shuffle
             var direction = paths[0];
-            MakeMove(direction[0]);
-
+            
             if (direction[0].State == Cell.CellState.Border)
             {
                 Debug.Log("PLAYER LOST!");
+                MakeMove(direction[0]);
+                return;
             }
+
+            MakeMove(direction[0]);
         }
         else
         {
