@@ -21,7 +21,7 @@ public class CellView : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        _cell.ChangeState();
+        _cell.ChangeState(Cell.CellState.Filled);
     }
 
     private void OnStateChanged(Cell.CellState state)

@@ -13,17 +13,20 @@ public class Cell : MonoBehaviour
     {
         Border,
         Free,
-        Filled
+        Filled,
+        Player
     }
 
     public CellState State => _state;
     [SerializeField] private CellState _state;
+    public Vector3 QrsPosition => _qrsPosition;
+    [SerializeField] private Vector3 _qrsPosition;
 
-    public void ChangeState()
+    public void ChangeState(CellState state)
     {
         if (_state == CellState.Free)
         {
-            _state = CellState.Filled;
+            _state = state;
             StateChangedEvent?.Invoke(_state);
         }
     }
