@@ -16,25 +16,12 @@ public class Bot : MonoBehaviour
     {
         // Get next cell
         OnMovedEvent?.Invoke();
-
-        var neighbors = _map.GetFreeNeighbors(_currentCell);
-        foreach (var neighbor in neighbors)
-        {
-            Debug.Log(neighbor.QrsPosition);
-        }
-        Debug.Log("---------------");
     }
 
     private void OnEnable()
     {
         _currentCell = _startCell;
         transform.position = _currentCell.transform.position;
-
-        var neighbors = _map.GetFreeNeighbors(_currentCell);
-        foreach (var neighbor in neighbors)
-        {
-            Debug.Log(neighbor.QrsPosition);
-        }
-        Debug.Log("---------------");
+        _currentCell.ChangeState(Cell.CellState.Player);
     }
 }
