@@ -24,11 +24,8 @@ public class Cell : MonoBehaviour
 
     public void ChangeState(CellState state)
     {
-        if (_state == CellState.Free)
-        {
-            _state = state;
-            StateChangedEvent?.Invoke(_state);
-        }
+        _state = state;
+        StateChangedEvent?.Invoke(_state);
     }
 
     public void Lock(int moves)
