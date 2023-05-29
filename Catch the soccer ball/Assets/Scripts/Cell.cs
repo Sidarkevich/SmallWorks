@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Cell : MonoBehaviour
 {
-    [HideInInspector] public UnityEvent<CellState> StateChangedEvent;
+    [HideInInspector] public UnityEvent<CellState, bool> StateChangedEvent;
     public UnityEvent LockedEvent;
     public UnityEvent UnlockedEvent;
 
@@ -22,10 +22,10 @@ public class Cell : MonoBehaviour
     public Vector3 QrsPosition => _qrsPosition;
     [SerializeField] private Vector3 _qrsPosition;
 
-    public void ChangeState(CellState state)
+    public void ChangeState(CellState state, bool byPlayer)
     {
         _state = state;
-        StateChangedEvent?.Invoke(_state);
+        StateChangedEvent?.Invoke(_state, byPlayer);
     }
 
     public void Lock(int moves)

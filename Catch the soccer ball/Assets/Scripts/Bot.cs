@@ -55,11 +55,11 @@ public class Bot : MonoBehaviour
     {
         if (_currentCell)
         {
-            _currentCell.ChangeState(Cell.CellState.Free);
+            _currentCell.ChangeState(Cell.CellState.Free, false);
         }
 
         _currentCell = nextCell;
-        _currentCell.ChangeState(Cell.CellState.Player);
+        _currentCell.ChangeState(Cell.CellState.Player, false);
 
         transform.position = _currentCell.transform.position;
     }
@@ -67,5 +67,6 @@ public class Bot : MonoBehaviour
     private void OnEnable()
     {
         MakeMove(_startCell);
+        _map.RandomFill();
     }
 }

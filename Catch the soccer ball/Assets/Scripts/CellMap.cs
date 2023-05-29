@@ -5,11 +5,25 @@ using UnityEngine;
 public class CellMap : MonoBehaviour
 {
     [SerializeField] private Vector3[] _directionVectors;
-    private Cell[] _cells;
+    [SerializeField] private Vector2Int _filledCount;
+    private List<Cell> _cells;
 
     private void Awake()
     {
-        _cells = GetComponentsInChildren<Cell>();
+        _cells = new List<Cell>(GetComponentsInChildren<Cell>());
+    }
+
+    public void RandomFill()
+    {
+        var free = _cells.FindAll((x) => x.State == Cell.CellState.Free);
+
+        var count = Mathf.Min(free.Count, Random.Range(_filledCount.x, _filledCount.y+1));
+        for (int i = 0; i < count; i++)
+        {
+            var filled = free[Random.Range(0, free.Count)];
+            filled.ChangeState(Cell.CellState.Filled, false);
+            free.Remove(filled);
+        }
     }
 
     public List<Cell> GetFreeNeighbors(Vector3 qrs)

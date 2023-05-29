@@ -21,10 +21,10 @@ public class CellView : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        _cell.ChangeState(Cell.CellState.Filled);
+        _cell.ChangeState(Cell.CellState.Filled, true);
     }
 
-    private void OnStateChanged(Cell.CellState state)
+    private void OnStateChanged(Cell.CellState state, bool byPlayer)
     {
         if (state == Cell.CellState.Filled)
         {
