@@ -564,6 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c0e40d3f6943e4e8d98945ef98a97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 0
   _text: {fileID: 314116415}
   _tracker: {fileID: 167226724}
 --- !u!1001 &93336054
@@ -7224,6 +7225,7 @@ GameObject:
   - component: {fileID: 1098816110}
   - component: {fileID: 1098816112}
   - component: {fileID: 1098816111}
+  - component: {fileID: 1098816113}
   m_Layer: 5
   m_Name: BestPanel
   m_TagString: Untagged
@@ -7291,6 +7293,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098816109}
   m_CullTransparentMesh: 1
+--- !u!114 &1098816113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098816109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c0e40d3f6943e4e8d98945ef98a97c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 1
+  _text: {fileID: 1506326085}
+  _tracker: {fileID: 167226724}
 --- !u!1001 &1102204056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7632,6 +7649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c0e40d3f6943e4e8d98945ef98a97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 0
   _text: {fileID: 1803491317}
   _tracker: {fileID: 167226724}
 --- !u!1001 &1126249559
@@ -14815,7 +14833,7 @@ PrefabInstance:
       objectReference: {fileID: 1678446951}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.size
@@ -14826,6 +14844,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
       objectReference: {fileID: 0}
@@ -14834,11 +14856,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1294675225}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1098816113}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1294675225}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
@@ -14850,12 +14880,20 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SaveResult
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ScoreTracker, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -14866,11 +14904,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}

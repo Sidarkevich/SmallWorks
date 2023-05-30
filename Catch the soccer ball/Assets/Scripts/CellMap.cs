@@ -17,8 +17,6 @@ public class CellMap : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("Enable!");
-
         ClearMap();
         _bot.MakeMove(_startCell);
         RandomFill();
