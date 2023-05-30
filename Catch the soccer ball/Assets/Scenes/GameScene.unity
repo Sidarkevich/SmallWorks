@@ -1447,6 +1447,7 @@ MonoBehaviour:
   - {x: -1, y: 0, z: 1}
   _filledCount: {x: 6, y: 9}
   _bot: {fileID: 8061599144848063432}
+  _startCell: {fileID: 1678446951}
 --- !u!1 &181670808
 GameObject:
   m_ObjectHideFlags: 0

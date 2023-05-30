@@ -15,8 +15,10 @@ public class MoveTracker : MonoBehaviour
         get => _moves;
         set
         {
-            _moves++;
-            PlayerMovedEvent?.Invoke(_moves);
+            _moves = value;
+            
+            if (_moves > 0)
+                PlayerMovedEvent?.Invoke(_moves);
         }
     }
 

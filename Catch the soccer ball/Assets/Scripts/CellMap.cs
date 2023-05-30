@@ -7,6 +7,7 @@ public class CellMap : MonoBehaviour
     [SerializeField] private Vector3[] _directionVectors;
     [SerializeField] private Vector2Int _filledCount;
     [SerializeField] private Bot _bot;
+    [SerializeField] private Cell _startCell;
     private List<Cell> _cells;
 
     private void Awake()
@@ -14,14 +15,17 @@ public class CellMap : MonoBehaviour
         _cells = new List<Cell>(GetComponentsInChildren<Cell>());
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        _bot.EnableAfterLoad();
+        Debug.Log("Enable!");
+
+        ClearMap();
+        _bot.MakeMove(_startCell);
+        RandomFill();
     }
 
     public void ClearMap()
     {
-        Debug.Log("Clear!");
         var playable = _cells.FindAll((x) => ((x.State == Cell.CellState.Filled) || (x.State == Cell.CellState.Player)));
 
         foreach (var cell in playable)
