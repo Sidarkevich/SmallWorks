@@ -6,6 +6,7 @@ public class CellMap : MonoBehaviour
 {
     [SerializeField] private Vector3[] _directionVectors;
     [SerializeField] private Vector2Int _filledCount;
+    [SerializeField] private Bot _bot;
     private List<Cell> _cells;
 
     private void Awake()
@@ -13,8 +14,14 @@ public class CellMap : MonoBehaviour
         _cells = new List<Cell>(GetComponentsInChildren<Cell>());
     }
 
+    private void Start()
+    {
+        _bot.EnableAfterLoad();
+    }
+
     public void ClearMap()
     {
+        Debug.Log("Clear!");
         var playable = _cells.FindAll((x) => ((x.State == Cell.CellState.Filled) || (x.State == Cell.CellState.Player)));
 
         foreach (var cell in playable)

@@ -14,6 +14,7 @@ public class Bot : MonoBehaviour
     [SerializeField] private CellMap _map;
 
     private Cell _currentCell;
+    private bool _firstLoad = true;
 
     public void Move(int moves)
     {
@@ -67,8 +68,19 @@ public class Bot : MonoBehaviour
 
     private void OnEnable()
     {
+        if (_firstLoad)
+        {
+            _firstLoad = false;
+            return;
+        }
+
         _map.ClearMap();
         MakeMove(_startCell);
         _map.RandomFill();
+    }
+
+    public void EnableAfterLoad()
+    {
+        OnEnable();
     }
 }

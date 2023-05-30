@@ -5,6 +5,7 @@ using UnityEngine;
 public class CellView : MonoBehaviour
 {
     [SerializeField] private Sprite _filledSprite;
+    [SerializeField] private Sprite _emptySprite;
     
     private Cell _cell;
     private SpriteRenderer _renderer;
@@ -29,6 +30,10 @@ public class CellView : MonoBehaviour
         if (state == Cell.CellState.Filled)
         {
             _renderer.sprite = _filledSprite;
+        }
+        else if (state == Cell.CellState.Free)
+        {
+            _renderer.sprite = _emptySprite;
         }
     }
 
