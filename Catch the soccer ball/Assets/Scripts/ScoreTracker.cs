@@ -52,4 +52,10 @@ public class ScoreTracker : MonoBehaviour
         PlayerPrefs.SetInt("BestResult", saveValue);
         PlayerPrefs.Save();
     }
+
+    public void ResetResult()
+    {
+        PlayerPrefs.SetInt("BestResult", 0);
+        PlayerPrefs.Save();
+    }
 }
