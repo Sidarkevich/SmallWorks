@@ -98,7 +98,6 @@ public class CellMap : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("SomethingWrong!");
                     break;
                 }
             }

@@ -24,6 +24,13 @@ public class Cell : MonoBehaviour
 
     public void ChangeState(CellState state, bool byPlayer)
     {
+        if (state == CellState.Filled)
+        {
+            if (_state == CellState.Filled || _state == CellState.Player)
+            {
+                return;
+            }
+        }
         _state = state;
         StateChangedEvent?.Invoke(_state, byPlayer);
     }

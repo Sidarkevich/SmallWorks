@@ -20,6 +20,11 @@ public class CellView : MonoBehaviour
         _cell.StateChangedEvent.AddListener(OnStateChanged);
     }
 
+    private void OnEnable()
+    {
+        OnUnlocked();
+    }
+
     private void OnMouseUpAsButton()
     {
         _cell.ChangeState(Cell.CellState.Filled, true);

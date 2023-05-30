@@ -38,11 +38,18 @@ public class ScoreTracker : MonoBehaviour
     public void SaveResult()
     {
         var bestResult = PlayerPrefs.GetInt("BestResult", 0);
+        var saveValue = bestResult;
 
-        if (_tracker.Moves < bestResult)
+        if (bestResult == 0)
         {
-            PlayerPrefs.SetInt("BestResult", _tracker.Moves);
-            PlayerPrefs.Save();
+            saveValue = _tracker.Moves;
         }
+        else if (_tracker.Moves < bestResult)
+        {
+            saveValue = _tracker.Moves;
+        }
+
+        PlayerPrefs.SetInt("BestResult", saveValue);
+        PlayerPrefs.Save();
     }
 }
