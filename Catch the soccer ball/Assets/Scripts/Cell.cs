@@ -26,6 +26,11 @@ public class Cell : MonoBehaviour
 
     public void ChangeState(CellState state, bool byPlayer)
     {
+        if (_state == CellState.Border)
+        {
+            return;
+        }
+
         if (state == CellState.Filled)
         {
             if (_state == CellState.Filled || _state == CellState.Player)
