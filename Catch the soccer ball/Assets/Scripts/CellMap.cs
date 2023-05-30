@@ -13,6 +13,16 @@ public class CellMap : MonoBehaviour
         _cells = new List<Cell>(GetComponentsInChildren<Cell>());
     }
 
+    public void ClearMap()
+    {
+        var playable = _cells.FindAll((x) => ((x.State == Cell.CellState.Filled) || (x.State == Cell.CellState.Player)));
+
+        foreach (var cell in playable)
+        {
+            cell.ChangeState(Cell.CellState.Free, false);
+        }
+    }
+
     public void RandomFill()
     {
         var free = _cells.FindAll((x) => x.State == Cell.CellState.Free);

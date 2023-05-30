@@ -12,5 +12,4 @@ public class ScoreTracker : MonoBehaviour
     {
         _tracker.PlayerMovedEvent.AddListener((value) => _text.text = value.ToString());
     }
-
 }

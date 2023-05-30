@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class Bot : MonoBehaviour
 {
+    public UnityEvent PlayerWonEvent;
+    public UnityEvent PlayerLostEvent;
+
     [HideInInspector] public UnityEvent OnMovedEvent;
 
     [SerializeField] private Cell _startCell;
@@ -14,8 +17,6 @@ public class Bot : MonoBehaviour
 
     public void Move(int moves)
     {
-        // Get next cell
-
         var paths = _map.GetFreeDirections(_currentCell.QrsPosition);
 
         if (paths.Count > 0)
@@ -26,7 +27,7 @@ public class Bot : MonoBehaviour
             
             if (direction[0].State == Cell.CellState.Border)
             {
-                Debug.Log("PLAYER LOST!");
+                PlayerLostEvent?.Invoke();
                 MakeMove(direction[0]);
                 return;
             }
@@ -44,7 +45,7 @@ public class Bot : MonoBehaviour
             }
             else
             {
-                Debug.Log("PLAYER WON!");
+                PlayerWonEvent?.Invoke();
             }
         }
 
@@ -66,6 +67,7 @@ public class Bot : MonoBehaviour
 
     private void OnEnable()
     {
+        _map.ClearMap();
         MakeMove(_startCell);
         _map.RandomFill();
     }

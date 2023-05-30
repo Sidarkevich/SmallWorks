@@ -2127,7 +2127,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 325923904}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 424002863}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1727002637}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &325923904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2660,6 +2672,7 @@ GameObject:
   - component: {fileID: 424002861}
   - component: {fileID: 424002860}
   - component: {fileID: 424002859}
+  - component: {fileID: 424002863}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2753,6 +2766,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &424002863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424002858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a08586f9951ee4ba6553f69c562707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screens:
+  - {fileID: 1682664003}
+  - {fileID: 547189953}
+  - {fileID: 1727002637}
 --- !u!1001 &460267483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2925,7 +2954,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 480649583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 424002863}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1682664003}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &480649583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3181,7 +3222,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 505309758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1294675225}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 424002863}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1682664003}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &505309758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5839,7 +5904,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 937301578}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 424002863}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1727002637}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &937301578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7473,6 +7550,7 @@ GameObject:
   - component: {fileID: 1123343165}
   - component: {fileID: 1123343167}
   - component: {fileID: 1123343166}
+  - component: {fileID: 1123343168}
   m_Layer: 5
   m_Name: ResultPanel
   m_TagString: Untagged
@@ -7540,6 +7618,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123343164}
   m_CullTransparentMesh: 1
+--- !u!114 &1123343168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123343164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c0e40d3f6943e4e8d98945ef98a97c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 1803491317}
+  _tracker: {fileID: 167226724}
 --- !u!1001 &1126249559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8442,7 +8534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1251176997}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 424002863}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1251176994}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1251176997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11088,7 +11192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1682664004
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11290,7 +11394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1727002638
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13028,7 +13132,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1976853883}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 424002863}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1682664003}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1976853883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13239,7 +13355,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1983459368}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 424002863}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 547189953}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1983459368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13402,7 +13530,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2010593691}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1294675225}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 424002863}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: SwitchScreen
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1727002637}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2010593691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14659,6 +14811,70 @@ PrefabInstance:
       propertyPath: _startCell
       value: 
       objectReference: {fileID: 1678446951}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1294675225}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1294675225}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerWonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387307221179234020, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
+      propertyPath: PlayerLostEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8061599143676593169, guid: 5e9e28b2e28b2c149945664bb80a5b8a, type: 3}
       propertyPath: m_RootOrder
       value: 1

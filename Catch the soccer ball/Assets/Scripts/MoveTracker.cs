@@ -50,4 +50,9 @@ public class MoveTracker : MonoBehaviour
             Moves++;
         }
     }
+
+    private void OnEnable()
+    {
+        Moves = 0;
+    }
 }
