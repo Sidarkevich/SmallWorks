@@ -42,7 +42,7 @@ public class MoveTracker : MonoBehaviour
         }
 
         PlayerMovedEvent.AddListener(_bot.Move);
-        _bot.OnMovedEvent.AddListener(() => BotMovedEvent?.Invoke());
+        _bot.MovedEvent.AddListener(() => BotMovedEvent?.Invoke());
     }
 
     private void OnStateChanged(Cell.CellState state, bool byPlayer)
