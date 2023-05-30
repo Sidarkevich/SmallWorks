@@ -9,6 +9,8 @@ public class Cell : MonoBehaviour
     public UnityEvent LockedEvent;
     public UnityEvent UnlockedEvent;
 
+    private AudioPlayer _player;
+
     public enum CellState
     {
         Border,
@@ -30,6 +32,11 @@ public class Cell : MonoBehaviour
             {
                 return;
             }
+
+            if (byPlayer)
+            {
+                _player.PlayClick();
+            }
         }
         _state = state;
         StateChangedEvent?.Invoke(_state, byPlayer);
@@ -43,5 +50,10 @@ public class Cell : MonoBehaviour
     public void Unlock()
     {
         UnlockedEvent?.Invoke();
+    }
+
+    private void Awake()
+    {
+        _player = FindObjectOfType<AudioPlayer>();
     }
 }
