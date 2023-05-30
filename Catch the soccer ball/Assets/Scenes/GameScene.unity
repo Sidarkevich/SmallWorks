@@ -2452,7 +2452,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2979,7 +2979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ff601f26dc8104bb368e350174cd7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toggle: {fileID: 1961486162}
+  _EngToggle: {fileID: 1961486162}
+  _RuToggle: {fileID: 330928070}
 --- !u!1001 &460267483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4705,7 +4706,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 236, y: 50}
+  m_SizeDelta: {x: 282, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628481958
 MonoBehaviour:

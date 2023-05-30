@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class LocalizationTracker : MonoBehaviour
 {
-    [SerializeField] private Toggle _toggle; 
+    [SerializeField] private Toggle _EngToggle;
+    [SerializeField] private Toggle _RuToggle;
 
     public void ChangeLocale(bool value)
     {
@@ -16,7 +17,10 @@ public class LocalizationTracker : MonoBehaviour
     private void Awake()
     {
         int id = PlayerPrefs.GetInt("LocaleSettings", 0);
-        _toggle.isOn = id == 0 ? true : false;
+
+        _EngToggle.isOn = id == 0 ? true : false;
+        _RuToggle.isOn = !_EngToggle.isOn;
+
         ChangeLocale(id == 0 ? true : false);
     }
 
