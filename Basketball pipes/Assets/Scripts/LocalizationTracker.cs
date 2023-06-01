@@ -25,5 +25,6 @@ public class LocalizationTracker : MonoBehaviour
         yield return LocalizationSettings.InitializationOperation;
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[id];
         PlayerPrefs.SetInt("LocaleSettings", id);
+        PlayerPrefs.Save();
     }
 }
