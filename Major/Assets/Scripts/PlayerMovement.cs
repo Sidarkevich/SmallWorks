@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using DG.Tweening;
+
+public class PlayerMovement : MonoBehaviour
+{
+    [SerializeField] private Transform[] _targets;
+    private int _currentIndex;
+
+    private void OnMouseUpAsButton()
+    {
+        MoveToTarget();
+    }
+
+    private void MoveToTarget()
+    {
+        transform.DOMoveX(_targets[_currentIndex].position.x, 1).OnComplete(() => {_currentIndex++; });
+    }
+}
