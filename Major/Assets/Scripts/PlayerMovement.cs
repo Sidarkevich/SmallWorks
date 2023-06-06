@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Transform _player;
     [SerializeField] private Transform[] _targets;
     private int _currentIndex;
 
@@ -15,6 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveToTarget()
     {
-        transform.DOMoveX(_targets[_currentIndex].position.x, 1).OnComplete(() => {_currentIndex++; });
+        _player.DOMoveX(_targets[_currentIndex].position.x, 1).OnComplete(() => {_currentIndex++; });
     }
 }
