@@ -5682,8 +5682,9 @@ GameObject:
   - component: {fileID: 1550448296}
   - component: {fileID: 1550448298}
   - component: {fileID: 1550448297}
+  - component: {fileID: 1550448299}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Goalkeeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5747,6 +5748,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550448295}
   m_CullTransparentMesh: 1
+--- !u!114 &1550448299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550448295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a87c30f8067a4f543a083037683ef74e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 1
+  _moveEndPoint: {fileID: 461875575}
 --- !u!1 &1564354688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5758,6 +5773,7 @@ GameObject:
   - component: {fileID: 1564354689}
   - component: {fileID: 1564354691}
   - component: {fileID: 1564354690}
+  - component: {fileID: 1564354692}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -5823,6 +5839,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564354688}
   m_CullTransparentMesh: 1
+--- !u!114 &1564354692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564354688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b18341ee43c7f042a7a9137685f7820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keeper: {fileID: 1550448299}
 --- !u!1 &1576619307
 GameObject:
   m_ObjectHideFlags: 0
