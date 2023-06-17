@@ -11,4 +11,21 @@ public class Ball : MonoBehaviour
     {
         transform.Translate(_moveDirection * _moveSpeed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        var goalkeeper = collider.GetComponent<Goalkeeper>();
+        if (goalkeeper)
+        {
+            // score++
+            Destroy(gameObject);
+        }
+
+        var goal = collider.GetComponent<Goal>();
+        if (goal)
+        {
+            Debug.Log("Goal!");
+            Destroy(gameObject);
+        }
+    }
 }
