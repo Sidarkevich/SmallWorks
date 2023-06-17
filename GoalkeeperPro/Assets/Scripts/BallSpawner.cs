@@ -12,23 +12,28 @@ public class BallSpawner : MonoBehaviour
     private float _counter;
     private bool _isActive = false;
 
-    private void Start()
+    private void OnEnable()
     {
         StartSpawn();
     }
 
-    public void StartSpawn()
+    private void OnDisable()
+    {
+        StopSpawn();
+    }
+
+    private void StartSpawn()
     {
         _isActive = true;
         _counter = 0;
     }
 
-    public void StopSpawn()
+    private void StopSpawn()
     {
         _isActive = false;
     }
 
-    void Update()
+    private void Update()
     {
         if (_isActive)
         {

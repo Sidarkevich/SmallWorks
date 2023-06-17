@@ -14,12 +14,13 @@ public class ScoreHandler : MonoBehaviour
         get => _score;
         set
         {
+            SaveKeep(value - _score);
             _score = value;
             ScoreChangedEvent?.Invoke(_score);
         }
     }
 
-    public void SaveResult()
+    public void SaveBestResult()
     {
         var lastBest = PlayerPrefs.GetInt("BestScore", 0);
 
@@ -28,5 +29,17 @@ public class ScoreHandler : MonoBehaviour
             PlayerPrefs.SetInt("BestScore", _score);
             PlayerPrefs.Save();
         }
+    }
+
+    private void SaveKeep(int delta)
+    {
+        var score = PlayerPrefs.GetInt("Score", 0);
+        PlayerPrefs.SetInt("Score", score+delta);
+        PlayerPrefs.Save();
+    }
+
+    private void OnEnable()
+    {
+        _score = 0;
     }
 }

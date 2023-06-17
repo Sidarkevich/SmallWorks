@@ -8,6 +8,8 @@ public class Goalkeeper : MonoBehaviour
     [SerializeField] private Transform _moveEndPoint; 
     [SerializeField] private ScoreHandler _handler;
 
+    private Vector3 _startPosition;
+
     private Vector3 _moveDirection = Vector3.zero;
 
     public void Keep()
@@ -33,5 +35,15 @@ public class Goalkeeper : MonoBehaviour
         {
             transform.Translate(delta);
         }
+    }
+
+    private void OnDisable()
+    {
+        transform.position = _startPosition;
+    }
+
+    private void Awake()
+    {
+        _startPosition = transform.position;
     }
 }
