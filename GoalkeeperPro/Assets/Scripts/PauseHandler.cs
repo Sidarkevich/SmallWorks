@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PauseHandler : MonoBehaviour
 {
+    public UnityEvent PausedEvent;
+    public UnityEvent UnpausedEvent;
+
     private float _startTimeScale;
     private bool _isPauseActive;
 
@@ -29,10 +33,12 @@ public class PauseHandler : MonoBehaviour
     private void Pause()
     {
         Time.timeScale = 0;
+        PausedEvent?.Invoke();
     }
 
     private void Unpause()
     {
         Time.timeScale = _startTimeScale;
+        UnpausedEvent?.Invoke();
     }
 }

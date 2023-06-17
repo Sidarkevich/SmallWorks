@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour
         var goalkeeper = collider.GetComponent<Goalkeeper>();
         if (goalkeeper)
         {
-            // score++
+            goalkeeper.Hit();
         }
 
         var goal = collider.GetComponent<GoalHandler>();
