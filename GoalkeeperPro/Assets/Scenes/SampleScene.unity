@@ -4564,9 +4564,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1224191570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfd0f1e9d0c7449418e9665162896070, type: 3}
+  m_Script: {fileID: 11500000, guid: afc2f06fafd87f443890554ab3711827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GoalEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1254630293
 GameObject:
   m_ObjectHideFlags: 0

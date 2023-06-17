@@ -18,14 +18,14 @@ public class Ball : MonoBehaviour
         if (goalkeeper)
         {
             // score++
-            Destroy(gameObject);
         }
 
-        var goal = collider.GetComponent<Goal>();
+        var goal = collider.GetComponent<GoalHandler>();
         if (goal)
         {
-            Debug.Log("Goal!");
-            Destroy(gameObject);
+            goal.Goal();
         }
+
+        Destroy(gameObject);
     }
 }
