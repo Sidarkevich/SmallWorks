@@ -18,4 +18,15 @@ public class ScoreHandler : MonoBehaviour
             ScoreChangedEvent?.Invoke(_score);
         }
     }
+
+    public void SaveResult()
+    {
+        var lastBest = PlayerPrefs.GetInt("BestScore", 0);
+
+        if (_score > lastBest)
+        {
+            PlayerPrefs.SetInt("BestScore", _score);
+            PlayerPrefs.Save();
+        }
+    }
 }

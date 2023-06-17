@@ -10,7 +10,7 @@ public class Goalkeeper : MonoBehaviour
 
     private Vector3 _moveDirection = Vector3.zero;
 
-    public void Hit()
+    public void Keep()
     {
         _handler.Score++;
     }
