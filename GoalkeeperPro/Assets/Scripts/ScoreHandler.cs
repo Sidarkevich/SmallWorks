@@ -33,8 +33,8 @@ public class ScoreHandler : MonoBehaviour
 
     private void SaveKeep(int delta)
     {
-        var score = PlayerPrefs.GetInt("Score", 0);
-        PlayerPrefs.SetInt("Score", score+delta);
+        var score = PlayerPrefs.GetInt("TotalScore", 0);
+        PlayerPrefs.SetInt("TotalScore", score+delta);
         PlayerPrefs.Save();
     }
 
