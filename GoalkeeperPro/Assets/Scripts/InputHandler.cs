@@ -25,4 +25,9 @@ public class InputHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         _keeper.Stop();
     }
+
+    private void OnEnable()
+    {
+        _keeper.Stop();
+    }
 }
