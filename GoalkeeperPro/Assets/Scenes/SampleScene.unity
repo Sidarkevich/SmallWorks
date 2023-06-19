@@ -7759,7 +7759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ballPrefab: {fileID: 5839206564063590677, guid: 2a30481bca4f6904e89e3cca39a305bc, type: 3}
   _maxSpawnPoint: {fileID: 461875575}
-  _spawnTime: 1.1
+  _spawnTime: 0.8
   _parentTransform: {fileID: 1756045808}
 --- !u!1 &1760621316
 GameObject:
