@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class ScoreHandler : MonoBehaviour
 {
-    [HideInInspector] public UnityEvent<int> ScoreChangedEvent;
+    public UnityEvent<int> ScoreChangedEvent;
 
     private int _score;
 
