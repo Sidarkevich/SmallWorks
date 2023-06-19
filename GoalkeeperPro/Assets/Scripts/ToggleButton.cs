@@ -25,6 +25,7 @@ public class ToggleButton : MonoBehaviour
     public void ChangeValue(bool value)
     {
         _isOn = value;
+        Setup();
     }
 
     private void Setup()

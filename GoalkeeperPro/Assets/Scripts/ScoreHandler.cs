@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class ScoreHandler : MonoBehaviour
 {
-    public UnityEvent<int> ScoreChangedEvent;
+    [HideInInspector] public UnityEvent<int> ScoreChangedEvent;
 
     private int _score;
 
@@ -33,6 +33,11 @@ public class ScoreHandler : MonoBehaviour
 
     private void SaveKeep(int delta)
     {
+        if (delta == 0)
+        {
+            return;
+        }
+
         var score = PlayerPrefs.GetInt("TotalScore", 0);
         PlayerPrefs.SetInt("TotalScore", score+delta);
         PlayerPrefs.Save();
@@ -40,6 +45,6 @@ public class ScoreHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        _score = 0;
+        Score = 0;
     }
 }

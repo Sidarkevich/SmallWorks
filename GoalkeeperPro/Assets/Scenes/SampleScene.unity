@@ -6614,7 +6614,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87c30f8067a4f543a083037683ef74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1.5
+  KeepedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 851514711}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayKeep
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _moveSpeed: 1.9
   _moveEndPoint: {fileID: 2104922026}
   _handler: {fileID: 773277318}
 --- !u!60 &1550448300
@@ -7744,7 +7759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ballPrefab: {fileID: 5839206564063590677, guid: 2a30481bca4f6904e89e3cca39a305bc, type: 3}
   _maxSpawnPoint: {fileID: 461875575}
-  _spawnTime: 1.5
+  _spawnTime: 1.1
   _parentTransform: {fileID: 1756045808}
 --- !u!1 &1760621316
 GameObject:

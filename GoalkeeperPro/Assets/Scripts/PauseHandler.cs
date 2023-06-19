@@ -20,7 +20,7 @@ public class PauseHandler : MonoBehaviour
         Unpause();
     }
 
-    private void Start()
+    private void Awake()
     {
         _startTimeScale = Time.timeScale;
     }

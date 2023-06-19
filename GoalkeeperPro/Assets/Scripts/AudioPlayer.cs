@@ -19,31 +19,22 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] private AudioClip _GoalClip;
     [SerializeField] private AudioClip _KeepClip;
 
-    private bool _isLoading = true;
     private int _soundSettings;
     private int _musicSettings;
 
     private void Awake()
     {
         _soundSettings = PlayerPrefs.GetInt("SoundSettings", 1);
+        _soundToggle.ChangeValue((_soundSettings > 0)? true : false);
         ChangeSoundState((_soundSettings > 0)? true : false);
 
         _musicSettings = PlayerPrefs.GetInt("MusicSettings", 1);
+        _musicToggle.ChangeValue((_musicSettings > 0)? true : false);
         ChangeMusicState((_musicSettings > 0)? true : false);
-    }
-
-    private void Start()
-    {
-        _isLoading = false;
     }
 
     private void Play(AudioClip clip)
     {
-        if (_isLoading)
-        {
-            return;
-        }
-
         _soundSource.clip = clip;
         _soundSource.Play();
     }
@@ -53,7 +44,6 @@ public class AudioPlayer : MonoBehaviour
         var mixer = (value ? _mixerOn : _mixerOff);
 
         _soundSource.outputAudioMixerGroup = mixer;
-        _soundToggle.ChangeValue(value);
 
         var newSettings = value ? 1 : 0;
         if (newSettings != _soundSettings)
@@ -68,10 +58,9 @@ public class AudioPlayer : MonoBehaviour
         var mixer = (value ? _mixerOn : _mixerOff);
 
         _musicSource.outputAudioMixerGroup = mixer;
-        _soundToggle.ChangeValue(value);
 
         var newSettings = value ? 1 : 0;
-        if (newSettings != _soundSettings)
+        if (newSettings != _musicSettings)
         {
             PlayerPrefs.SetInt("MusicSettings", newSettings);
             PlayerPrefs.Save();

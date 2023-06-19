@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Goalkeeper : MonoBehaviour
 {
+    public UnityEvent KeepedEvent;
+
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Transform _moveEndPoint; 
     [SerializeField] private ScoreHandler _handler;
@@ -15,6 +18,7 @@ public class Goalkeeper : MonoBehaviour
     public void Keep()
     {
         _handler.Score++;
+        KeepedEvent?.Invoke();
     }
 
     public void Move(Vector3 direction)
