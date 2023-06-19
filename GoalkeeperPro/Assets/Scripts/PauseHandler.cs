@@ -9,20 +9,15 @@ public class PauseHandler : MonoBehaviour
     public UnityEvent UnpausedEvent;
 
     private float _startTimeScale;
-    private bool _isPauseActive;
 
-    public void ChangeValue()
+    private void OnEnable()
     {
-        _isPauseActive = !_isPauseActive;
+        Pause();
+    }
 
-        if (_isPauseActive)
-        {
-            Pause();
-        }
-        else
-        {
-            Unpause();
-        }
+    private void OnDisable()
+    {
+        Unpause();
     }
 
     private void Start()
