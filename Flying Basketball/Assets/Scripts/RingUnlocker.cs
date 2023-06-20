@@ -13,7 +13,6 @@ public class RingUnlocker : MonoBehaviour
 
         if (ball)
         {
-            Debug.Log("UNLOCKED!");
             UnlockedEvent?.Invoke();
         }
     }

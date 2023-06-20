@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private Vector3 _direction;
-    private float _gravity = -9.8f;
-    private float _strength = 5f;
+    [SerializeField] private Rigidbody2D _body;
+    [SerializeField] private float _strength = 6f;
+
+    private bool _needCalculate = true;
 
     public void Kick()
     {
-        _direction = Vector3.up * _strength;
-    }
-
-    private void Update()
-    {
-        _direction.y += _gravity * Time.deltaTime;
-        transform.position += _direction * Time.deltaTime;
+        _body.velocity = Vector2.up * _strength;
     }
 }

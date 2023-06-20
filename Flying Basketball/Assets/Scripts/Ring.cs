@@ -36,8 +36,6 @@ public class Ring : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("SCORE!");
-
         var ball = collision.gameObject.GetComponent<Ball>();
 
         if (ball)

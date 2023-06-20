@@ -2997,9 +2997,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 138228745634235497, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
-      propertyPath: m_GravityScale
+      propertyPath: m_Interpolate
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 138228745634235497, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 200078305076351622, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: _body
+      value: 
+      objectReference: {fileID: 1580634348}
     - target: {fileID: 5037473732860528636, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3179,6 +3187,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516384280}
   m_CullTransparentMesh: 1
+--- !u!50 &1580634348 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 138228745634235497, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+  m_PrefabInstance: {fileID: 1359158314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1644320963
 GameObject:
   m_ObjectHideFlags: 0
