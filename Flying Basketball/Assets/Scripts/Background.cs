@@ -5,10 +5,19 @@ using UnityEngine;
 public class Background : MonoBehaviour
 {
     [SerializeField] private MeshRenderer _renderer;
-    [SerializeField] private float _animationSpeed;
+    [SerializeField] private float _startSpeed;
 
-    void Update()
+    private float _lowSpeed;
+    private float _speed;
+
+    private void Start()
     {
-        _renderer.material.mainTextureOffset += new Vector2(_animationSpeed * Time.deltaTime, 0);
+        _speed = _startSpeed;
+        _lowSpeed = _speed / 4;
+    }
+
+    private void Update()
+    {
+        _renderer.material.mainTextureOffset += new Vector2(_speed * Time.deltaTime, 0);
     }
 }

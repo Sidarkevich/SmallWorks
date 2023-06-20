@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] private float _forceValue;
-
     private Vector3 _direction;
     private float _gravity = -9.8f;
     private float _strength = 5f;

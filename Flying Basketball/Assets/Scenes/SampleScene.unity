@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 5959259477852732071, guid: e521ea93a16f0dc44ac88a481b051e4f, type: 3}
-  _spawnTime: 1
+  _spawnTime: 5
 --- !u!1 &676908494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +2830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 1202635440}
-  _animationSpeed: 0.0535
+  _startSpeed: 0.0535
 --- !u!1 &1256050942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,6 +2988,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534401120}
     m_Modifications:
+    - target: {fileID: 138228745634235497, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 138228745634235497, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: m_Constraints
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138228745634235497, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5037473732860528636, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3203,7 +3215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 165.5, y: 0}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1644320965
@@ -4008,7 +4020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 35.489998, y: 0}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2053889349

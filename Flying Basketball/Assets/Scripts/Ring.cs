@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Ring : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _startSpeed;
     [SerializeField] private Vector3 _moveDirection;
 
     private float _minPosition;
+    private float _lowSpeed;
+    private float _speed;
 
     private void Start()
     {
         _minPosition = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 5f;
+
+        _speed = _startSpeed;
+        _lowSpeed = _speed / 4;
     }
 
     private void Update()
     {
-        transform.Translate(_moveDirection * _moveSpeed * Time.deltaTime);
+        transform.Translate(_moveDirection * _speed * Time.deltaTime);
 
         if (transform.position.x < _minPosition)
         {
@@ -27,5 +32,17 @@ public class Ring : MonoBehaviour
     private void OnDisable()
     {
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("SCORE!");
+
+        var ball = collision.gameObject.GetComponent<Ball>();
+
+        if (ball)
+        {
+            Destroy(gameObject);
+        }
     }
 }
