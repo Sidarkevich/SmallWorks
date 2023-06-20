@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _ballPrefab;
+    [SerializeField] private GameObject _prefab;
     [SerializeField] private float _spawnTime;
+
+    private float _yMax;
+    private float _yMin;
 
     private float _counter;
     private bool _isActive = false;
@@ -18,6 +21,12 @@ public class Spawner : MonoBehaviour
     private void OnDisable()
     {
         StopSpawn();
+    }
+
+    private void Start()
+    {
+        _yMin = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight*0.25f, 0)).y;
+        _yMax = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight*(1f - 0.35f), 0)).y;
     }
 
     private void StartSpawn()
@@ -39,8 +48,8 @@ public class Spawner : MonoBehaviour
 
             if (_counter > _spawnTime)
             {
-                var xPosition = Random.Range(-_maxSpawnPoint.position.x, _maxSpawnPoint.position.x);
-                Instantiate(_ballPrefab, new Vector3(xPosition, transform.position.y, transform.position.z), Quaternion.identity, _parentTransform);
+                var yPosition = Random.Range(_yMin, _yMax);
+                Instantiate(_prefab, new Vector3(transform.position.x, yPosition, transform.position.z), Quaternion.identity, transform);
 
                 _counter = 0;
             }
