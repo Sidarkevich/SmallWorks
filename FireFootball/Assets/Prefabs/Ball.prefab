@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5656797383298959811}
   - component: {fileID: 7507175474242060974}
   - component: {fileID: 4193395603217553612}
+  - component: {fileID: 6668916332954767058}
   m_Layer: 5
   m_Name: Ball
   m_TagString: Untagged
@@ -90,6 +91,20 @@ PolygonCollider2D:
       - {x: -16.414341, y: -3.757773}
       - {x: -4.908027, y: -11.890737}
       - {x: 9.87049, y: -13.565657}
+--- !u!114 &6668916332954767058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5656797383298959810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c3cf399a687824485a31f767b20236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _body: {fileID: 7507175474242060974}
+  _strength: 4
 --- !u!1 &5656797383487575490
 GameObject:
   m_ObjectHideFlags: 0
