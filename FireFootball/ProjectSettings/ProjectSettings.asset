@@ -8,12 +8,12 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: FireFootball
+  companyName: Fire Football
+  productName: Fire Football
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -273,7 +273,9 @@ PlayerSettings:
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 3289b4ed275b537438c739d236aa9062, type: 3}
+      - {fileID: 2800000, guid: a516055ad62a2ae49bb4c98e5c47f1f3, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
@@ -303,7 +305,8 @@ PlayerSettings:
       m_Height: 81
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: f2cac18b633d875428ffdb26a3d381e4, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 1
@@ -333,7 +336,8 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 1
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: f2cac18b633d875428ffdb26a3d381e4, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
