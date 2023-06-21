@@ -3279,10 +3279,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 945569570944131861, guid: c1c2218e9e7479e4cbeac2303fd37e4d, type: 3}
-  _spawnTime: 2
+  _spawnTime: 1
   _spawnChance: 1
-  _yMin: -350
-  _yMax: -50
+  _yMin: -360
+  _yMax: -40
 --- !u!114 &891159560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3296,8 +3296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 5945358256837153098, guid: 0e6f8ec41cb23e346989bb727c8c673a, type: 3}
-  _spawnTime: 5
-  _spawnChance: 0.3
+  _spawnTime: 2.1
+  _spawnChance: 0.1
   _yMin: -230
   _yMax: 230
 --- !u!1 &904780716
@@ -4749,6 +4749,10 @@ PrefabInstance:
     - target: {fileID: 5656797383298959811, guid: d683c7b7423080a4e86aa59c70f65c5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507175474242060974, guid: d683c7b7423080a4e86aa59c70f65c5a, type: 3}
+      propertyPath: m_Constraints
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d683c7b7423080a4e86aa59c70f65c5a, type: 3}
