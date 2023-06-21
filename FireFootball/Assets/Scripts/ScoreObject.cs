@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScoreObject : MonoBehaviour
 {
+    public UnityEvent ScoreCollectedEvent;
+
     [SerializeField] private int _scoreValue;
     [SerializeField] private Collider2D _collider;
 
@@ -15,6 +18,8 @@ public class ScoreObject : MonoBehaviour
         {
             handler.IncreaseScore(_scoreValue);
             _collider.enabled = false;
+
+            ScoreCollectedEvent?.Invoke();
         }
     }
 }
