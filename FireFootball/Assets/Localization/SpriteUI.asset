@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db626ad063b13545924a9839ac5fa83, type: 3}
+  m_Name: SpriteUI
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: a24a52bb3a7aeed4291047f4456421b7, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 603f262039f103046b9051cb51a14f3f, type: 2}
+  - {fileID: 11400000, guid: 8232d3396ba698643ad8281ab4fdf935, type: 2}
+  m_Extensions: []
+  m_Group: Asset Table
+  references:
+    version: 2
+    RefIds: []
