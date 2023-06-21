@@ -25,6 +25,7 @@ public class ScoreHandler : MonoBehaviour
     public void Loss()
     {
         SaveBestResult();
+        DirectionMovement.AliveValue = 0;
         LossEvent?.Invoke();
     }
 
@@ -50,6 +51,7 @@ public class ScoreHandler : MonoBehaviour
 
     private void OnEnable()
     {
+        DirectionMovement.AliveValue = 1;
         Score = 0;
     }
 }

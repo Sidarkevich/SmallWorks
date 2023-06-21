@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DirectionMovement : MonoBehaviour
 {
+    public static int AliveValue = 1;
+
     [SerializeField] private float _speed;
     [SerializeField] private Vector3 _moveDirection;
 
@@ -16,7 +18,7 @@ public class DirectionMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(_moveDirection * _speed * Time.deltaTime);
+        transform.Translate(_moveDirection * _speed * AliveValue * Time.deltaTime);
 
         if (transform.position.x < _destroyValue)
         {
