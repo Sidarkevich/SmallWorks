@@ -23,7 +23,7 @@ public class AudioPlayer : MonoBehaviour
     {
         _soundSettings = PlayerPrefs.GetInt("SoundSettings", 1);
         ChangeSoundState((_soundSettings > 0)? true : false);
-        _soundToggle.ChangeValue((_soundSettings > 0)? true : false);
+        _soundToggle.SetValue((_soundSettings > 0)? true : false);
     }
 
     private void Play(AudioClip clip)

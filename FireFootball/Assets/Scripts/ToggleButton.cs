@@ -23,9 +23,15 @@ public class ToggleButton : MonoBehaviour
         ValueChangedEvent?.Invoke(_isOn);
     }
 
-    public void ChangeValue(bool value)
+    public void SetValue(bool value)
     {
         _isOn = value;
+        Setup();
+    }
+
+    public void ChangeValue()
+    {
+        _isOn = !_isOn;
         Setup();
     }
 
