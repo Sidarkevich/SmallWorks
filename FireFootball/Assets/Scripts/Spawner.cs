@@ -45,10 +45,7 @@ public class Spawner : MonoBehaviour
             {
                 if (Random.Range(0f, 1f) <= _spawnChance)
                 {
-                    var yPos = Random.Range(_yMin, _yMax);
-                    Debug.Log(yPos);
-
-                    var obj = Instantiate(_prefab, new Vector3(transform.position.x, yPos / 80, transform.position.z), Quaternion.identity, transform);
+                    var obj = Instantiate(_prefab, new Vector3(transform.position.x, Random.Range(_yMin, _yMax) / 80, transform.position.z), Quaternion.identity, transform);
                 }
 
                 _counter = 0;
