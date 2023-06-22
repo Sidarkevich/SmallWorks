@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
         {
             if (_isActive)
             {
+                ball.Stop();
                 PlayerKickedBallEvent?.Invoke();
             }
         }

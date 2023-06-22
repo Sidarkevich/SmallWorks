@@ -23,12 +23,10 @@ public class PlayerLine : MonoBehaviour
         }
 
         ChangePlayer(_players[_players.Length/2]);
-        Ball.MoveSpeedCoeff = 1;
     }
 
     private void OnPlayerKickedBall()
     {
-        Ball.MoveSpeedCoeff = 0;
         LossEvent?.Invoke();
     }
 

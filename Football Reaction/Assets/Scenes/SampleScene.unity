@@ -596,7 +596,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 146170118}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 476030601}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1180594420}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &146170118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,7 +717,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LossEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1180594424}
+        m_TargetAssemblyTypeName: LossAnimation, Assembly-CSharp
+        m_MethodName: StartAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   GoalEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -785,10 +809,10 @@ RectTransform:
   m_Father: {fileID: 22952021}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 137.14, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 137.14, y: -29.5}
+  m_SizeDelta: {x: 12.51, y: 24.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210376896
 MonoBehaviour:
@@ -1319,6 +1343,7 @@ GameObject:
   - component: {fileID: 476030599}
   - component: {fileID: 476030598}
   - component: {fileID: 476030597}
+  - component: {fileID: 476030601}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1411,6 +1436,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &476030601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476030596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2bce6891f299541812585dfd02b306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screens:
+  - {fileID: 1838117123}
+  - {fileID: 1443151864}
+  - {fileID: 939723533}
+  - {fileID: 1180594420}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,7 +1828,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 615260648}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 476030601}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1838117123}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &615260648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1859,10 +1913,10 @@ RectTransform:
   m_Father: {fileID: 22952021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 87.244995, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 87.244995, y: -29.5}
+  m_SizeDelta: {x: 67.28, y: 24.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615650974
 MonoBehaviour:
@@ -2058,7 +2112,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 620867402}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 476030601}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1443151864}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &620867402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3066,7 +3132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1180594421
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3146,7 +3212,19 @@ MonoBehaviour:
       m_Calls: []
   AnimationFinishedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 476030601}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1838117123}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _animationDuration: 1
 --- !u!1 &1197701581
 GameObject:
@@ -3368,7 +3446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1248080862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 476030601}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1838117123}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1248080862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3563,7 +3653,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1427198377}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -4247,7 +4337,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1793115939}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 476030601}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1838117123}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1793115939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4303,7 +4405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1838117124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4810,7 +4912,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2001110501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 476030601}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 939723533}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2001110501
 MonoBehaviour:
   m_ObjectHideFlags: 0

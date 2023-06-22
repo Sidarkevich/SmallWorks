@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public static float MoveSpeedCoeff = 1;
-
     [SerializeField] private Vector3 _moveDirection;
     
     private float _moveSpeed;
     private float _yDestroyPosition;
+
+    public void Stop()
+    {
+        _moveSpeed = 0;
+    }
 
     public void Init(float speed, float yDestroy)
     {
@@ -24,7 +27,7 @@ public class Ball : MonoBehaviour
             Destroy(gameObject);
         }
 
-        transform.Translate(_moveDirection * _moveSpeed * Time.deltaTime * MoveSpeedCoeff);
+        transform.Translate(_moveDirection * _moveSpeed * Time.deltaTime);
     }
 
     private void OnDisable()

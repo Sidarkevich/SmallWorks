@@ -13,7 +13,12 @@ public class LossAnimation : MonoBehaviour
     public void StartAnimation()
     {
         AnimationStartedEvent?.Invoke();
-        StartAnimation();
+        StartCoroutine(AnimationCoroutine());
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     private IEnumerator AnimationCoroutine()
