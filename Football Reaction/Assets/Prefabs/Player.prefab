@@ -49,6 +49,7 @@ MonoBehaviour:
   PlayerClickedEvent:
     m_PersistentCalls:
       m_Calls: []
+  _sprite: {fileID: 3857472486496205972}
 --- !u!61 &1734873300919373757
 BoxCollider2D:
   m_ObjectHideFlags: 0

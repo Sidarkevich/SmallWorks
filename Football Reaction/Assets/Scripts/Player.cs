@@ -21,4 +21,32 @@ public class Player : MonoBehaviour
     {
         PlayerClickedEvent?.Invoke(this);
     }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        var ball = collider.GetComponent<Ball>();
+
+        if (ball)
+        {
+            if (_isActive)
+            {
+                Debug.Log("LOSS!");
+
+                ball.Destroy();
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        var ball = collider.GetComponent<Ball>();
+
+        if (ball)
+        {
+            if (!_isActive)
+            {
+                Debug.Log("SCORE++");
+            }
+        }
+    }
 }
