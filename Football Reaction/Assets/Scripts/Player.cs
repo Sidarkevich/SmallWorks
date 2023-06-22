@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     [HideInInspector] public UnityEvent<Player> PlayerClickedEvent;
+    [HideInInspector] public UnityEvent PlayerKickedBallEvent;
+    [HideInInspector] public UnityEvent PlayerSkippedBallEvent;
 
     [SerializeField] private SpriteRenderer _sprite;
 
@@ -30,9 +32,7 @@ public class Player : MonoBehaviour
         {
             if (_isActive)
             {
-                Debug.Log("LOSS!");
-
-                ball.Destroy();
+                PlayerKickedBallEvent?.Invoke();
             }
         }
     }
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         {
             if (!_isActive)
             {
-                Debug.Log("SCORE++");
+                PlayerSkippedBallEvent?.Invoke();
             }
         }
     }

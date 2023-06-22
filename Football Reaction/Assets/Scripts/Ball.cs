@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    public static float MoveSpeedCoeff = 1;
+
     [SerializeField] private Vector3 _moveDirection;
     
     private float _moveSpeed;
@@ -15,18 +17,18 @@ public class Ball : MonoBehaviour
         _yDestroyPosition = yDestroy;
     }
 
-    public void Destroy()
-    {
-        Destroy(gameObject);
-    }
-
     private void Update()
     {
         if (transform.position.y > _yDestroyPosition)
         {
-            Destroy();
+            Destroy(gameObject);
         }
 
-        transform.Translate(_moveDirection * _moveSpeed * Time.deltaTime);
+        transform.Translate(_moveDirection * _moveSpeed * Time.deltaTime * MoveSpeedCoeff);
+    }
+
+    private void OnDisable()
+    {
+        Destroy(gameObject);
     }
 }
