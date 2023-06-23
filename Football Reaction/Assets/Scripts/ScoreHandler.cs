@@ -11,6 +11,17 @@ public class ScoreHandler : MonoBehaviour
 
     private int _score;
 
+    public void SaveBestResult()
+    {
+        var lastBest = PlayerPrefs.GetInt("BestScore", 0);
+
+        if (_score > lastBest)
+        {
+            PlayerPrefs.SetInt("BestScore", _score);
+            PlayerPrefs.Save();
+        }
+    }
+
     public void IncreaseScore(int value)
     {
         if (_score + value > _score)
