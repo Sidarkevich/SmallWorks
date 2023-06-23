@@ -9,13 +9,12 @@ public class Player : MonoBehaviour
     [HideInInspector] public UnityEvent PlayerKickedBallEvent;
 
     [SerializeField] private SpriteRenderer _sprite;
-
-    private bool _isActive = true;
+    [SerializeField] private Collider2D _collider;
 
     public void ChangeState(bool state)
     {
-        _isActive = state;
-        _sprite.enabled = _isActive;
+        _collider.enabled = state;
+        _sprite.enabled = state;
     }
 
     private void OnMouseUpAsButton()
@@ -29,11 +28,8 @@ public class Player : MonoBehaviour
 
         if (ball)
         {
-            if (_isActive)
-            {
-                ball.Stop();
-                PlayerKickedBallEvent?.Invoke();
-            }
+            ball.Stop();
+            PlayerKickedBallEvent?.Invoke();
         }
     }
 }
