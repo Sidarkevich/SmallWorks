@@ -4,31 +4,25 @@ using UnityEngine;
 
 public class RingCorner : MonoBehaviour
 {
-    [SerializeField] private float strength;
-    private float _timeScale;
-
-    private void Start()
-    {
-        _timeScale = Time.timeScale;
-    }
+    [SerializeField] private float _scaleSign;
 
     private void OnCollisionEnter2D(Collision2D collision2D)
     {
-        var ball = collision2D.gameObject.GetComponent<Ball>();
-        if (ball)
+        var scaler = collision2D.gameObject.GetComponent<SpeedScaler>();
+        if (scaler)
         {
-            //ball.Kick(strength);
-            Time.timeScale = _timeScale / 4;
+            Debug.Log("Enter!");
+            scaler.Scale(_scaleSign);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision2D)
     {
-        var ball = collision2D.gameObject.GetComponent<Ball>();
-
-        if (ball)
+        var scaler = collision2D.gameObject.GetComponent<SpeedScaler>();
+        if (scaler)
         {
-            Time.timeScale = _timeScale;
+            Debug.Log("Exit!");
+            scaler.CancelScale();
         }
     }
 }

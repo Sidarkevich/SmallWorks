@@ -21,7 +21,7 @@ public class Ring : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(_moveDirection * _speed * Time.deltaTime);
+        transform.Translate(_moveDirection * _speed * Time.deltaTime * SpeedScaler.SpeedCorrection);
 
         if (transform.position.x < _minPosition)
         {
