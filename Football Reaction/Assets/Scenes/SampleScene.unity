@@ -2952,6 +2952,7 @@ GameObject:
   - component: {fileID: 665095399}
   - component: {fileID: 665095401}
   - component: {fileID: 665095400}
+  - component: {fileID: 665095402}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -2976,8 +2977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -31.84, y: -5.4}
+  m_SizeDelta: {x: 136.33, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665095400
 MonoBehaviour:
@@ -2999,7 +3000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'SCORE:'
+  m_text: SCORE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53568c1f0b2a62149863a2f9b9cb21e2, type: 2}
   m_sharedMaterial: {fileID: 188952112300652113, guid: 53568c1f0b2a62149863a2f9b9cb21e2, type: 2}
@@ -3034,7 +3035,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3076,6 +3077,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665095398}
   m_CullTransparentMesh: 1
+--- !u!114 &665095402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665095398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:90d742774bbd3c24194af090c8363ff4
+    m_TableEntryReference:
+      m_KeyId: 968173899776
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 665095400}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &718118622
 GameObject:
   m_ObjectHideFlags: 0
@@ -4353,8 +4394,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 68.47, y: -51.9}
+  m_SizeDelta: {x: 63.07, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1112801782
 MonoBehaviour:
@@ -4411,7 +4452,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 4
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4419,7 +4460,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -4574,7 +4615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1124922536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5503,7 +5544,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:90d742774bbd3c24194af090c8363ff4
     m_TableEntryReference:
-      m_KeyId: 661977124864
+      m_KeyId: 157753073553408
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -6172,6 +6213,7 @@ GameObject:
   - component: {fileID: 1518471295}
   - component: {fileID: 1518471297}
   - component: {fileID: 1518471296}
+  - component: {fileID: 1518471298}
   m_Layer: 5
   m_Name: BestScoreText
   m_TagString: Untagged
@@ -6196,8 +6238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -31.84, y: -51.9}
+  m_SizeDelta: {x: 136.33, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1518471296
 MonoBehaviour:
@@ -6219,7 +6261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'BEST SCORE:'
+  m_text: BEST SCORE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53568c1f0b2a62149863a2f9b9cb21e2, type: 2}
   m_sharedMaterial: {fileID: 188952112300652113, guid: 53568c1f0b2a62149863a2f9b9cb21e2, type: 2}
@@ -6254,7 +6296,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -6296,6 +6338,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518471294}
   m_CullTransparentMesh: 1
+--- !u!114 &1518471298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518471294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:90d742774bbd3c24194af090c8363ff4
+    m_TableEntryReference:
+      m_KeyId: 159029182156800
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1518471296}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1615087816
 GameObject:
   m_ObjectHideFlags: 0
@@ -6351,7 +6433,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:90d742774bbd3c24194af090c8363ff4
     m_TableEntryReference:
-      m_KeyId: 661977124864
+      m_KeyId: 160057608720384
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -7109,7 +7191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1838117124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7227,7 +7309,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:90d742774bbd3c24194af090c8363ff4
     m_TableEntryReference:
-      m_KeyId: 478950281216
+      m_KeyId: 160737027248128
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -8045,8 +8127,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 68.47, y: -5.400003}
+  m_SizeDelta: {x: 63.07, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020839146
 MonoBehaviour:
@@ -8103,7 +8185,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 4
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -8111,7 +8193,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}

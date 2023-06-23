@@ -45,6 +45,22 @@ MonoBehaviour:
     m_Localized: PUNKTZAHL
     m_Metadata:
       m_Items: []
+  - m_Id: 157753073553408
+    m_Localized: NOCHMAL ABSPIELEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159029182156800
+    m_Localized: BESTES ERGEBNIS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160057608720384
+    m_Localized: HEIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160737027248128
+    m_Localized: SPIEL IST AUS
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

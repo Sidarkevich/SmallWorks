@@ -45,6 +45,22 @@ MonoBehaviour:
     m_Localized: SCORE
     m_Metadata:
       m_Items: []
+  - m_Id: 157753073553408
+    m_Localized: REJOUER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159029182156800
+    m_Localized: MEILLEUR SCORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160057608720384
+    m_Localized: MAISON
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160737027248128
+    m_Localized: "JEU TERMIN\xC9"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

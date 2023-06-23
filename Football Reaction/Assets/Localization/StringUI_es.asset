@@ -45,6 +45,22 @@ MonoBehaviour:
     m_Localized: PUNTAJE
     m_Metadata:
       m_Items: []
+  - m_Id: 157753073553408
+    m_Localized: JUEGA DE NUEVO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159029182156800
+    m_Localized: "MEJOR PUNTUACI\xD3N"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160057608720384
+    m_Localized: HOGAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 160737027248128
+    m_Localized: JUEGO TERMINADO
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
