@@ -10,17 +10,13 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] private Transform[] _playersTransforms;
 
     private float _yStartPosition;
-    private float _yDestroyPosition;
     private float _yBallSize;
     private int _spawnedCount;
 
     private void Awake()
     {
         _yBallSize = _ballPrefab.GetComponent<Collider2D>().bounds.size.y;
-
-        var camera = Camera.main; 
-        _yStartPosition = camera.ScreenToWorldPoint(Vector3.zero).y - _yBallSize;
-        _yDestroyPosition = camera.ScreenToWorldPoint(new Vector3(camera.pixelWidth, camera.pixelHeight, 0)).y + _yBallSize;
+        _yStartPosition = Camera.main.ScreenToWorldPoint(Vector3.zero).y - _yBallSize;
     }
 
     private void OnEnable()
@@ -42,7 +38,7 @@ public class BallSpawner : MonoBehaviour
             position.y = _yStartPosition;
 
             var ball = Instantiate(_ballPrefab, position, Quaternion.identity, transform);
-            ball.Init(Mathf.Min((_spawnedCount / 10)+2, _maxMoveSpeed), _yDestroyPosition);
+            ball.Init(Mathf.Min((_spawnedCount * 0.4f)+3f, _maxMoveSpeed));
             _spawnedCount++;
 
             yield return new WaitForSeconds(_spawnTime);

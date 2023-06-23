@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
 {
     [HideInInspector] public UnityEvent<Player> PlayerClickedEvent;
     [HideInInspector] public UnityEvent PlayerKickedBallEvent;
-    [HideInInspector] public UnityEvent PlayerSkippedBallEvent;
 
     [SerializeField] private SpriteRenderer _sprite;
 
@@ -34,19 +33,6 @@ public class Player : MonoBehaviour
             {
                 ball.Stop();
                 PlayerKickedBallEvent?.Invoke();
-            }
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collider)
-    {
-        var ball = collider.GetComponent<Ball>();
-
-        if (ball)
-        {
-            if (!_isActive)
-            {
-                PlayerSkippedBallEvent?.Invoke();
             }
         }
     }

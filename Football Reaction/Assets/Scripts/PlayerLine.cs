@@ -6,11 +6,9 @@ using UnityEngine.Events;
 public class PlayerLine : MonoBehaviour
 {
     public UnityEvent LossEvent;
-    public UnityEvent GoalEvent;
     public UnityEvent PlayerChanged;
 
     [SerializeField] private Player[] _players;
-    [SerializeField] private ScoreHandler _score;
 
     private Player _lastPlayer;
 
@@ -20,7 +18,6 @@ public class PlayerLine : MonoBehaviour
         {
             player.PlayerClickedEvent.AddListener(ChangePlayer);
             player.PlayerKickedBallEvent.AddListener(OnPlayerKickedBall);
-            player.PlayerSkippedBallEvent.AddListener(OnPlayerSkippedBall);
         }
 
         ChangePlayer(_players[_players.Length/2]);
@@ -31,19 +28,12 @@ public class PlayerLine : MonoBehaviour
         LossEvent?.Invoke();
     }
 
-    private void OnPlayerSkippedBall()
-    {
-        _score.IncreaseScore(1);
-        GoalEvent?.Invoke();
-    }
-
     private void OnDisable()
     {
         foreach (var player in _players)
         {
             player.PlayerClickedEvent.RemoveListener(ChangePlayer);
             player.PlayerKickedBallEvent.RemoveListener(OnPlayerKickedBall);
-            player.PlayerSkippedBallEvent.RemoveListener(OnPlayerSkippedBall);
         }
     }
 
@@ -56,11 +46,11 @@ public class PlayerLine : MonoBehaviour
 
         if (_lastPlayer)
         {
+            PlayerChanged?.Invoke();
             _lastPlayer.ChangeState(true);
         }
 
         _lastPlayer = player;
         _lastPlayer.ChangeState(false);
-        PlayerChanged?.Invoke();
     }
 }
