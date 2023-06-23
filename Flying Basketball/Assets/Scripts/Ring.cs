@@ -6,10 +6,16 @@ public class Ring : MonoBehaviour
 {
     [SerializeField] private float _startSpeed;
     [SerializeField] private Vector3 _moveDirection;
+    [SerializeField] private Animation _animation;
 
     private float _minPosition;
     private float _lowSpeed;
     private float _speed;
+
+    public void SelfDestroy()
+    {
+        Destroy(gameObject);
+    }
 
     private void Start()
     {
@@ -40,6 +46,7 @@ public class Ring : MonoBehaviour
 
         if (ball)
         {
+            //_animation.Play();
             Destroy(gameObject);
         }
     }
