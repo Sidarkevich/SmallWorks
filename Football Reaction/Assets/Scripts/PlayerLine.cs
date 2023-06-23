@@ -7,6 +7,7 @@ public class PlayerLine : MonoBehaviour
 {
     public UnityEvent LossEvent;
     public UnityEvent GoalEvent;
+    public UnityEvent PlayerChanged;
 
     [SerializeField] private Player[] _players;
     [SerializeField] private ScoreHandler _score;
@@ -60,5 +61,6 @@ public class PlayerLine : MonoBehaviour
 
         _lastPlayer = player;
         _lastPlayer.ChangeState(false);
+        PlayerChanged?.Invoke();
     }
 }
