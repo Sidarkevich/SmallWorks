@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 138228745634235497}
   - component: {fileID: 200078305076351622}
   - component: {fileID: 7113734590996729460}
+  - component: {fileID: 5403402729549032463}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -62,7 +63,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5037473732860528636}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -89,6 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _body: {fileID: 138228745634235497}
   _strength: 6
+  _animation: {fileID: 5403402729549032463}
 --- !u!114 &7113734590996729460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +105,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scaleFactor: 0.2
   _scaleDuration: 1
+--- !u!111 &5403402729549032463
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5037473732860528636}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6c55f6622271276429150312fdd874d4, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 6c55f6622271276429150312fdd874d4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5037473733056806852
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5037473733056806852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.056, y: 0.601, z: 0}
+  m_LocalPosition: {x: 0.473, y: 0.336, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -212,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5037473733207029017}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.729, y: 0.317, z: 0}
+  m_LocalPosition: {x: -0.361, y: -0.036, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
