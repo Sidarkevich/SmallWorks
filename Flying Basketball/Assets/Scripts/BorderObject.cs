@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class BorderObject : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnCollisionEnter2D(Collision2D collider)
     {
-        var handler = collider.GetComponent<ScoreHandler>();
+        Debug.Log("there");
+
+        var handler = collider.gameObject.GetComponent<ScoreHandler>();
 
         if (handler)
         {
