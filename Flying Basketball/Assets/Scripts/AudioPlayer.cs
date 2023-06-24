@@ -9,6 +9,7 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] private AudioSource _soundSource;
     [SerializeField] private AudioSource _musicSource;
     [SerializeField] private AudioSource _clickSource;
+    [SerializeField] private AudioSource _hitSource;
 
     [SerializeField] private AudioMixerGroup _mixerOn;
     [SerializeField] private AudioMixerGroup _mixerOff;
@@ -24,12 +25,6 @@ public class AudioPlayer : MonoBehaviour
         _soundToggle.SetValue((_soundSettings > 0)? true : false);
     }
 
-    private void Play(AudioClip clip)
-    {
-        _soundSource.clip = clip;
-        _soundSource.Play();
-    }
-
     public void ChangeSoundState(bool value)
     {
         var mixer = (value ? _mixerOn : _mixerOff);
@@ -37,6 +32,7 @@ public class AudioPlayer : MonoBehaviour
         _soundSource.outputAudioMixerGroup = mixer;
         _musicSource.outputAudioMixerGroup = mixer;
         _clickSource.outputAudioMixerGroup = mixer;
+        _hitSource.outputAudioMixerGroup = mixer;
 
         var newSettings = value ? 1 : 0;
         if (newSettings != _soundSettings)
@@ -54,5 +50,10 @@ public class AudioPlayer : MonoBehaviour
     public void PlayScore()
     {
         _soundSource.Play();
+    }
+
+    public void PlayHit()
+    {
+        _hitSource.Play();
     }
 }
