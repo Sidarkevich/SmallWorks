@@ -42,12 +42,12 @@ public class Ring : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var ball = collision.gameObject.GetComponent<Ball>();
+        var score = collision.gameObject.GetComponent<ScoreHandler>();
 
-        if (ball)
+        if (score)
         {
-            //_animation.Play();
-            Destroy(gameObject);
+            score.IncreaseScore(1);
+            _animation.Play();
         }
     }
 }
