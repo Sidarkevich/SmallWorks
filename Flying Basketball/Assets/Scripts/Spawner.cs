@@ -5,54 +5,45 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject _prefab;
-    [SerializeField] private float _spawnTime;
 
     private float _yMax;
     private float _yMin;
+    private float _xSpawn;
 
-    private float _counter;
-    private bool _isActive = false;
+    private Ring _lastRing;
+
+    private void Awake()
+    {
+        var mainCamera = Camera.main;
+
+        var xPos = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth*0.55f, Camera.main.pixelHeight, 0)).x;
+
+        _yMin = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight*0.25f, 0)).y;
+        _yMax = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight*(1f - 0.35f), 0)).y;
+        _xSpawn = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth + 50, 0, 0)).x;
+
+        transform.position = new Vector3(xPos, 0, transform.position.z);
+    }
 
     private void OnEnable()
     {
-        StartSpawn();
+        Spawn();
     }
 
-    private void OnDisable()
+    private void Spawn()
     {
-        StopSpawn();
+        var yPosition = Random.Range(_yMin, _yMax);
+        Instantiate(_prefab, new Vector3(_xSpawn, yPosition, transform.position.z), Quaternion.identity, transform);
     }
 
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        _yMin = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight*0.25f, 0)).y;
-        _yMax = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight*(1f - 0.35f), 0)).y;
-    }
+        var ring = collider.GetComponentInParent<Ring>();
 
-    private void StartSpawn()
-    {
-        _isActive = true;
-        _counter = 0;
-    }
-
-    private void StopSpawn()
-    {
-        _isActive = false;
-    }
-
-    private void Update()
-    {
-        if (_isActive)
+        if ((ring) && (ring != _lastRing))
         {
-            _counter += Time.deltaTime;
-
-            if (_counter > _spawnTime)
-            {
-                var yPosition = Random.Range(_yMin, _yMax);
-                Instantiate(_prefab, new Vector3(transform.position.x, yPosition, transform.position.z), Quaternion.identity, transform);
-
-                _counter = 0;
-            }
-        }    
+            Spawn();
+            _lastRing = ring;
+        }
     }
 }

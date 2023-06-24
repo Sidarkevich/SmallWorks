@@ -11,7 +11,6 @@ public class RingCorner : MonoBehaviour
         var scaler = collision2D.gameObject.GetComponent<SpeedScaler>();
         if (scaler)
         {
-            Debug.Log("Enter!");
             scaler.Scale(_scaleSign);
         }
     }
@@ -21,7 +20,6 @@ public class RingCorner : MonoBehaviour
         var scaler = collision2D.gameObject.GetComponent<SpeedScaler>();
         if (scaler)
         {
-            Debug.Log("Exit!");
             scaler.CancelScale();
         }
     }
