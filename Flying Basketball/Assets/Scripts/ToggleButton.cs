@@ -8,7 +8,6 @@ public class ToggleButton : MonoBehaviour
 {
     public UnityEvent<bool> ValueChangedEvent;
 
-    [SerializeField] private Button _button;
     [SerializeField] private Image _OnImage;
     [SerializeField] private Image _OffImage;
 
@@ -36,8 +35,6 @@ public class ToggleButton : MonoBehaviour
 
     private void Setup()
     {
-        _button.targetGraphic = (_isOn ? _OnImage : _OffImage);
-
         _OnImage.gameObject.SetActive(_isOn);
         _OffImage.gameObject.SetActive(!_isOn);
     }
