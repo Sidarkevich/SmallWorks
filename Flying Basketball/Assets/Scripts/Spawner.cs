@@ -16,11 +16,11 @@ public class Spawner : MonoBehaviour
     {
         var mainCamera = Camera.main;
 
-        var xPos = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth*0.55f, Camera.main.pixelHeight, 0)).x;
+        var xPos = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth*0.65f, Camera.main.pixelHeight, 0)).x;
 
         _yMin = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight*0.25f, 0)).y;
         _yMax = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight*(1f - 0.35f), 0)).y;
-        _xSpawn = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth + 50, 0, 0)).x;
+        _xSpawn = mainCamera.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth + 60, 0, 0)).x;
 
         transform.position = new Vector3(xPos, 0, transform.position.z);
     }
