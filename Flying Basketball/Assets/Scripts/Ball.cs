@@ -6,12 +6,14 @@ using UnityEngine.Events;
 public class Ball : MonoBehaviour
 {
     public UnityEvent BallCollisionEvent;
+    public UnityEvent BallKickedEvent;
 
     [SerializeField] private Rigidbody2D _body;
     [SerializeField] private float _strength = 6f;
     [SerializeField] private Animation _animation;
 
-    private Transform _startTransform;
+    private Vector3 _startPosition;
+    private Quaternion _startRotation;
 
     public void ChangeState(bool isAlive)
     {
@@ -25,6 +27,7 @@ public class Ball : MonoBehaviour
 
     public void Kick()
     {
+        BallKickedEvent?.Invoke();
         _animation.Play();
         _body.velocity = Vector2.up * _strength;
     }
@@ -36,12 +39,13 @@ public class Ball : MonoBehaviour
 
     private void Awake()
     {
-        _startTransform = transform;
+        _startPosition = transform.position;
+        _startRotation = transform.rotation;
     }
 
-    private void OnDisable()
+    private void OnEnable()
     {
-        transform.position = _startTransform.position;
-        transform.rotation = _startTransform.rotation;
+        transform.position = _startPosition;
+        transform.rotation = _startRotation;
     }
 }
