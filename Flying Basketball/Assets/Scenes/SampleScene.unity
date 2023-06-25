@@ -3386,6 +3386,34 @@ PrefabInstance:
       propertyPath: LossEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2057894650}
+    - target: {fileID: 200078305076351622, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: BallCollisionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 200078305076351622, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: BallCollisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 200078305076351622, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: BallCollisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11603186}
+    - target: {fileID: 200078305076351622, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: BallCollisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 200078305076351622, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: BallCollisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 200078305076351622, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: BallCollisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 200078305076351622, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
+      propertyPath: BallCollisionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5037473732860528636, guid: 4215cc24776954a48a66c5dc098e0d43, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4133,19 +4161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11603186}
-        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: PlayHit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1747499121
 GameObject:
   m_ObjectHideFlags: 0
@@ -4746,19 +4762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11603186}
-        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: PlayHit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1980716858
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,18 +5271,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1708418552}
-        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
-        m_MethodName: Switch
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 725962205}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1580634350}
         m_TargetAssemblyTypeName: SpeedScaler, Assembly-CSharp
         m_MethodName: Scale
@@ -5310,6 +5302,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1708418552}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 725962205}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

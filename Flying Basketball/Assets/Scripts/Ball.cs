@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Ball : MonoBehaviour
 {
+    public UnityEvent BallCollisionEvent;
+
     [SerializeField] private Rigidbody2D _body;
     [SerializeField] private float _strength = 6f;
     [SerializeField] private Animation _animation;
@@ -26,12 +29,17 @@ public class Ball : MonoBehaviour
         _body.velocity = Vector2.up * _strength;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        BallCollisionEvent?.Invoke();
+    }
+
     private void Awake()
     {
         _startTransform = transform;
     }
 
-    private void OnEnable()
+    private void OnDisable()
     {
         transform.position = _startTransform.position;
         transform.rotation = _startTransform.rotation;
