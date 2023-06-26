@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _stopDistance;
     [SerializeField] private Rigidbody2D _rb;
 
     private Vector3 _target;
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Vector3.Distance(transform.position, _target) < 0.1f)
+        if (Vector3.Distance(transform.position, _target) < _stopDistance)
         {
             _needMove = false;
         }
@@ -28,8 +29,7 @@ public class PlayerMovement : MonoBehaviour
         {
             var direction = _target - transform.position;
 
-            Vector3 step = direction.normalized * 30f * Time.fixedDeltaTime;
-
+            Vector3 step = direction.normalized * _moveSpeed * Time.fixedDeltaTime;
             if (direction.magnitude < step.magnitude)
             {
                 step = direction;

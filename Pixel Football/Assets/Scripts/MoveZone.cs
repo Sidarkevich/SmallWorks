@@ -5,8 +5,10 @@ using UnityEngine.Events;
 
 public class MoveZone : MonoBehaviour
 {
-    public UnityEvent BallEnteredEvent;
-    public UnityEvent BallOutEvent;
+    [HideInInspector] public UnityEvent<Transform> BallEnteredEvent;
+    [HideInInspector] public UnityEvent BallOutEvent;
+
+    public Transform Center => _center;
 
     [SerializeField] private Transform _ball;
     [SerializeField] private Transform _bottomLeft;
@@ -23,7 +25,7 @@ public class MoveZone : MonoBehaviour
             {
                 if (!_ballInZone)
                 {
-                    Debug.Log("Ball in zone!");
+                    BallEnteredEvent?.Invoke(_ball);
                     _ballInZone = true;
                 }
 
@@ -33,7 +35,7 @@ public class MoveZone : MonoBehaviour
 
         if (_ballInZone)
         {
-            Debug.Log("Ball out of zone!");
+            BallOutEvent?.Invoke();
             _ballInZone = false;
         }
     }
