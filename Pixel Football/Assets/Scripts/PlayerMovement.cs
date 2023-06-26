@@ -17,21 +17,24 @@ public class PlayerMovement : MonoBehaviour
         _needMove = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (_needMove)
-        {
-            _rb.MovePosition(_target);
-        }
-
-        // if (_needMove)
-        // {
-        //     transform.position = Vector3.MoveTowards(transform.position, _target, Time.deltaTime * _moveSpeed);
-        // }
-
-        if (Vector3.Distance(transform.position, _target) < 0.001f)
+        if (Vector3.Distance(transform.position, _target) < 0.1f)
         {
             _needMove = false;
+        }
+
+        if (_needMove)
+        {
+            var direction = _target - transform.position;
+
+            Vector3 step = direction.normalized * 30f * Time.fixedDeltaTime;
+
+            if (direction.magnitude < step.magnitude)
+            {
+                step = direction;
+            }
+            _rb.MovePosition(transform.position + step);
         }
     }
 }
