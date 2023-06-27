@@ -36,4 +36,12 @@ public class Ball : MonoBehaviour
         _startPosition = transform.position;
         _startRotation = transform.rotation;
     }
+
+    private void OnBecameInvisible()
+    {
+        if (gameObject.activeInHierarchy)
+        {
+            transform.position = _startPosition;
+        }
+    }
 }
