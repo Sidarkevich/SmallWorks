@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
 
     private Vector3 _target;
     private bool _needMove;
+    private Vector3 _startPosition;
 
     public void SetTarget(Vector3 target)
     {
@@ -36,5 +37,15 @@ public class CharacterMovement : MonoBehaviour
             }
             _rb.MovePosition(transform.position + step);
         }
+    }
+
+    private void OnEnable()
+    {
+        transform.position = _startPosition;
+    }
+
+    private void Awake()
+    {
+        _startPosition = transform.position;
     }
 }

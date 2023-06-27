@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5063870547597023069}
   - component: {fileID: 6649569285179211603}
   - component: {fileID: 5318206399943380426}
-  - component: {fileID: 8484138294144897282}
+  - component: {fileID: 2221759753094083548}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -123,8 +123,8 @@ MonoBehaviour:
   _moveSpeed: 40
   _stopDistance: 0.1
   _rb: {fileID: 6649569285179211603}
---- !u!70 &8484138294144897282
-CapsuleCollider2D:
+--- !u!60 &2221759753094083548
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,6 +136,26 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04, y: 0}
-  m_Size: {x: 0.89, y: 1.9}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.39, y: 1.9}
+    newSize: {x: 2.39, y: 1.9}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.44710675, y: -0.89322567}
+      - {x: -0.38738987, y: -0.9484475}
+      - {x: 0.3231715, y: -0.9524977}
+      - {x: 0.3713084, y: -0.8930605}
+      - {x: 0.07870051, y: -0.06568081}
+      - {x: 0.22053017, y: 0.6414314}
+      - {x: 0.17946346, y: 0.86217266}
+      - {x: -0.032878377, y: 0.9634956}
+      - {x: -0.25340328, y: 0.8823463}
+      - {x: -0.30089015, y: 0.6485675}
+      - {x: -0.17814693, y: -0.06968261}

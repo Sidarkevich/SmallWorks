@@ -1495,18 +1495,6 @@ MonoBehaviour:
   FinishedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1981661038}
-        m_TargetAssemblyTypeName: Ball, Assembly-CSharp
-        m_MethodName: SetPosition
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 441170789}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1981661037}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1519,7 +1507,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  _duration: 2
+      - m_Target: {fileID: 1981661038}
+        m_TargetAssemblyTypeName: Ball, Assembly-CSharp
+        m_MethodName: SetPosition
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 441170789}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _duration: 1.5
 --- !u!1 &346393176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2737,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1981661037}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   _duration: 1
 --- !u!114 &708197481
 MonoBehaviour:
@@ -2791,6 +2803,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1981661037}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   _duration: 1
 --- !u!1 &757799547
@@ -5624,18 +5648,6 @@ MonoBehaviour:
   FinishedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1981661038}
-        m_TargetAssemblyTypeName: Ball, Assembly-CSharp
-        m_MethodName: SetPosition
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 620095884}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1981661037}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -5648,4 +5660,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  _duration: 2
+      - m_Target: {fileID: 1981661038}
+        m_TargetAssemblyTypeName: Ball, Assembly-CSharp
+        m_MethodName: SetPosition
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 620095884}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _duration: 1.5
