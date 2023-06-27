@@ -146,6 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5235759990305869978}
   - component: {fileID: 3948968446852713515}
+  - component: {fileID: 6726013156709516001}
   m_Layer: 0
   m_Name: BottomBarbell
   m_TagString: Untagged
@@ -194,6 +195,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07, y: 0.22}
   m_EdgeRadius: 0
+--- !u!114 &6726013156709516001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054963376965479025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb0f90a955f3be4590ec5abd87ab356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2076753602271331960
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1044023962677049309}
   - component: {fileID: 8673034559338488021}
+  - component: {fileID: 8916439108633603482}
   m_Layer: 0
   m_Name: TopBarbell
   m_TagString: Untagged
@@ -252,3 +269,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07, y: 0.22}
   m_EdgeRadius: 0
+--- !u!114 &8916439108633603482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076753602271331960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb0f90a955f3be4590ec5abd87ab356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
