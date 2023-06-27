@@ -5,8 +5,10 @@ using UnityEngine.Events;
 
 public class ScoreHandler : MonoBehaviour
 {
-    public UnityEvent LossEvent;
+    public UnityEvent WinEvent;
     public UnityEvent ScoreIncreasedEvent;
+
+    [SerializeField] private int _scoreToWin;
 
     [HideInInspector] public UnityEvent<int> ScoreChangedEvent;
 
@@ -19,12 +21,12 @@ public class ScoreHandler : MonoBehaviour
         {
             _score = value;
             ScoreChangedEvent?.Invoke(_score);
-        }
-    }
 
-    public void Loss()
-    {
-        LossEvent?.Invoke();
+            if (_score >= _scoreToWin)
+            {
+                WinEvent?.Invoke();
+            }
+        }
     }
 
     public void Increase(int value)

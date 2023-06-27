@@ -100,12 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267e5eb417a6d4c4198a007284b4fbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LossEvent:
+  WinEvent:
     m_PersistentCalls:
       m_Calls: []
   ScoreIncreasedEvent:
     m_PersistentCalls:
       m_Calls: []
+  _scoreToWin: 7
   ScoreChangedEvent:
     m_PersistentCalls:
       m_Calls: []
