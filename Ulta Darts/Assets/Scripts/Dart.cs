@@ -9,6 +9,7 @@ public class Dart : MonoBehaviour
     [SerializeField] private ScoreHandler _score;
 
     private Vector3 _startPosition;
+    private Quaternion _startRotation;
     private Vector3 _targetPosition;
     private bool _isMoving;
     private int _maxHitValue;
@@ -19,6 +20,8 @@ public class Dart : MonoBehaviour
         {
             return;
         }
+
+        transform.up = target - transform.position;
 
         _isMoving = true;
         _targetPosition = target;
@@ -34,12 +37,20 @@ public class Dart : MonoBehaviour
         if (_maxHitValue > 0)
         {
             _score.IncreaseScore(_maxHitValue);
-            _maxHitValue = 0;
-            transform.position = _startPosition;
+        }
+        else
+        {
+            _score.Loss();
         }
 
-        _score.Loss();
+        SetStartValues();
         _maxHitValue = 0;
+    }
+
+    private void SetStartValues()
+    {
+        transform.position = _startPosition;
+        transform.rotation = _startRotation;
     }
 
     private void Update()
@@ -58,11 +69,12 @@ public class Dart : MonoBehaviour
 
     private void OnEnable()
     {
-        transform.position = _startPosition;
+        SetStartValues();
     }
 
     private void Awake()
     {
         _startPosition = transform.position;
+        _startRotation = transform.rotation;
     }
 }
