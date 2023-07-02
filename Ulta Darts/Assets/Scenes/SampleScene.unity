@@ -779,7 +779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &161849670
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1215,6 +1215,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1288,6 +1289,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6523b5c498f2924b9f1af1ddbae9b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 519420031}
+  _score: {fileID: 1560575056}
 --- !u!1 &553202283
 GameObject:
   m_ObjectHideFlags: 0
@@ -3516,7 +3531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1454419262
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4956,6 +4971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dart
       objectReference: {fileID: 0}
+    - target: {fileID: 7649004419012760466, guid: 6a7d6ed06ca707d43a027f9640c93f36, type: 3}
+      propertyPath: _hit
+      value: 
+      objectReference: {fileID: 519420033}
     - target: {fileID: 7649004419012760466, guid: 6a7d6ed06ca707d43a027f9640c93f36, type: 3}
       propertyPath: _score
       value: 

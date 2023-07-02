@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class Dart : MonoBehaviour
 {
+    [SerializeField] private HitCheck _hit;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _stopDistance;
-    [SerializeField] private ScoreHandler _score;
 
     private Vector3 _startPosition;
     private Quaternion _startRotation;
     private Vector3 _targetPosition;
     private bool _isMoving;
-    private int _maxHitValue;
-    private Board _hitBoard;
 
     public void SetTarget(Vector3 target)
     {
@@ -28,28 +26,6 @@ public class Dart : MonoBehaviour
         _targetPosition = target;
     }
 
-    public void Hit(Board board, int value)
-    {
-        _maxHitValue = value;
-        _hitBoard = board;
-    }
-
-    private void CheckHit()
-    {
-        if (_maxHitValue > 0)
-        {
-            _score.IncreaseScore(_maxHitValue);
-            _hitBoard.Disappear();
-            SetStartValues();
-        }
-        else
-        {
-            _score.Loss();
-        }
-
-        _maxHitValue = 0;
-    }
-
     private void SetStartValues()
     {
         transform.position = _startPosition;
@@ -62,7 +38,11 @@ public class Dart : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, _targetPosition) < _stopDistance)
             {
-                CheckHit();
+                if (_hit.Check(transform.position))
+                {
+                    SetStartValues();
+                }
+
                 _isMoving = false;
             }
 
