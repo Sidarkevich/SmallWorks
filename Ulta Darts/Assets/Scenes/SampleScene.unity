@@ -655,6 +655,10 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 86ffdf5332cf9a1449b6f72a6145d7e5, type: 2}
   - {fileID: 7400000, guid: 6d081029621f6a740bb521b61ad386dc, type: 2}
+  - {fileID: 7400000, guid: dc7e98dd1e6ae914a819f8b032a973dd, type: 2}
+  - {fileID: 7400000, guid: 32c7e9d3ccc2b544abf27df516fd8ee5, type: 2}
+  - {fileID: 7400000, guid: b14b49fd988c7ce4181daeaea09fdf9b, type: 2}
+  - {fileID: 7400000, guid: 1dec74250a7acff4093a088522aebbbc, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -689,6 +693,10 @@ MonoBehaviour:
   _levels:
   - {fileID: 11400000, guid: c98db39c73a5a5d488215c3ebb137b0b, type: 2}
   - {fileID: 11400000, guid: c855a125f8f4c7c498064471caacc183, type: 2}
+  - {fileID: 11400000, guid: ffb9ea9a28430c44ea5e1f403953345a, type: 2}
+  - {fileID: 11400000, guid: a54b54999aec75d4caff7db1b306701e, type: 2}
+  - {fileID: 11400000, guid: 1bd375c41d9d90d4da1115575bb22302, type: 2}
+  - {fileID: 11400000, guid: 68798809e3d209840ae41214c3af89b7, type: 2}
   _levelAnimation: {fileID: 106776563}
 --- !u!1001 &137094392
 PrefabInstance:
@@ -745,7 +753,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 1202988037826301351, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
+    - target: {fileID: 1594446113168006975, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -2173,7 +2181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -120
+      value: -57
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2211,7 +2219,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1202988037826301351, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
+    - target: {fileID: 1594446113168006975, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -2277,7 +2285,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 1202988037826301351, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
+    - target: {fileID: 1594446113168006975, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -2473,7 +2481,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1202988037826301351, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
+    - target: {fileID: 1594446113168006975, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -4833,7 +4841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4871,7 +4879,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board (0)
       objectReference: {fileID: 0}
-    - target: {fileID: 1202988037826301351, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
+    - target: {fileID: 1238298238112819603, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594446113168006975, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
