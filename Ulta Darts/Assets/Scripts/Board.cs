@@ -25,12 +25,16 @@ public class Board : MonoBehaviour
     public void InvokeDisappearedEvent()
     {
         _disappearedEvent?.Invoke();
-        _disappearedEvent.RemoveAllListeners();
     }
 
     private void OnEnable()
     {
         _animation.clip = _appearanceClip;
         _animation.Play();
+    }
+
+    private void OnDisable()
+    {
+        _disappearedEvent.RemoveAllListeners();
     }
 }

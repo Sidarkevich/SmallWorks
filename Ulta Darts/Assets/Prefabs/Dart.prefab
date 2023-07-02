@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hit: {fileID: 0}
-  _moveSpeed: 7
+  _moveSpeed: 9
   _stopDistance: 0.1

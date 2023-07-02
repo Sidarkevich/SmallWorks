@@ -9,7 +9,7 @@ public class HitCheck : MonoBehaviour
 
     public bool Check(Vector3 point)
     {
-        RaycastHit2D hit = Physics2D.CircleCast(point, 0.1f, Vector3.zero);
+        RaycastHit2D hit = Physics2D.CircleCast(point, 0.01f, Vector3.zero);
 
         if (hit)
         {
@@ -19,7 +19,7 @@ public class HitCheck : MonoBehaviour
             {
                 _score.IncreaseScore(zone.HitValue);
                 zone.Board.Disappear();
-                
+
                 return true;
             }
         }
