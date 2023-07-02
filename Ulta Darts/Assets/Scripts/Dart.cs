@@ -40,13 +40,13 @@ public class Dart : MonoBehaviour
         {
             _score.IncreaseScore(_maxHitValue);
             _hitBoard.Disappear();
+            SetStartValues();
         }
         else
         {
             _score.Loss();
         }
 
-        SetStartValues();
         _maxHitValue = 0;
     }
 
