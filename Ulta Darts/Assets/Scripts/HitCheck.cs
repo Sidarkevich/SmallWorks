@@ -9,16 +9,31 @@ public class HitCheck : MonoBehaviour
 
     public bool Check(Vector3 point)
     {
-        RaycastHit2D hit = Physics2D.CircleCast(point, 0.01f, Vector3.zero);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(point, 0.001f, Vector3.one);
 
-        if (hit)
+        if (hits.Length > 0)
         {
-            var zone = hit.transform.GetComponent<HitZone>();
+            var maxHit = 0;
+            HitZone resultZone = null;
 
-            if (zone)
+            foreach (var hit in hits)
             {
-                _score.IncreaseScore(zone.HitValue);
-                zone.Board.Disappear();
+                var zone = hit.transform.GetComponent<HitZone>();
+
+                if (zone)
+                {
+                    if (zone.HitValue > maxHit)
+                    {
+                        resultZone = zone;
+                        maxHit = zone.HitValue;
+                    }
+                }
+            }
+
+            if (resultZone)
+            {
+                _score.IncreaseScore(resultZone.HitValue);
+                resultZone.Board.Disappear();
 
                 return true;
             }
