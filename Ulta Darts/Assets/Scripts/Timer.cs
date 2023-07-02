@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
 
     [SerializeField] private float _duration;
 
-    public void Start()
+    public void StartTimer()
     {
         StartedEvent?.Invoke();
         StartCoroutine(AnimationCoroutine());
