@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1202988037826301348}
-  - component: {fileID: 2379588089263848232}
   m_Layer: 5
   m_Name: Board
   m_TagString: Untagged
@@ -33,19 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2379588089263848232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202988037826301351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0502b42212311541a2ec691eab6c89c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _disappearance: {fileID: 3650006503012412550}
 --- !u!1 &1594446113168006975
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,13 +43,14 @@ GameObject:
   - component: {fileID: 1238298238112819603}
   - component: {fileID: 7507279504111610991}
   - component: {fileID: 3650006503012412550}
+  - component: {fileID: 2338631677561219805}
   m_Layer: 5
   m_Name: AnimationObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1238298238112819603
 Transform:
   m_ObjectHideFlags: 0
@@ -143,13 +130,29 @@ Animation:
   m_GameObject: {fileID: 1594446113168006975}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 4896fa2168bb2f24ba5f2b133e7a8fc9, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations:
+  - {fileID: 7400000, guid: a3b0d04c93305e5409e34b57afdd5591, type: 2}
   - {fileID: 7400000, guid: 4896fa2168bb2f24ba5f2b133e7a8fc9, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &2338631677561219805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594446113168006975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0502b42212311541a2ec691eab6c89c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 3650006503012412550}
+  _disappearanceClip: {fileID: 7400000, guid: 4896fa2168bb2f24ba5f2b133e7a8fc9, type: 2}
+  _appearanceClip: {fileID: 7400000, guid: a3b0d04c93305e5409e34b57afdd5591, type: 2}
 --- !u!1 &7542846810648228155
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e0d6817e51ae34e8539eab25713cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _board: {fileID: 2379588089263848232}
+  _board: {fileID: 2338631677561219805}
   _hitValue: 2
 --- !u!58 &4175796982787806468
 CircleCollider2D:
@@ -258,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e0d6817e51ae34e8539eab25713cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _board: {fileID: 2379588089263848232}
+  _board: {fileID: 2338631677561219805}
   _hitValue: 3
 --- !u!58 &5551842653139298750
 CircleCollider2D:
@@ -321,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e0d6817e51ae34e8539eab25713cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _board: {fileID: 2379588089263848232}
+  _board: {fileID: 2338631677561219805}
   _hitValue: 1
 --- !u!58 &2695887528381502464
 CircleCollider2D:

@@ -654,8 +654,9 @@ Animation:
   m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400000, guid: 86ffdf5332cf9a1449b6f72a6145d7e5, type: 2}
+  - {fileID: 7400000, guid: 6d081029621f6a740bb521b61ad386dc, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &106776564
@@ -670,8 +671,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f507aa1d7014d45893fb314c2e7226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelPassedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 106776564}
+        m_TargetAssemblyTypeName: LevelHandler, Assembly-CSharp
+        m_MethodName: ChangeToRandomLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _levels:
   - {fileID: 11400000, guid: c98db39c73a5a5d488215c3ebb137b0b, type: 2}
+  - {fileID: 11400000, guid: c855a125f8f4c7c498064471caacc183, type: 2}
   _levelAnimation: {fileID: 106776563}
 --- !u!1001 &137094392
 PrefabInstance:
@@ -2156,7 +2173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -57
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4816,7 +4833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.z
