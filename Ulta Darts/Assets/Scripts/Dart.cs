@@ -13,6 +13,7 @@ public class Dart : MonoBehaviour
     private Vector3 _targetPosition;
     private bool _isMoving;
     private int _maxHitValue;
+    private Board _hitBoard;
 
     public void SetTarget(Vector3 target)
     {
@@ -27,9 +28,10 @@ public class Dart : MonoBehaviour
         _targetPosition = target;
     }
 
-    public void Hit(int value)
+    public void Hit(Board board, int value)
     {
-        _maxHitValue = Mathf.Max(_maxHitValue, value); 
+        _maxHitValue = value;
+        _hitBoard = board;
     }
 
     private void CheckHit()
@@ -37,6 +39,7 @@ public class Dart : MonoBehaviour
         if (_maxHitValue > 0)
         {
             _score.IncreaseScore(_maxHitValue);
+            _hitBoard.Disappear();
         }
         else
         {

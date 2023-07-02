@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HitZone : MonoBehaviour
 {
+    [SerializeField] private Board _board;
     [SerializeField] private int _hitValue;
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -12,7 +13,7 @@ public class HitZone : MonoBehaviour
 
         if (dart)
         {
-            dart.Hit(_hitValue);
+            dart.Hit(_board, _hitValue);
         }
     }
 }
