@@ -613,8 +613,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 106776562}
-  - component: {fileID: 106776563}
   - component: {fileID: 106776564}
+  - component: {fileID: 106776563}
   m_Layer: 5
   m_Name: Boards
   m_TagString: Untagged
@@ -642,7 +642,23 @@ Transform:
   m_Father: {fileID: 1560575055}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &106776563
+--- !u!111 &106776563
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106776561}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 86ffdf5332cf9a1449b6f72a6145d7e5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &106776564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,31 +667,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 106776561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53cdd786e0bb5f843aded2ef61b81edb, type: 3}
+  m_Script: {fileID: 11500000, guid: 99f507aa1d7014d45893fb314c2e7226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
---- !u!95 &106776564
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106776561}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: acdc83a873fdd914685bad4505c5fb27, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  _levels:
+  - {fileID: 11400000, guid: c98db39c73a5a5d488215c3ebb137b0b, type: 2}
+  _levelAnimation: {fileID: 106776563}
 --- !u!1001 &137094392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -733,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301351, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
@@ -2265,7 +2262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301351, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
@@ -4815,11 +4812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 110
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1202988037826301348, guid: a980a1abb86819849a4af0d98a66abb4, type: 3}
       propertyPath: m_LocalPosition.z
