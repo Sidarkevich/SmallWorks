@@ -5,12 +5,19 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Toggle))]
 public class ToggleExtension : MonoBehaviour, IPointerClickHandler 
 {
-    public UnityEvent ClickedEvent;
+    [SerializeField] private UnityEvent<bool> _clickedEvent;
+    private Toggle _toggle;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        ClickedEvent?.Invoke();
+        _clickedEvent?.Invoke(_toggle.isOn);
+    }
+
+    private void Awake()
+    {
+        _toggle = GetComponent<Toggle>();
     }
 }
