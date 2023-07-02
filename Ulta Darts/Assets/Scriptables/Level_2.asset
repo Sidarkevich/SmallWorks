@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Level_2
   m_EditorClassIdentifier: 
   _activeCount: 3
-  _movementClip: {fileID: 7400000, guid: dc7e98dd1e6ae914a819f8b032a973dd, type: 2}
+  _movementClip: {fileID: 7400000, guid: 86ffdf5332cf9a1449b6f72a6145d7e5, type: 2}
