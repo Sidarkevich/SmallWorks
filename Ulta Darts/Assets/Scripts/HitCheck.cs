@@ -24,6 +24,7 @@ public class HitCheck : MonoBehaviour
             }
         }
 
+        _score.Loss();
         return false;
     }
 }
