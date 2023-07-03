@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringUI_fr-FR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr-FR
+  m_SharedData: {fileID: 11400000, guid: 778ba78002f7e3b43bcf0bd323c45df8, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 18298261504
+    m_Localized: 'essai d''archer
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110048661504
+    m_Localized: "param\xE8tres\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 218270093312
+    m_Localized: "< Fran\xE7ais >"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 279741812736
+    m_Localized: "la fin\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367629258752
+    m_Localized: jouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 423572885504
+    m_Localized: "son\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480141463552
+    m_Localized: "musique\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 545505497088
+    m_Localized: rejouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 608759795712
+    m_Localized: maison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685662359552
+    m_Localized: "sur\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739018100736
+    m_Localized: "d\xE9sactiv\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 787877548032
+    m_Localized: "meilleur score\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 865543475200
+    m_Localized: score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 994270859264
+    m_Localized: manquer
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

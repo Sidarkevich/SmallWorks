@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringUI Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: StringUI
+  m_TableCollectionNameGuidString: 778ba78002f7e3b43bcf0bd323c45df8
+  m_Entries:
+  - m_Id: 18298261504
+    m_Key: Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110048661504
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 218270093312
+    m_Key: Localization
+    m_Metadata:
+      m_Items: []
+  - m_Id: 279741812736
+    m_Key: End
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367629258752
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 423572885504
+    m_Key: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480141463552
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 545505497088
+    m_Key: Play again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 608759795712
+    m_Key: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685662359552
+    m_Key: On
+    m_Metadata:
+      m_Items: []
+  - m_Id: 739018100736
+    m_Key: Off
+    m_Metadata:
+      m_Items: []
+  - m_Id: 787877548032
+    m_Key: Best score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 865543475200
+    m_Key: Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 994270859264
+    m_Key: Miss
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4645366338574876724
+  references:
+    version: 2
+    RefIds:
+    - rid: 4645366338574876724
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1688388365736
