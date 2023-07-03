@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Arrow : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rb;
-    [SerializeField] private float _maxForce;
-    
+    [SerializeField] private ScoreHandler _scoreHandler;
+    [SerializeField] private MissHandler _missHandler;
+
+    private Rigidbody2D _rb;
     private Vector2 _startPosition;
     private Quaternion _startRotation;
     private bool _isFlying;
@@ -37,10 +39,17 @@ public class Arrow : MonoBehaviour
 
     private void OnBecameInvisible()
     {
+        _missHandler.Miss();
+
         _isFlying = false;
         _rb.simulated = false;
         transform.position = _startPosition;
         transform.rotation = _startRotation;
         _rb.velocity = Vector2.zero;
+    }
+
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody2D>();
     }
 }
