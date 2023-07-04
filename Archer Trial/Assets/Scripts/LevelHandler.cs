@@ -7,6 +7,11 @@ public class LevelHandler : MonoBehaviour
 {
     [SerializeField] private UnityEvent _lossEvent;
 
+    public void Next()
+    {
+        
+    }
+
     public void Loss()
     {
         _lossEvent?.Invoke();

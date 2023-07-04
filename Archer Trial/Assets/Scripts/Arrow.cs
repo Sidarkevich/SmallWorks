@@ -13,6 +13,14 @@ public class Arrow : MonoBehaviour
     private Quaternion _startRotation;
     private bool _isFlying;
 
+    public void Hit()
+    {
+        _rb.simulated = false;
+        _isFlying = false;
+
+        _scoreHandler.Increase(1);
+    }
+
     public void Shoot(Vector2 mousePos)
     {
         _startPosition = transform.position;
