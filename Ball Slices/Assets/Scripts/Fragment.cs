@@ -10,4 +10,10 @@ public class Fragment : MonoBehaviour
     public FragmentData Data => _data;
 
     private FragmentData _data;
+
+    public void Init(FragmentData data)
+    {
+        _data = data;
+        _image.sprite = data.Sprite;
+    }
 }

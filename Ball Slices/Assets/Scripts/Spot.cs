@@ -7,6 +7,8 @@ public class Spot : MonoBehaviour
 {
     private List<Fragment> _fragments = new List<Fragment>();
 
+    public Fragment GetFirst => _fragments[0];
+
     public bool CanBeAdded(Fragment applicant)
     {
         bool result = true;
@@ -24,11 +26,12 @@ public class Spot : MonoBehaviour
 
     public void AddFragment(Fragment fragment)
     {
-
+        _fragments.Add(fragment);
+        fragment.transform.SetParent(transform);
     }
 
     public void RemoveFragment(Fragment fragment)
     {
-
+        _fragments.Remove(fragment);
     }
 }
