@@ -9,7 +9,7 @@ public class FragmentSpawner : MonoBehaviour
 
     public Fragment Spawn()
     {
-        var fragment = Instantiate(_prefab, transform.position, Quaternion.identity, transform);
+        var fragment = Instantiate(_prefab, Vector3.zero, Quaternion.identity, transform);
         fragment.Init(_dataList[Random.Range(0, _dataList.Count)]);
         return fragment;
     }

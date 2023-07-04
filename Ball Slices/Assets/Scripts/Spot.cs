@@ -27,7 +27,8 @@ public class Spot : MonoBehaviour
     public void AddFragment(Fragment fragment)
     {
         _fragments.Add(fragment);
-        fragment.transform.SetParent(transform);
+        fragment.gameObject.transform.SetParent(transform);
+        fragment.gameObject.transform.position = transform.position;
     }
 
     public void RemoveFragment(Fragment fragment)
