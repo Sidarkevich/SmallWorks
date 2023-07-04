@@ -1,0 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Fragment : MonoBehaviour
+{
+    [SerializeField] private Image _image;
+
+    public FragmentData Data => _data;
+
+    private FragmentData _data;
+}
