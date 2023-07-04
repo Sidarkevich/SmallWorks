@@ -5,7 +5,10 @@ using System.Linq;
 
 public class Spot : MonoBehaviour
 {
+    [SerializeField] private List<Spot> _neighbors;
+
     private List<Fragment> _fragments = new List<Fragment>();
+    private int _totalScore;
 
     public Fragment GetFirst => _fragments[0];
 
@@ -17,7 +20,10 @@ public class Spot : MonoBehaviour
         {
             foreach (var position in applicant.Data.FragmentPositions)
             {
-                result = !(fragment.Data.FragmentPositions.Contains(position));
+                if (fragment.Data.FragmentPositions.Contains(position))
+                {
+                    result = false;
+                }
             }
         }
 
@@ -29,6 +35,13 @@ public class Spot : MonoBehaviour
         _fragments.Add(fragment);
         fragment.gameObject.transform.SetParent(transform);
         fragment.gameObject.transform.position = transform.position;
+
+        _totalScore += fragment.Data.ScoreValue;
+
+        if (_totalScore >= 6)
+        {
+
+        }
     }
 
     public void RemoveFragment(Fragment fragment)
