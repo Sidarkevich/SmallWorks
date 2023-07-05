@@ -56,11 +56,21 @@ public class Spot : MonoBehaviour
         _fragments.Remove(fragment);
     }
 
-    public void Clear()
+    public void Clear(bool needAnimation)
     {
-        foreach (var fragment in _fragments)
+        if (needAnimation)
         {
-            fragment.Disappear();
+            foreach (var fragment in _fragments)
+            {
+                fragment.Disappear();
+            }
+        }
+        else
+        {
+            foreach (var fragment in _fragments)
+            {
+                fragment.SelfDestroy();
+            }
         }
 
         _fragments.Clear();

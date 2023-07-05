@@ -33,7 +33,7 @@ public class SpotsHandler : MonoBehaviour
             spot.Spot.FullOfFragmentsEvent.RemoveListener(OnFullOfFragments);
         }
 
-        _spots.Clear();
+        Clear();
     }
 
     private void OnClicked(Spot clicked)
@@ -69,25 +69,36 @@ public class SpotsHandler : MonoBehaviour
 
         var total = _spots[currentIndex].TotalScore + _spots[nextIndex].TotalScore + _spots[prevIndex].TotalScore;
 
-        _spots[currentIndex].Clear();
-        _spots[nextIndex].Clear();
-        _spots[prevIndex].Clear();
+        _spots[currentIndex].Clear(true);
+        _spots[nextIndex].Clear(true);
+        _spots[prevIndex].Clear(true);
 
         _score.IncreaseScore(total);
     }
 
     private bool CanBeAddedToAny(Fragment fragment)
     {
-        bool result = true;
-
         foreach (var spot in _spots)
         {
-            if (!spot.CanBeAdded(fragment))
+            if (spot.CanBeAdded(fragment))
             {
-                result = false;
+                Debug.Log("Can be placed to " + spot.gameObject.name);
+                return true;
             }
         }
 
-        return result;
+        return false;
+    }
+
+    private void Clear()
+    {
+        _centralSpot.Clear(false);
+        _nextSpot.Clear(false);
+
+        foreach (var spot in _spots)
+        {
+            spot.Clear(false);
+        }
+        _spots.Clear();
     }
 }
