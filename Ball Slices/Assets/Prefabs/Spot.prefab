@@ -93,7 +93,7 @@ MonoBehaviour:
   FullOfFragmentsEvent:
     m_PersistentCalls:
       m_Calls: []
-  _animationDuration: 0.35
+  _animationDuration: 0.25
 --- !u!114 &4136604408425283569
 MonoBehaviour:
   m_ObjectHideFlags: 0

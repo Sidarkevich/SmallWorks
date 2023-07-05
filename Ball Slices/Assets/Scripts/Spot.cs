@@ -8,6 +8,7 @@ using DG.Tweening;
 public class Spot : MonoBehaviour
 {
     public UnityEvent<Spot> FullOfFragmentsEvent;
+    public UnityEvent FragmentAddedEvent;
 
     [SerializeField] private float _animationDuration;
 
@@ -43,7 +44,8 @@ public class Spot : MonoBehaviour
 
         if (needAnimation)
         {
-            fragment.transform.DOMove(transform.position, _animationDuration).OnComplete(CheckScore);
+            fragment.transform.DOMove(transform.position, _animationDuration).SetEase(Ease.InCubic);
+            CheckScore();
             return;
         }
 
@@ -82,6 +84,9 @@ public class Spot : MonoBehaviour
         if (_totalScore >= 6)
         {
             FullOfFragmentsEvent?.Invoke(this);
+            return;
         }
+
+        FragmentAddedEvent?.Invoke();
     }
 }

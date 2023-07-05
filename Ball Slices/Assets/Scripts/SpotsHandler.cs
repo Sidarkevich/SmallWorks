@@ -18,6 +18,7 @@ public class SpotsHandler : MonoBehaviour
         {
             spot.ClickedEvent.AddListener(OnClicked);
             spot.Spot.FullOfFragmentsEvent.AddListener(OnFullOfFragments);
+            spot.Spot.FragmentAddedEvent.AddListener(OnFragmentAdded);
             _spots.Add(spot.Spot);
         }
 
@@ -31,6 +32,7 @@ public class SpotsHandler : MonoBehaviour
         {
             spot.ClickedEvent.RemoveListener(OnClicked);
             spot.Spot.FullOfFragmentsEvent.RemoveListener(OnFullOfFragments);
+            spot.Spot.FragmentAddedEvent.RemoveListener(OnFragmentAdded);
         }
 
         Clear();
@@ -74,6 +76,11 @@ public class SpotsHandler : MonoBehaviour
         _spots[prevIndex].Clear(true);
 
         _score.IncreaseScore(total);
+    }
+
+    private void OnFragmentAdded()
+    {
+        _score.IncreaseScore(1);
     }
 
     private bool CanBeAddedToAny(Fragment fragment)
