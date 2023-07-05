@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Fragment : MonoBehaviour
 {
     [SerializeField] private Image _image;
+    [SerializeField] private Animation _animation;
 
     public FragmentData Data => _data;
 
@@ -19,11 +20,16 @@ public class Fragment : MonoBehaviour
 
     public void Disappear()
     {
-        SelfDestroy();
+        _animation.Play("DisappearAnimation");
     }
 
     public void SelfDestroy()
     {
         Destroy(gameObject);
+    }
+
+    private void OnEnable()
+    {
+        _animation.Play("AppearAnimation");
     }
 }

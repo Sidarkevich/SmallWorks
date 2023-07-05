@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6111873594792892202}
   - component: {fileID: 6111873594792892201}
   - component: {fileID: 6111873594792892203}
+  - component: {fileID: 2269201336004649103}
   m_Layer: 5
   m_Name: Fragment
   m_TagString: Untagged
@@ -90,3 +91,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 6111873594792892201}
+  _animation: {fileID: 2269201336004649103}
+--- !u!111 &2269201336004649103
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6111873594792892215}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: a68620c6a9f97194b8777bde2f834afc, type: 2}
+  - {fileID: 7400000, guid: 45bf416fcf468f14c9883205623b66a6, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
