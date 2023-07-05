@@ -82,7 +82,6 @@ public class SpotsHandler : MonoBehaviour
         {
             if (spot.CanBeAdded(fragment))
             {
-                Debug.Log("Can be placed to " + spot.gameObject.name);
                 return true;
             }
         }
