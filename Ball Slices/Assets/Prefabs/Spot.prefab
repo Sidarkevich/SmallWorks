@@ -90,6 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca15634b98eee4f47a5e836ba6b632e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FullOfFragmentsEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _animationDuration: 0.35
 --- !u!114 &4136604408425283569
 MonoBehaviour:
   m_ObjectHideFlags: 0

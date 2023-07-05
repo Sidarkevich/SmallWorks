@@ -23,6 +23,11 @@ public class Fragment : MonoBehaviour
         _animation.Play("DisappearAnimation");
     }
 
+    public void Appear()
+    {
+        _animation.Play("AppearAnimation");
+    }
+
     public void SelfDestroy()
     {
         Destroy(gameObject);
@@ -30,6 +35,6 @@ public class Fragment : MonoBehaviour
 
     private void OnEnable()
     {
-        _animation.Play("AppearAnimation");
+        Appear();
     }
 }

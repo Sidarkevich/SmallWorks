@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class Spot : MonoBehaviour
 {
     public UnityEvent<Spot> FullOfFragmentsEvent;
+
+    [SerializeField] private float _animationDuration;
 
     private List<Fragment> _fragments = new List<Fragment>();
     private int _totalScore;
@@ -32,18 +35,20 @@ public class Spot : MonoBehaviour
         return result;
     }
 
-    public void AddFragment(Fragment fragment)
+    public void AddFragment(Fragment fragment, bool needAnimation)
     {
         _fragments.Add(fragment);
-        fragment.gameObject.transform.SetParent(transform);
-        fragment.gameObject.transform.position = transform.position;
-
         _totalScore += fragment.Data.ScoreValue;
+        fragment.gameObject.transform.SetParent(transform);
 
-        if (_totalScore >= 6)
+        if (needAnimation)
         {
-            FullOfFragmentsEvent?.Invoke(this);
+            fragment.transform.DOMove(transform.position, _animationDuration).OnComplete(CheckScore);
+            return;
         }
+
+        fragment.gameObject.transform.position = transform.position;
+        CheckScore();
     }
 
     public void RemoveFragment(Fragment fragment)
@@ -60,5 +65,13 @@ public class Spot : MonoBehaviour
 
         _fragments.Clear();
         _totalScore = 0;
+    }
+
+    private void CheckScore()
+    {
+        if (_totalScore >= 6)
+        {
+            FullOfFragmentsEvent?.Invoke(this);
+        }
     }
 }
