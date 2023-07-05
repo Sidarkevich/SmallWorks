@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class SpotInput : MonoBehaviour, IPointerClickHandler
 {
     public UnityEvent<Spot> ClickedEvent;
+    public Spot Spot => _spot;
 
     private Spot _spot;
 

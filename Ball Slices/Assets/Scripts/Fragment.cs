@@ -16,4 +16,14 @@ public class Fragment : MonoBehaviour
         _data = data;
         _image.sprite = data.Sprite;
     }
+
+    public void Disappear()
+    {
+        SelfDestroy();
+    }
+
+    public void SelfDestroy()
+    {
+        Destroy(gameObject);
+    }
 }
