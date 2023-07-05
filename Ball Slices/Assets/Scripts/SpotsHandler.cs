@@ -50,13 +50,13 @@ public class SpotsHandler : MonoBehaviour
             _centralSpot.AddFragment(fragment, false);
             fragment.Appear();
 
-            var newFragment = _spawner.Spawn();
-            _nextSpot.AddFragment(newFragment, false);
-
-            if (!CanBeAddedToAny(newFragment))
+            if (!CanBeAddedToAny(fragment))
             {
                 _score.Loss();
+                return;
             }
+
+            _nextSpot.AddFragment(_spawner.Spawn(), false);
         }
     }
 

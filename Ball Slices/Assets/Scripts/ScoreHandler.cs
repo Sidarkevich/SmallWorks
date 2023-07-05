@@ -24,6 +24,7 @@ public class ScoreHandler : MonoBehaviour
 
     public void Loss()
     {
+        Debug.Log("Loss!");
         SaveBestResult();
         LossEvent?.Invoke();
     }
