@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8097870121392752702}
   - component: {fileID: 8097870121392752701}
   - component: {fileID: 5297809689083472000}
+  - component: {fileID: 5714344122084333083}
   m_Layer: 5
   m_Name: Cactus_0
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8097870121392752696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 90, y: 90, z: 90}
+  m_LocalScale: {x: 80, y: 80, z: 80}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,7 +97,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.3195722, y: 0.4512476}
@@ -117,3 +118,15 @@ MonoBehaviour:
   _needRandomSpeed: 0
   _speedRange: {x: 8, y: 12}
   _moveDirection: {x: -1, y: 0, z: 0}
+--- !u!114 &5714344122084333083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097870121392752696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323ade3082ce3be4cb16e568a97049c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

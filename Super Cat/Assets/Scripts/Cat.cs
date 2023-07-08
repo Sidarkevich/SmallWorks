@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cat : MonoBehaviour
 {
+    [SerializeField] private ScoreHandler _handler;
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private GroundCkeck _groundCheck;
     [SerializeField] private float _jumpForce;
@@ -16,6 +17,11 @@ public class Cat : MonoBehaviour
         {
             _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
         }
+    }
+
+    public void Hit()
+    {
+        _handler.Loss();
     }
 
     private void Awake()
