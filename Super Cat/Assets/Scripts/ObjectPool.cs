@@ -27,7 +27,8 @@ public class ObjectPool : MonoBehaviour
         }
 
         _freeCount = 0;
-        var additional = Instantiate(_prefabs[Random.Range(0, _prefabs.Count)], transform); 
+        var additional = Instantiate(_prefabs[Random.Range(0, _prefabs.Count)], transform);
+        additional.AddReleaseListener(OnReleased);
         _objects.Add(additional);
         return additional;
     }

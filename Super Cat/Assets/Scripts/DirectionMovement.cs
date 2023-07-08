@@ -7,9 +7,11 @@ public class DirectionMovement : MonoBehaviour
 {
     private UnityEvent<DirectionMovement> ReleasedEvent = new UnityEvent<DirectionMovement>();
 
-    [SerializeField] private float _speed;
+    [SerializeField] private bool _needRandomSpeed;
+    [SerializeField] private Vector2 _speedRange;
     [SerializeField] private Vector3 _moveDirection;
-
+    
+    private float _speed;
     private float _destroyValue;
 
     public void AddReleaseListener(UnityAction<DirectionMovement> callback)
@@ -29,6 +31,18 @@ public class DirectionMovement : MonoBehaviour
         if (transform.position.x < _destroyValue)
         {
             ReleasedEvent?.Invoke(this);
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (_needRandomSpeed)
+        {
+            _speed = Random.Range(_speedRange.x, _speedRange.y);
+        }
+        else
+        {
+            _speed = _speedRange.x;
         }
     }
 }
