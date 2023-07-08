@@ -6,8 +6,9 @@ public class Cat : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private GroundCkeck _groundCheck;
-
     [SerializeField] private float _jumpForce;
+
+    private Vector3 _startPosition;
 
     public void Jump()
     {
@@ -15,5 +16,15 @@ public class Cat : MonoBehaviour
         {
             _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
         }
+    }
+
+    private void Awake()
+    {
+        _startPosition = transform.position;
+    }
+
+    private void OnEnable()
+    {
+        transform.position = _startPosition;
     }
 }
