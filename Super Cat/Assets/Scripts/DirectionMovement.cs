@@ -14,14 +14,6 @@ public class DirectionMovement : MonoBehaviour
     private float _speed;
     private float _destroyValue;
 
-    public void IncreaseSpeed(float delta)
-    {
-        if (delta > 0)
-        {
-            _speed += delta;
-        }
-    }
-
     public void AddReleaseListener(UnityAction<DirectionMovement> callback)
     {
         ReleasedEvent.AddListener(callback);
@@ -52,5 +44,21 @@ public class DirectionMovement : MonoBehaviour
         {
             _speed = _speedRange.x;
         }
+    }
+
+    private void Awake()
+    {
+        if (_needRandomSpeed)
+        {
+            return;
+        }
+
+        var score = FindObjectOfType<ScoreHandler>();
+        score.ScoreChangedEvent.AddListener(UpdateSpeed);
+    }
+
+    private void UpdateSpeed(int score)
+    {
+        _speed = _speedRange.x + ((score / 5) * 0.1f);
     }
 }

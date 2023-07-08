@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb21e5601492dc549ae330d9d361a68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _time: 1
+  _time: 2
   _chance: 0.5
   _yOffset: 2
   _pool: {fileID: 12695017}
@@ -369,7 +369,7 @@ MonoBehaviour:
   ScoreChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  _scorePerSecond: 4
+  _scorePerSecond: 3
 --- !u!1 &236388726
 GameObject:
   m_ObjectHideFlags: 0
