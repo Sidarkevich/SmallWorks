@@ -14,6 +14,14 @@ public class DirectionMovement : MonoBehaviour
     private float _speed;
     private float _destroyValue;
 
+    public void IncreaseSpeed(float delta)
+    {
+        if (delta > 0)
+        {
+            _speed += delta;
+        }
+    }
+
     public void AddReleaseListener(UnityAction<DirectionMovement> callback)
     {
         ReleasedEvent.AddListener(callback);

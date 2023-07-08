@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _needRandomSpeed: 1
-  _speedRange: {x: 4, y: 8}
+  _speedRange: {x: 1, y: 4}
   _moveDirection: {x: -1, y: 0, z: 0}
