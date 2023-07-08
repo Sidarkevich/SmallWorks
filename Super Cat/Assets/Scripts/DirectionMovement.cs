@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class DirectionMovement : MonoBehaviour
 {
-    private UnityEvent<DirectionMovement> ReleasedEvent;
+    private UnityEvent<DirectionMovement> ReleasedEvent = new UnityEvent<DirectionMovement>();
 
     [SerializeField] private float _speed;
     [SerializeField] private Vector3 _moveDirection;
