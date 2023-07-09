@@ -9,29 +9,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: StringUI_es
+  m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
+  m_Name: SpriteUI_es
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: es
-  m_SharedData: {fileID: 11400000, guid: 24545d9bba3049f458968586020f72ae, type: 2}
+  m_SharedData: {fileID: 11400000, guid: b8aac291d07d4924cbecd07900e354c8, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 329976991744
-    m_Localized: SONIDO
+  - m_Id: 147822563328
+    m_Localized: c41518c960e540c4988368ab4fc2cdb0
     m_Metadata:
       m_Items: []
-  - m_Id: 456766607360
-    m_Localized: "M\xDASICA"
+  - m_Id: 370544300032
+    m_Localized: a598cce64e5add842a4e026910a7f54a
     m_Metadata:
       m_Items: []
-  - m_Id: 512517296128
-    m_Localized: "< Espa\xF1ol >"
+  - m_Id: 479910776832
+    m_Localized: 696f515bb1328844797df1596b7858fd
     m_Metadata:
       m_Items: []
-  - m_Id: 2833548660736
-    m_Localized: Nivel
+  - m_Id: 581769449472
+    m_Localized: 6b468ef227fdad34eaa761f401253b4b
     m_Metadata:
       m_Items: []
   references:

@@ -30,6 +30,10 @@ MonoBehaviour:
     m_Localized: < ENGLISH >
     m_Metadata:
       m_Items: []
+  - m_Id: 2833548660736
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
