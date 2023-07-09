@@ -14,4 +14,9 @@ public class LevelData : ScriptableObject
     public bool IsOpen => _isOpen;
     public LevelCondition Prefab => _prefab;
     public Sprite Sprite => _sprite;
+
+    public void OpenLevel()
+    {
+        _isOpen = true;
+    }
 }
