@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class LevelIterator : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class LevelIterator : MonoBehaviour
 
     [SerializeField] private List<LevelData> _levels;
     [SerializeField] private Transform _levelsRoot;
+    [SerializeField] private TMP_Text _indexText;
     
     private LevelData _current;
     private LevelCondition _level;
@@ -26,7 +28,8 @@ public class LevelIterator : MonoBehaviour
         {
             _current = _levels[index];
             _current.OpenLevel();
-            _level = Instantiate(_current.Prefab, _levelsRoot); 
+            _level = Instantiate(_current.Prefab, _levelsRoot);
+            _indexText.text = (index+1).ToString();
 
             _level.PassedEvent.AddListener(OnPassed);
             _level.LostEvent.AddListener(OnLost);
