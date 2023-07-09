@@ -7,6 +7,7 @@ using TMPro;
 public class LevelIterator : MonoBehaviour
 {
     public UnityEvent GamePassedEvent;
+    public UnityEvent LevelPassedEvent;
 
     [SerializeField] private List<LevelData> _levels;
     [SerializeField] private Transform _levelsRoot;
@@ -39,6 +40,8 @@ public class LevelIterator : MonoBehaviour
 
     private void OnPassed()
     {
+        LevelPassedEvent?.Invoke();
+
         if (_current.Index == _levels.Count-1)
         {
             GamePassedEvent?.Invoke();
