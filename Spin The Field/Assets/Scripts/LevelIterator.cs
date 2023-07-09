@@ -29,6 +29,7 @@ public class LevelIterator : MonoBehaviour
         {
             _current = _levels[index];
             _current.OpenLevel();
+            SaveSystem.SaveLevelStatus(_current.Index, SaveSystem.OpenedLevelStatus);
             _level = Instantiate(_current.Prefab, _levelsRoot);
             _indexText.text = (index+1).ToString();
             _levelsRoot.rotation = new Quaternion();
@@ -54,5 +55,21 @@ public class LevelIterator : MonoBehaviour
     private void OnLost()
     {
         SetCurrent(_current.Index);
+    }
+
+    private void Awake()
+    {
+        foreach (var level in _levels)
+        {
+            if (level.IsOpen)
+            {
+                continue;
+            }
+
+            if (SaveSystem.LoadLevelStatus(level.Index) > 0)
+            {
+                level.OpenLevel();
+            }
+        }
     }
 }

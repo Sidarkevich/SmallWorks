@@ -5509,7 +5509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelRoot: {fileID: 470493275}
   _axis: Mouse X
-  _rotationSpeed: 5
+  _rotationSpeed: 2
 --- !u!114 &1737716358
 MonoBehaviour:
   m_ObjectHideFlags: 0
