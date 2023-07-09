@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private float _rotationSpeed;
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        _rb.MoveRotation(_rb.rotation - _rb.velocity.x * _rotationSpeed);
     }
 }

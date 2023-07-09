@@ -30,6 +30,7 @@ public class LevelIterator : MonoBehaviour
             _current.OpenLevel();
             _level = Instantiate(_current.Prefab, _levelsRoot);
             _indexText.text = (index+1).ToString();
+            _levelsRoot.rotation = new Quaternion();
 
             _level.PassedEvent.AddListener(OnPassed);
             _level.LostEvent.AddListener(OnLost);
