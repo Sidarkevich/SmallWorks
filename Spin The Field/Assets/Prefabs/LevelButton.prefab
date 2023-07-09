@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3890668197058012369}
   - component: {fileID: 3890668197058012368}
   - component: {fileID: 3890668197058012383}
+  - component: {fileID: 7370422993448294096}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: Untagged
@@ -120,4 +121,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3890668197058012368}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7370422993448294096}
+        m_TargetAssemblyTypeName: LevelButton, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7370422993448294096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890668197058012381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01016c66288eeb40becd93c88764972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _iterator: {fileID: 0}
+  _level: {fileID: 0}
+  _button: {fileID: 3890668197058012383}
+  _image: {fileID: 3890668197058012368}
