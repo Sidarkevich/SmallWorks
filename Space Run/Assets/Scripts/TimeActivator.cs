@@ -35,9 +35,7 @@ public class TimeActivator : MonoBehaviour
                 
                 var xPos = Random.Range(_leftBorder.position.x, _rightBorder.position.x);
                 spawned.transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
-
-                var element = spawned.GetComponent<Element>();
-                element.Init(_score, _pool);
+                spawned.Element.Init(_score, _pool);
                 SpeedHandler.ChangeSpeed(SpeedHandler.SpeedValue + _speedIncrease);
             }
         }

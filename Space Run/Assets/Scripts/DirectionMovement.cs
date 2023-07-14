@@ -5,19 +5,14 @@ using UnityEngine.Events;
 
 public class DirectionMovement : MonoBehaviour
 {
+    [SerializeField] private UnityEvent _outOfViewEvent;
     [SerializeField] private Vector3 _moveDirection;
     
-    private UnityEvent<DirectionMovement> ReleasedEvent = new UnityEvent<DirectionMovement>();
     private float _destroyValue;
-
-    public void AddReleaseListener(UnityAction<DirectionMovement> callback)
-    {
-        ReleasedEvent.AddListener(callback);
-    }
 
     private void Start()
     {
-        _destroyValue = Camera.main.ScreenToWorldPoint(Vector3.zero).y - 1f;
+        _destroyValue = Camera.main.ScreenToWorldPoint(Vector3.zero).y;
     }
 
     private void Update()
@@ -26,7 +21,7 @@ public class DirectionMovement : MonoBehaviour
 
         if (transform.position.y < _destroyValue)
         {
-            ReleasedEvent?.Invoke(this);
+            _outOfViewEvent?.Invoke();
         }
     }
 }

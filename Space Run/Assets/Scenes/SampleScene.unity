@@ -881,11 +881,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabs:
-  - {fileID: -3884157782319149508, guid: 2ab65e83f8c63694eb65acb119181b7f, type: 3}
-  - {fileID: 2439638261108251641, guid: eb23d316ff3dc4744862cf1c871b9875, type: 3}
-  - {fileID: -5189445129071101508, guid: 3e6d97234571d9b4bba264a85f7d1514, type: 3}
-  - {fileID: -8026006781842852808, guid: fb1d1b9e8fe500741af8cd7812eedb04, type: 3}
-  - {fileID: 3163420506838751442, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+  - {fileID: -760017284540744698, guid: 2ab65e83f8c63694eb65acb119181b7f, type: 3}
+  - {fileID: -352260102641781184, guid: eb23d316ff3dc4744862cf1c871b9875, type: 3}
+  - {fileID: -8172067235943111147, guid: 3e6d97234571d9b4bba264a85f7d1514, type: 3}
+  - {fileID: 2786563203395832956, guid: fb1d1b9e8fe500741af8cd7812eedb04, type: 3}
+  - {fileID: 1038159419804108002, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
 --- !u!114 &350865389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -904,7 +904,7 @@ MonoBehaviour:
   _leftBorder: {fileID: 709196836}
   _pool: {fileID: 350865388}
   _score: {fileID: 1825588570}
-  _speedIncrease: 0.2
+  _speedIncrease: 0.15
 --- !u!1 &353028708
 GameObject:
   m_ObjectHideFlags: 0

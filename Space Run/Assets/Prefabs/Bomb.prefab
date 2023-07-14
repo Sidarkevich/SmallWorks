@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 884568953470462143}
   - component: {fileID: 2439638261108251641}
   - component: {fileID: -7705485409530082997}
+  - component: {fileID: -352260102641781184}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -107,6 +108,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ad7caee1bf3154cafa484b99ad01ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outOfViewEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -352260102641781184}
+        m_TargetAssemblyTypeName: Releasable, Assembly-CSharp
+        m_MethodName: Release
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _moveDirection: {x: 0, y: -1, z: 0}
 --- !u!114 &-7705485409530082997
 MonoBehaviour:
@@ -120,3 +136,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7739fb80def7018428f3ddce3c141cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-352260102641781184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884568953470462141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3ff9ce728e5db4dade03f01b0894ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _element: {fileID: -7705485409530082997}

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6593591747333091298}
   - component: {fileID: -5189445129071101508}
   - component: {fileID: -5887195157367940659}
+  - component: {fileID: -8172067235943111147}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -107,6 +108,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ad7caee1bf3154cafa484b99ad01ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _outOfViewEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8172067235943111147}
+        m_TargetAssemblyTypeName: Releasable, Assembly-CSharp
+        m_MethodName: Release
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _moveDirection: {x: 0, y: -1, z: 0}
 --- !u!114 &-5887195157367940659
 MonoBehaviour:
@@ -121,3 +137,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedDecrease: 1
+--- !u!114 &-8172067235943111147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593591747333091300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3ff9ce728e5db4dade03f01b0894ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _element: {fileID: -5887195157367940659}

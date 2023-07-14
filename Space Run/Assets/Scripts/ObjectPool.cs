@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    [SerializeField] private List<DirectionMovement> _prefabs;
-    private List<DirectionMovement> _objects;
-    private List<DirectionMovement> _inactiveObjects = new List<DirectionMovement>();
+    [SerializeField] private List<Releasable> _prefabs;
+    private List<Releasable> _objects;
+    private List<Releasable> _inactiveObjects = new List<Releasable>();
 
     public void DeactivateAllType(System.Type type)
     {
@@ -14,9 +14,7 @@ public class ObjectPool : MonoBehaviour
         {
             if (obj.gameObject.activeInHierarchy)
             {
-                var element = obj.GetComponent<Element>();
-
-                if (element.GetType() == type)
+                if (obj.Element.GetType() == type)
                 {
                     OnReleased(obj);
                 }
@@ -24,7 +22,7 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    public DirectionMovement ActivateObject()
+    public Releasable ActivateObject()
     {
         if (_inactiveObjects.Count != 0)
         {
@@ -42,7 +40,7 @@ public class ObjectPool : MonoBehaviour
 
     private void Awake()
     {
-        _objects = new List<DirectionMovement>(transform.GetComponentsInChildren<DirectionMovement>());
+        _objects = new List<Releasable>(transform.GetComponentsInChildren<Releasable>());
 
         foreach (var obj in _objects)
         {
@@ -62,10 +60,10 @@ public class ObjectPool : MonoBehaviour
         DeactivateAll();
     }
 
-    private void OnReleased(DirectionMovement movement)
+    private void OnReleased(Releasable releasable)
     {
-        movement.gameObject.SetActive(false);
-        _inactiveObjects.Add(movement);
+        releasable.gameObject.SetActive(false);
+        _inactiveObjects.Add(releasable);
     }
 
     private void DeactivateAll()
