@@ -5,9 +5,8 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     [SerializeField] private List<DirectionMovement> _prefabs;
-    
     private List<DirectionMovement> _objects;
-    private List<DirectionMovement> _inactiveObjects;
+    private List<DirectionMovement> _inactiveObjects = new List<DirectionMovement>();
 
     public DirectionMovement ActivateObject()
     {
@@ -54,9 +53,12 @@ public class ObjectPool : MonoBehaviour
 
     private void DeactivateAll()
     {
+        _inactiveObjects.Clear();
+        
         foreach (var obj in _objects)
         {
             obj.gameObject.SetActive(false);
+            _inactiveObjects.Add(obj);
         }
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6593591747333091296}
   - component: {fileID: 6593591747333091299}
   - component: {fileID: 6593591747333091298}
+  - component: {fileID: -5189445129071101508}
   m_Layer: 5
   m_Name: Clock
   m_TagString: Untagged
@@ -93,3 +94,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 13
+--- !u!114 &-5189445129071101508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593591747333091300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ad7caee1bf3154cafa484b99ad01ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveDirection: {x: 0, y: -1, z: 0}

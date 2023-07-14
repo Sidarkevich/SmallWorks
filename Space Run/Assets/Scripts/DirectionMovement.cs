@@ -9,7 +9,7 @@ public class DirectionMovement : MonoBehaviour
 
     [SerializeField] private Vector3 _moveDirection;
     
-    private float _speed;
+    private float _speed = 2.0f;
     private float _destroyValue;
 
     public void AddReleaseListener(UnityAction<DirectionMovement> callback)
@@ -19,7 +19,7 @@ public class DirectionMovement : MonoBehaviour
 
     private void Start()
     {
-        _destroyValue = Camera.main.ScreenToWorldPoint(Vector3.zero).y - 10f;
+        _destroyValue = Camera.main.ScreenToWorldPoint(Vector3.zero).y - 1f;
     }
 
     private void Update()
