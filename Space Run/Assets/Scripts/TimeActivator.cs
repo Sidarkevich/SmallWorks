@@ -10,12 +10,13 @@ public class TimeActivator : MonoBehaviour
     [SerializeField] private Transform _leftBorder;
     [SerializeField] private ObjectPool _pool;
     [SerializeField] private ScoreHandler _score;
+    [SerializeField] private SpeedHandler _speed;
     [SerializeField] private float _speedIncrease;
 
     private void OnEnable()
     {
         StartCoroutine(ActivationCoroutine());
-        SpeedHandler.ResetSpeed();
+        _speed.ResetSpeed();
     }
 
     private void OnDisable()
@@ -35,8 +36,9 @@ public class TimeActivator : MonoBehaviour
                 
                 var xPos = Random.Range(_leftBorder.position.x, _rightBorder.position.x);
                 spawned.transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
-                spawned.Element.Init(_score, _pool);
-                SpeedHandler.ChangeSpeed(SpeedHandler.SpeedValue + _speedIncrease);
+                spawned.Element.Init(_score, _pool, _speed);
+                spawned.Movement.Init(_speed);
+                _speed.ChangeSpeed(_speed.SpeedValue + _speedIncrease);
             }
         }
     }

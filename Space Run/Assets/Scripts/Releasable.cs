@@ -7,7 +7,9 @@ using UnityEngine.Events;
 public class Releasable : MonoBehaviour
 {
     [SerializeField] private Element _element;
+    [SerializeField] private DirectionMovement _movement;
     public Element Element => _element;
+    public DirectionMovement Movement => _movement;
 
     private UnityEvent<Releasable> ReleasedEvent = new UnityEvent<Releasable>();
 

@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class SpeedHandler : MonoBehaviour
 {
-    public const float StartSpeed = 2.0f;
-    public const float MinSpeed = 1.0f;
-    public static float SpeedValue;
+    [SerializeField] private float _startSpeed;
+    [SerializeField] private float _minSpeed = 1.0f;
+    
+    public float SpeedValue => _speedValue;
+    
+    private float _speedValue;
 
-    public static void ChangeSpeed(float newValue)
+    public void ChangeSpeed(float newValue)
     {
-        SpeedValue = Mathf.Max(newValue, SpeedValue);
+        _speedValue = Mathf.Max(newValue, _minSpeed);
     }
 
-    public static void ResetSpeed()
+    public void ResetSpeed()
     {
-        SpeedValue = StartSpeed;
+        _speedValue = _startSpeed;
     }
 }

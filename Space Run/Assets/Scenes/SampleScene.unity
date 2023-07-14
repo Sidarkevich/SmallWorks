@@ -904,6 +904,7 @@ MonoBehaviour:
   _leftBorder: {fileID: 709196836}
   _pool: {fileID: 350865388}
   _score: {fileID: 1825588570}
+  _speed: {fileID: 0}
   _speedIncrease: 0.15
 --- !u!1 &353028708
 GameObject:
@@ -4940,6 +4941,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ff3031fbfc2f94684b9b80cad425fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startSpeed: 2
+  _minSpeed: 1
 --- !u!1 &1853649853
 GameObject:
   m_ObjectHideFlags: 0

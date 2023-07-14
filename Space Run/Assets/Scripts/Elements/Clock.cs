@@ -8,6 +8,6 @@ public class Clock : Element
 
     protected override void Effect()
     {
-        SpeedHandler.ChangeSpeed(SpeedHandler.SpeedValue - _speedDecrease);
+        _speed.ChangeSpeed(_speed.SpeedValue - _speedDecrease);
     }
 }
