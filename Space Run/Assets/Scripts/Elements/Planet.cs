@@ -6,6 +6,6 @@ public class Planet : Element
 {
     protected override void Effect()
     {
-        throw new System.NotImplementedException();
+        _score.IncreaseScore(1);
     }
 }

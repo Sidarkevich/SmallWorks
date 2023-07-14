@@ -6,6 +6,6 @@ public class Bomb : Element
 {
     protected override void Effect()
     {
-        _pool.DeactivateAllType(this.GetType());
+        _pool.DeactivateAllType(typeof(Asteroid));
     }
 }

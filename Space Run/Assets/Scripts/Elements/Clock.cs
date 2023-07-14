@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Clock : Element
 {
+    [SerializeField] private float _speedDecrease;
+
     protected override void Effect()
     {
-        throw new System.NotImplementedException();
+        SpeedHandler.ChangeSpeed(SpeedHandler.SpeedValue - _speedDecrease);
     }
 }

@@ -6,6 +6,6 @@ public class Asteroid : Element
 {
     protected override void Effect()
     {
-        throw new System.NotImplementedException();
+        _score.Loss();
     }
 }

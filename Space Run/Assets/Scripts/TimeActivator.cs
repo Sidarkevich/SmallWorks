@@ -10,10 +10,12 @@ public class TimeActivator : MonoBehaviour
     [SerializeField] private Transform _leftBorder;
     [SerializeField] private ObjectPool _pool;
     [SerializeField] private ScoreHandler _score;
+    [SerializeField] private float _speedIncrease;
 
     private void OnEnable()
     {
         StartCoroutine(ActivationCoroutine());
+        SpeedHandler.ResetSpeed();
     }
 
     private void OnDisable()
@@ -36,6 +38,7 @@ public class TimeActivator : MonoBehaviour
 
                 var element = spawned.GetComponent<Element>();
                 element.Init(_score, _pool);
+                SpeedHandler.ChangeSpeed(SpeedHandler.SpeedValue + _speedIncrease);
             }
         }
     }
