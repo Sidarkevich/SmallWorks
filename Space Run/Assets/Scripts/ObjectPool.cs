@@ -14,6 +14,7 @@ public class ObjectPool : MonoBehaviour
         {
             var obj = _inactiveObjects[Random.Range(0, _inactiveObjects.Count)];
             _inactiveObjects.Remove(obj);
+            obj.gameObject.SetActive(true);
             return obj;
         }
 
@@ -54,7 +55,7 @@ public class ObjectPool : MonoBehaviour
     private void DeactivateAll()
     {
         _inactiveObjects.Clear();
-        
+
         foreach (var obj in _objects)
         {
             obj.gameObject.SetActive(false);
