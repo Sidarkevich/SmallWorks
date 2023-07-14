@@ -8,6 +8,22 @@ public class ObjectPool : MonoBehaviour
     private List<DirectionMovement> _objects;
     private List<DirectionMovement> _inactiveObjects = new List<DirectionMovement>();
 
+    public void DeactivateAllType(System.Type type)
+    {
+        foreach (var obj in _objects)
+        {
+            if (obj.gameObject.activeInHierarchy)
+            {
+                var element = obj.GetComponent<Element>();
+
+                if (element.GetType() == type)
+                {
+                    OnReleased(obj);
+                }
+            }
+        }
+    }
+
     public DirectionMovement ActivateObject()
     {
         if (_inactiveObjects.Count != 0)

@@ -5,15 +5,17 @@ using UnityEngine;
 public abstract class Element : MonoBehaviour
 {
     protected ScoreHandler _score;
+    protected ObjectPool _pool;
 
-    public void Init()
+    public void Init(ScoreHandler score, ObjectPool pool)
     {
-
+        _score = score;
+        _pool = pool;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        var rocket = collision.gameObject.GetComponent<RocketInput>();
+        var rocket = collider.GetComponent<RocketInput>();
 
         if (rocket)
         {

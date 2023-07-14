@@ -6,6 +6,6 @@ public class Bomb : Element
 {
     protected override void Effect()
     {
-        throw new System.NotImplementedException();
+        _pool.DeactivateAllType(this.GetType());
     }
 }

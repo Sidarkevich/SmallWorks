@@ -9,6 +9,7 @@ public class TimeActivator : MonoBehaviour
     [SerializeField] private Transform _rightBorder;
     [SerializeField] private Transform _leftBorder;
     [SerializeField] private ObjectPool _pool;
+    [SerializeField] private ScoreHandler _score;
 
     private void OnEnable()
     {
@@ -32,6 +33,9 @@ public class TimeActivator : MonoBehaviour
                 
                 var xPos = Random.Range(_leftBorder.position.x, _rightBorder.position.x);
                 spawned.transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
+
+                var element = spawned.GetComponent<Element>();
+                element.Init(_score, _pool);
             }
         }
     }

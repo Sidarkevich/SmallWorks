@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6855743821724962554}
   - component: {fileID: 6855743821724962552}
   - component: {fileID: 6855743821724962555}
-  - component: {fileID: 5102182342982053192}
+  - component: {fileID: 3411662087169215716}
+  - component: {fileID: 5625119652320573413}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -77,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!60 &5102182342982053192
+--- !u!60 &3411662087169215716
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,22 +103,43 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 23.29303, y: -29.544556}
-      - {x: 24.868652, y: -27.34253}
-      - {x: 16.49414, y: 0.03100586}
-      - {x: 16.428528, y: 20.230347}
-      - {x: 12.496826, y: 35.129272}
-      - {x: 8.352051, y: 43.06128}
-      - {x: 4.14209, y: 47.75305}
-      - {x: 0.49005127, y: 50.04309}
-      - {x: -4.0878906, y: 47.611694}
-      - {x: -7.994568, y: 43.018555}
-      - {x: -11.960083, y: 35.855103}
-      - {x: -16.161743, y: 19.701172}
-      - {x: -16.160034, y: -0.6699219}
-      - {x: -24.781746, y: -25.245304}
-      - {x: -22.982544, y: -29.183105}
-      - {x: -10.458313, y: -18.984863}
-      - {x: -9.280778, y: -23.440609}
-      - {x: 9.205828, y: -23.59039}
-      - {x: 10.318488, y: -19.325016}
+    - - {x: 15.629028, y: -7.262451}
+      - {x: 16.959839, y: 7.8986206}
+      - {x: 16.011047, y: 25.150574}
+      - {x: 10.912231, y: 40.333313}
+      - {x: 4.5648804, y: 48.090576}
+      - {x: 0.058166504, y: 50.045715}
+      - {x: -4.3986273, y: 47.787045}
+      - {x: -10.309509, y: 39.79004}
+      - {x: -15.4348755, y: 25.134094}
+      - {x: -16.913774, y: 9.133854}
+      - {x: -14.976013, y: -7.2807007}
+      - {x: -21.8927, y: -16.77295}
+      - {x: -24.64618, y: -28.59607}
+      - {x: -9.087341, y: -20.734558}
+      - {x: -9.303528, y: -24.188965}
+      - {x: 9.3324585, y: -23.94049}
+      - {x: 9.339233, y: -19.809937}
+      - {x: 24.15059, y: -29.295345}
+      - {x: 22.292427, y: -17.399967}
+--- !u!50 &5625119652320573413
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855743821724962533}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
