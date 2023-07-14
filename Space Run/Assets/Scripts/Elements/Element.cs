@@ -18,6 +18,11 @@ public abstract class Element : MonoBehaviour
         _speed = speed;
     }
 
+    public void Init(ScoreHandler score)
+    {
+        _score = score;
+    }
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         var rocket = collider.GetComponent<RocketInput>();
