@@ -136,7 +136,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a0e2bab7a5ead498616009ee9c6fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedDecrease: 1
+  _effectedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8172067235943111147}
+        m_TargetAssemblyTypeName: Releasable, Assembly-CSharp
+        m_MethodName: Release
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _speedDecrease: 2
 --- !u!114 &-8172067235943111147
 MonoBehaviour:
   m_ObjectHideFlags: 0

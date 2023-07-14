@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Element : MonoBehaviour
 {
+    [SerializeField] private UnityEvent _effectedEvent;
+
     protected ScoreHandler _score;
     protected ObjectPool _pool;
     protected SpeedHandler _speed;
@@ -22,6 +25,7 @@ public abstract class Element : MonoBehaviour
         if (rocket)
         {
             Effect();
+            _effectedEvent?.Invoke();
         }
     }
 

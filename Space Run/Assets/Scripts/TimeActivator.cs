@@ -38,6 +38,7 @@ public class TimeActivator : MonoBehaviour
                 spawned.transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
                 spawned.Element.Init(_score, _pool, _speed);
                 spawned.Movement.Init(_speed);
+                
                 _speed.ChangeSpeed(_speed.SpeedValue + _speedIncrease);
             }
         }

@@ -797,11 +797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 884568953470462142, guid: eb23d316ff3dc4744862cf1c871b9875, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 122.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 884568953470462142, guid: eb23d316ff3dc4744862cf1c871b9875, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.4000015
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 884568953470462142, guid: eb23d316ff3dc4744862cf1c871b9875, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -904,7 +904,7 @@ MonoBehaviour:
   _leftBorder: {fileID: 709196836}
   _pool: {fileID: 350865388}
   _score: {fileID: 1825588570}
-  _speed: {fileID: 0}
+  _speed: {fileID: 1825588571}
   _speedIncrease: 0.15
 --- !u!1 &353028708
 GameObject:
