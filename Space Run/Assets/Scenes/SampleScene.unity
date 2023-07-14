@@ -439,6 +439,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152525220}
     m_Modifications:
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152525221}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SunWasCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SunActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2353388047754661637, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
       propertyPath: m_Name
       value: Sun (7)
@@ -793,6 +821,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152525220}
     m_Modifications:
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152525221}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SunWasCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SunActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2353388047754661637, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
       propertyPath: m_Name
       value: Sun (8)
@@ -1917,6 +1973,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152525220}
     m_Modifications:
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152525221}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SunWasCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SunActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2353388047754661637, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
       propertyPath: m_Name
       value: Sun (5)
@@ -2891,6 +2975,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152525220}
     m_Modifications:
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152525221}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SunWasCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SunActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2353388047754661637, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
       propertyPath: m_Name
       value: Sun (4)
@@ -3415,6 +3527,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152525220}
     m_Modifications:
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152525221}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SunWasCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SunActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2353388047754661637, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
       propertyPath: m_Name
       value: Sun (1)
@@ -4132,6 +4272,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152525220}
     m_Modifications:
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152525221}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SunWasCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SunActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2353388047754661637, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
       propertyPath: m_Name
       value: Sun
@@ -4817,6 +4985,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152525220}
     m_Modifications:
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152525221}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SunWasCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SunActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2353388047754661637, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
       propertyPath: m_Name
       value: Sun (2)
@@ -5932,6 +6128,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152525220}
     m_Modifications:
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152525221}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SunWasCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SunActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2353388047754661637, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
       propertyPath: m_Name
       value: Sun (3)
@@ -6162,6 +6386,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152525220}
     m_Modifications:
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 152525221}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SunWasCollected
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SunActivator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3396851007198927910, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
+      propertyPath: _effectedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2353388047754661637, guid: cb4e4c439a1b8ec459994736d110ffd4, type: 3}
       propertyPath: m_Name
       value: Sun (6)
