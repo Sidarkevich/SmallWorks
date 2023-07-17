@@ -13,13 +13,13 @@ public class TimeActivator : MonoBehaviour
     [SerializeField] private SpeedHandler _speed;
     [SerializeField] private float _speedIncrease;
 
-    private void OnEnable()
+    public void Activate()
     {
         StartCoroutine(ActivationCoroutine());
         _speed.ResetSpeed();
     }
 
-    private void OnDisable()
+    public void Deactivate()
     {
         StopAllCoroutines();
     }

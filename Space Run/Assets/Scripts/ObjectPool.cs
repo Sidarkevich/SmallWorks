@@ -38,7 +38,7 @@ public class ObjectPool : MonoBehaviour
         return additional;
     }
 
-    private void Awake()
+    public void Init()
     {
         _objects = new List<Releasable>(transform.GetComponentsInChildren<Releasable>());
 
@@ -50,12 +50,12 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    public void Activate()
     {
         DeactivateAll();
     }
 
-    private void OnDisable()
+    public void Deactivate()
     {
         DeactivateAll();
     }

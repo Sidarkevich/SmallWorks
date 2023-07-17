@@ -13,7 +13,7 @@ public class SunActivator : MonoBehaviour
         ActivateSun();
     }
 
-    private void OnEnable()
+    public void Activate()
     {
         for (int i = 0; i < _activeCount; i++)
         {
