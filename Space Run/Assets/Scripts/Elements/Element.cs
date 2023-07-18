@@ -30,7 +30,7 @@ public abstract class Element : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        var rocket = collider.GetComponent<RocketInput>();
+        var rocket = collider.GetComponent<RocketMovement>();
 
         if (rocket)
         {
