@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 2353388047754661638}
   - component: {fileID: 2353388047754661641}
   - component: {fileID: 2353388047754661640}
-  - component: {fileID: 2353388047754661639}
+  - component: {fileID: 8952469748653370627}
   - component: {fileID: 3163420506838751442}
   - component: {fileID: -3396851007198927910}
   - component: {fileID: 1038159419804108002}
+  - component: {fileID: 3701867856961743021}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -80,8 +81,8 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!58 &2353388047754661639
-CircleCollider2D:
+--- !u!60 &8952469748653370627
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,9 +94,31 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 8
+  m_Offset: {x: 0, y: 6.54}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.4934387, y: 0.7967529}
+      - {x: -6.4165106, y: -2.1204262}
+      - {x: -7.6214457, y: -5.283993}
+      - {x: -7.4280834, y: -8.758053}
+      - {x: -5.9319763, y: -11.521423}
+      - {x: -2.9734192, y: -13.795593}
+      - {x: 0.81292725, y: -14.125916}
+      - {x: 4.1236877, y: -12.700928}
+      - {x: 6.1729736, y: -10.225098}
+      - {x: 7.06485, y: -6.2855835}
+      - {x: 6.3116455, y: -2.465393}
+      - {x: 3.5151367, y: 0.40104008}
+      - {x: -0.06578922, y: 1.4469566}
 --- !u!114 &3163420506838751442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +164,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1038159419804108002}
         m_TargetAssemblyTypeName: Releasable, Assembly-CSharp
-        m_MethodName: Release
+        m_MethodName: Deactivate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -167,3 +190,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _element: {fileID: -3396851007198927910}
   _movement: {fileID: 3163420506838751442}
+  _animation: {fileID: 3701867856961743021}
+--- !u!111 &3701867856961743021
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353388047754661637}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 703ff9d78f9f9cd49a7403e27fac8532, type: 2}
+  - {fileID: 7400000, guid: 32f43df277ea50842aa23f7e6ab61e16, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

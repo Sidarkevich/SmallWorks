@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3884157782319149508}
   - component: {fileID: -7347161648237966268}
   - component: {fileID: -760017284540744698}
+  - component: {fileID: 6581271227280489551}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -159,7 +160,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -760017284540744698}
         m_TargetAssemblyTypeName: Releasable, Assembly-CSharp
-        m_MethodName: Release
+        m_MethodName: Deactivate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -184,3 +185,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _element: {fileID: -7347161648237966268}
   _movement: {fileID: -3884157782319149508}
+  _animation: {fileID: 6581271227280489551}
+--- !u!111 &6581271227280489551
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111013179320378574}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 703ff9d78f9f9cd49a7403e27fac8532, type: 2}
+  - {fileID: 7400000, guid: 32f43df277ea50842aa23f7e6ab61e16, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

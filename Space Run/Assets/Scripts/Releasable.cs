@@ -8,18 +8,32 @@ public class Releasable : MonoBehaviour
 {
     [SerializeField] private Element _element;
     [SerializeField] private DirectionMovement _movement;
+    [SerializeField] private Animation _animation;
+
     public Element Element => _element;
     public DirectionMovement Movement => _movement;
 
     private UnityEvent<Releasable> ReleasedEvent = new UnityEvent<Releasable>();
 
-    public void Release()
+    public void Activate()
     {
-        ReleasedEvent?.Invoke(this);
+        gameObject.SetActive(true);
+        _animation.Play("OnActivate");
+    }
+
+    public void Deactivate()
+    {
+        _animation.Play("OnDeactivate");
     }
 
     public void AddReleaseListener(UnityAction<Releasable> callback)
     {
         ReleasedEvent.AddListener(callback);
+    }
+
+    public void Release()
+    {
+        ReleasedEvent?.Invoke(this);
+        gameObject.SetActive(false);
     }
 }

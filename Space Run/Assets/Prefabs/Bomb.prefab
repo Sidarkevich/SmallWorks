@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 884568953470462142}
   - component: {fileID: 884568953470462129}
   - component: {fileID: 884568953470462128}
-  - component: {fileID: 884568953470462143}
+  - component: {fileID: 2316149761041423659}
   - component: {fileID: 2439638261108251641}
   - component: {fileID: -7705485409530082997}
   - component: {fileID: -352260102641781184}
+  - component: {fileID: 3980269613051263546}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -80,8 +81,8 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!58 &884568953470462143
-CircleCollider2D:
+--- !u!60 &2316149761041423659
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,9 +94,30 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -6}
-  serializedVersion: 2
-  m_Radius: 14
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -6.7051697, y: 6.0425415}
+      - {x: -12.465247, y: 0.8236654}
+      - {x: -14.580186, y: -5.3375206}
+      - {x: -13.155653, y: -12.451534}
+      - {x: -8.192108, y: -17.324524}
+      - {x: -0.4689331, y: -19.293213}
+      - {x: 7.1046753, y: -18.03534}
+      - {x: 12.675598, y: -12.639832}
+      - {x: 14.48053, y: -7.109741}
+      - {x: 13.417694, y: -0.6046753}
+      - {x: 9.243744, y: 3.826416}
+      - {x: 1.9139471, y: 6.961849}
 --- !u!114 &2439638261108251641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +163,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -352260102641781184}
         m_TargetAssemblyTypeName: Releasable, Assembly-CSharp
-        m_MethodName: Release
+        m_MethodName: Deactivate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -166,3 +188,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _element: {fileID: -7705485409530082997}
   _movement: {fileID: 2439638261108251641}
+  _animation: {fileID: 3980269613051263546}
+--- !u!111 &3980269613051263546
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884568953470462141}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 703ff9d78f9f9cd49a7403e27fac8532, type: 2}
+  - {fileID: 7400000, guid: 32f43df277ea50842aa23f7e6ab61e16, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0

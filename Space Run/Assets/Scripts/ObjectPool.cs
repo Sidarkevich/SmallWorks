@@ -16,7 +16,7 @@ public class ObjectPool : MonoBehaviour
             {
                 if (obj.Element.GetType() == type)
                 {
-                    OnReleased(obj);
+                    obj.Deactivate();
                 }
             }
         }
@@ -26,14 +26,15 @@ public class ObjectPool : MonoBehaviour
     {
         if (_inactiveObjects.Count != 0)
         {
-            var obj = _inactiveObjects[Random.Range(0, _inactiveObjects.Count)];
-            _inactiveObjects.Remove(obj);
-            obj.gameObject.SetActive(true);
-            return obj;
+            var releasable = _inactiveObjects[Random.Range(0, _inactiveObjects.Count)];
+            _inactiveObjects.Remove(releasable);
+            releasable.Activate();
+            return releasable;
         }
 
         var additional = Instantiate(_prefabs[Random.Range(0, _prefabs.Count)], transform);
         additional.AddReleaseListener(OnReleased);
+        additional.Activate();
         _objects.Add(additional);
         return additional;
     }
@@ -42,11 +43,11 @@ public class ObjectPool : MonoBehaviour
     {
         _objects = new List<Releasable>(transform.GetComponentsInChildren<Releasable>());
 
-        foreach (var obj in _objects)
+        foreach (var releasable in _objects)
         {
-            obj.gameObject.SetActive(false);
-            obj.AddReleaseListener(OnReleased);
-            _inactiveObjects.Add(obj);
+            releasable.Release();
+            releasable.AddReleaseListener(OnReleased);
+            _inactiveObjects.Add(releasable);
         }
     }
 
@@ -62,7 +63,6 @@ public class ObjectPool : MonoBehaviour
 
     private void OnReleased(Releasable releasable)
     {
-        releasable.gameObject.SetActive(false);
         _inactiveObjects.Add(releasable);
     }
 
@@ -70,10 +70,9 @@ public class ObjectPool : MonoBehaviour
     {
         _inactiveObjects.Clear();
 
-        foreach (var obj in _objects)
+        foreach (var releasable in _objects)
         {
-            obj.gameObject.SetActive(false);
-            _inactiveObjects.Add(obj);
+            releasable.Release();
         }
     }
 }

@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 3755627300909168505}
   - component: {fileID: 3755627300909168503}
   - component: {fileID: 3755627300909168502}
-  - component: {fileID: 3755627300909168500}
+  - component: {fileID: 2660441955654342091}
   - component: {fileID: -8026006781842852808}
   - component: {fileID: 2135061710248774326}
   - component: {fileID: 2786563203395832956}
+  - component: {fileID: 7079848004308672755}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -80,8 +81,8 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!58 &3755627300909168500
-CircleCollider2D:
+--- !u!60 &2660441955654342091
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,9 +94,30 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 14
+  m_Offset: {x: 0, y: 6.26}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -7.272003, y: 6.2855225}
+      - {x: -12.465247, y: 0.8236656}
+      - {x: -14.580186, y: -5.3375206}
+      - {x: -13.155653, y: -12.451534}
+      - {x: -8.515991, y: -17.97229}
+      - {x: -0.4689331, y: -20.993774}
+      - {x: 7.671509, y: -18.52118}
+      - {x: 12.675598, y: -12.639832}
+      - {x: 14.48053, y: -7.109741}
+      - {x: 13.417694, y: -0.6046753}
+      - {x: 7.8671265, y: 5.9318237}
+      - {x: 0.45633602, y: 8.095516}
 --- !u!114 &-8026006781842852808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +163,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2786563203395832956}
         m_TargetAssemblyTypeName: Releasable, Assembly-CSharp
-        m_MethodName: Release
+        m_MethodName: Deactivate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -166,3 +188,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _element: {fileID: 2135061710248774326}
   _movement: {fileID: -8026006781842852808}
+  _animation: {fileID: 7079848004308672755}
+--- !u!111 &7079848004308672755
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3755627300909168504}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 703ff9d78f9f9cd49a7403e27fac8532, type: 2}
+  - {fileID: 7400000, guid: 32f43df277ea50842aa23f7e6ab61e16, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
