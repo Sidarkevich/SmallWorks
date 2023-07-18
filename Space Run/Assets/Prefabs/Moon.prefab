@@ -151,6 +151,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _effectClip: {fileID: 8300000, guid: a74eaee9fbb92cd45b4c51ccf044bcae, type: 3}
 --- !u!114 &2786563203395832956
 MonoBehaviour:
   m_ObjectHideFlags: 0

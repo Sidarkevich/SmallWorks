@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Planet : Element
 {
+    [SerializeField] private int _scoreValue;
+
     protected override void Effect()
     {
-        _score.IncreaseScore(1);
+        _score.IncreaseScore(_scoreValue);
     }
 }

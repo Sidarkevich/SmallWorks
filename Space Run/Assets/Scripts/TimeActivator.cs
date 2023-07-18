@@ -12,6 +12,7 @@ public class TimeActivator : MonoBehaviour
     [SerializeField] private ScoreHandler _score;
     [SerializeField] private SpeedHandler _speed;
     [SerializeField] private float _speedIncrease;
+    [SerializeField] private AudioPlayer _audio;
 
     public void Activate()
     {
@@ -36,7 +37,7 @@ public class TimeActivator : MonoBehaviour
                 
                 var xPos = Random.Range(_leftBorder.position.x, _rightBorder.position.x);
                 spawned.transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
-                spawned.Element.Init(_score, _pool, _speed);
+                spawned.Element.Init(_score, _pool, _speed, _audio);
                 spawned.Movement.Init(_speed);
                 
                 _speed.ChangeSpeed(_speed.SpeedValue + _speedIncrease);

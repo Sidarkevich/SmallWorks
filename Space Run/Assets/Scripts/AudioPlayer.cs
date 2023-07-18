@@ -15,26 +15,18 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] private AudioMixerGroup _mixerMuted;
 
     [SerializeField] private AudioClip _clickClip;
-    [SerializeField] private AudioClip _hitClip;
-    [SerializeField] private AudioClip _scoreClip;
 
     private int _soundSettings;
+
+    public void PlaySoundClip(AudioClip clip)
+    {
+        _soundSource.clip = clip;
+        _soundSource.Play();
+    }
 
     public void PlayClick()
     {
         _soundSource.clip = _clickClip;
-        _soundSource.Play();
-    }
-
-    public void PlayHit()
-    {
-        _soundSource.clip = _hitClip;
-        _soundSource.Play();
-    }
-
-    public void PlayScore()
-    {
-        _soundSource.clip = _scoreClip;
         _soundSource.Play();
     }
 

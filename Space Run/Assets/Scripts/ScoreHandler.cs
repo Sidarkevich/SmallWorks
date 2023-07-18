@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class ScoreHandler : MonoBehaviour
 {
     public UnityEvent LossEvent;
-    public UnityEvent ScoreIncreasedEvent;
 
     [HideInInspector] public UnityEvent<int> ScoreChangedEvent;
 
@@ -33,7 +32,6 @@ public class ScoreHandler : MonoBehaviour
         if (value > 0)
         {
             Score += value;
-            ScoreIncreasedEvent?.Invoke();
         }
     }
 

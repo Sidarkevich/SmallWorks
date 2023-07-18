@@ -464,6 +464,7 @@ MonoBehaviour:
   _pool: {fileID: 152525222}
   _activeCount: 1
   _score: {fileID: 1825588570}
+  _audio: {fileID: 1071352867}
 --- !u!114 &152525222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1398,7 @@ MonoBehaviour:
   _score: {fileID: 1825588570}
   _speed: {fileID: 1825588571}
   _speedIncrease: 0.15
+  _audio: {fileID: 1071352867}
 --- !u!1 &353028708
 GameObject:
   m_ObjectHideFlags: 0
@@ -6291,9 +6293,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  ScoreIncreasedEvent:
-    m_PersistentCalls:
-      m_Calls: []
   ScoreChangedEvent:
     m_PersistentCalls:
       m_Calls: []

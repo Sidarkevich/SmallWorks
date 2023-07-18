@@ -7,6 +7,7 @@ public class SunActivator : MonoBehaviour
     [SerializeField] private ObjectPool _pool;
     [SerializeField] private int _activeCount;
     [SerializeField] private ScoreHandler _score;
+    [SerializeField] private AudioPlayer _audio;
 
     public void SunWasCollected()
     {
@@ -24,6 +25,6 @@ public class SunActivator : MonoBehaviour
     private void ActivateSun()
     {
         var sun = _pool.ActivateObject();
-        sun.Element.Init(_score);
+        sun.Element.Init(_score, _audio);
     }
 }
