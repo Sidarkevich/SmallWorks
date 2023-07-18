@@ -23,6 +23,9 @@ public class SpawnStarter : MonoBehaviour
 
     private void OnDisable()
     {
+        _sunPool.Deactivate();
+        _elementPool.Deactivate();
+
         _timeActivator.Deactivate();
     }
 }
