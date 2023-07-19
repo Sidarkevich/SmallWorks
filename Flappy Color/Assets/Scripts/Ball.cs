@@ -5,11 +5,15 @@ using UnityEngine.Events;
 
 public class Ball : MonoBehaviour
 {
-    public UnityEvent BallCollisionEvent;
     public UnityEvent BallKickedEvent;
 
     [SerializeField] private Rigidbody2D _body;
     [SerializeField] private float _strength;
+    [SerializeField] private ColorHandler _color;
+    [SerializeField] private ScoreHandler _score;
+
+    public ColorHandler Color => _color;
+    public ScoreHandler Score => _score;
 
     private Vector3 _startPosition;
     private Quaternion _startRotation;
@@ -40,5 +44,6 @@ public class Ball : MonoBehaviour
     {
         transform.position = _startPosition;
         transform.rotation = _startRotation;
+        _color.SetRandomColor();
     }
 }
