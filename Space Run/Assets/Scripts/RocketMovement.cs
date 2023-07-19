@@ -42,7 +42,7 @@ public class RocketMovement : MonoBehaviour
         {
             _moveDirection.x = _target.x - transform.position.x;
 
-            Vector3 step = _moveDirection * _moveSpeed * Time.fixedDeltaTime;
+            Vector3 step = _moveDirection.normalized * _moveSpeed * Time.fixedDeltaTime;
             if (_moveDirection.magnitude < step.magnitude)
             {
                 step = _moveDirection;

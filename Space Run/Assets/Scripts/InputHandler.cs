@@ -9,7 +9,10 @@ public class InputHandler : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
 
     public void OnDrag(PointerEventData eventData)
     {
-        _rocket.SetTarget(eventData.pointerCurrentRaycast.worldPosition);
+        if (eventData.pointerCurrentRaycast.isValid)
+        {
+            _rocket.SetTarget(eventData.pointerCurrentRaycast.worldPosition);
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
