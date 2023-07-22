@@ -30,12 +30,6 @@ public class AudioPlayer : MonoBehaviour
         _soundSource.Play();
     }
 
-    private void Awake()
-    {
-        _soundSettings = PlayerPrefs.GetInt("SoundSettings", 0);
-        MuteSound((_soundSettings > 0) ? true : false);
-    }
-
     public void MuteSound(bool value)
     {
         var mixer = (value ? _mixerMuted : _mixer);
@@ -47,5 +41,10 @@ public class AudioPlayer : MonoBehaviour
         PlayerPrefs.Save();
 
         _soundStateChangedEvent?.Invoke(value);
+    }
+    private void Awake()
+    {
+        _soundSettings = PlayerPrefs.GetInt("SoundSettings", 0);
+        MuteSound((_soundSettings > 0) ? true : false);
     }
 }
