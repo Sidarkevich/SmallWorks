@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1606189501137355246}
   - component: {fileID: 1606189501137355247}
+  - component: {fileID: 6934069391120956349}
+  - component: {fileID: 4421291082146041773}
   m_Layer: 5
   m_Name: BlockGroup
   m_TagString: Untagged
@@ -35,11 +37,11 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 35, y: -30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 35, y: 0}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1606189501137355247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,6 +59,47 @@ MonoBehaviour:
   - {fileID: 4629884756576390040}
   - {fileID: 4629884754823163515}
   _colors: 000000000100000002000000
+--- !u!114 &6934069391120956349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606189501137355217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e077f87692f134495a105b2ac69d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movement: {fileID: 4421291082146041773}
+--- !u!114 &4421291082146041773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606189501137355217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7cb33763d6b274d9e84a11c4f3a775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outOfViewEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6934069391120956349}
+        m_TargetAssemblyTypeName: Releasable, Assembly-CSharp
+        m_MethodName: Release
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _moveDirection: {x: -1, y: 0, z: 0}
 --- !u!1001 &1606189500034073615
 PrefabInstance:
   m_ObjectHideFlags: 0

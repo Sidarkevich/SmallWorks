@@ -27,7 +27,7 @@ public class ObjectPool : MonoBehaviour
 
     public void Init()
     {
-        _objects = new List<Releasable>(transform.GetComponentsInChildren<Releasable>());
+        _objects = new List<Releasable>(transform.GetComponentsInChildren<Releasable>(includeInactive: true));
 
         foreach (var releasable in _objects)
         {

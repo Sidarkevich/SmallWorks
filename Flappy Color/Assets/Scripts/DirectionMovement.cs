@@ -18,7 +18,7 @@ public class DirectionMovement : MonoBehaviour
 
     private void Start()
     {
-        _destroyValue = Camera.main.ScreenToWorldPoint(Vector3.zero).x;
+        _destroyValue = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 1;
     }
 
     private void Update()

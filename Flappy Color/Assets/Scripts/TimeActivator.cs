@@ -9,13 +9,20 @@ public class TimeActivator : MonoBehaviour
     [SerializeField] private ObjectPool _pool;
     [SerializeField] private SpeedHandler _speed;
 
+    private void Awake()
+    {
+        _pool.Init();
+    }
+
     private void OnEnable()
     {
+        _pool.Activate();
         StartCoroutine(ActivationCoroutine());
     }
 
     private void OnDisable()
     {
+        _pool.Deactivate();
         StopAllCoroutines();
     }
 
