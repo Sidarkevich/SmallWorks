@@ -5,9 +5,11 @@ using UnityEngine;
 public class TimeActivator : MonoBehaviour
 {
     [SerializeField] private float _time;
+    [SerializeField] private bool _activateOnStart;
     [SerializeField] [Range(0f, 1f)] private float _chance;
     [SerializeField] private ObjectPool _pool;
     [SerializeField] private SpeedHandler _speed;
+    [SerializeField] private float _speedIncrement;
 
     private void Awake()
     {
@@ -17,6 +19,13 @@ public class TimeActivator : MonoBehaviour
     private void OnEnable()
     {
         _pool.Activate();
+        _speed.Reset();
+
+        if (_activateOnStart)
+        {
+            Activate();
+        }
+
         StartCoroutine(ActivationCoroutine());
     }
 
@@ -34,13 +43,18 @@ public class TimeActivator : MonoBehaviour
 
             if (Random.Range(0f, 1f) < _chance)
             {
-                var spawned = _pool.ActivateObject();
-                
-                spawned.transform.position = transform.position;
-                spawned.Movement.Init(_speed);
-                
-                //_speed.ChangeSpeed(_speed.SpeedValue + _speedIncrease);
+                Activate();
             }
         }
+    }
+
+    private void Activate()
+    {
+        var spawned = _pool.ActivateObject();
+
+        spawned.transform.position = transform.position;
+        spawned.Movement.Init(_speed);
+
+        _speed.Increase(_speedIncrement);
     }
 }
