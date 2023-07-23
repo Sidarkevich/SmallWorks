@@ -93,6 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _color: {fileID: 6085400870868635864}
   _increaseValue: 1
+  _scoreClip: {fileID: 8300000, guid: 1e116ae34f06ba94cb2bd945eb79be53, type: 3}
+  _hitClip: {fileID: 8300000, guid: 70264cd0537b0214e9ca5860e3618fa9, type: 3}
 --- !u!114 &6085400870868635864
 MonoBehaviour:
   m_ObjectHideFlags: 0
