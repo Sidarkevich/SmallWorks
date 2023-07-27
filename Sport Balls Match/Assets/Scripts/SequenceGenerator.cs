@@ -8,13 +8,13 @@ public class SequenceGenerator : MonoBehaviour
 
     private List<Sprite> _list; 
 
-    private void Awake()
-    {
-        _list = new List<Sprite>(_sprites);
-    }
-
     public List<Sprite> Generate()
     {
+        if (_list == null)
+        {
+            _list = new List<Sprite>(_sprites);
+        }
+
         var sequnce = new List<Sprite>();
         Shuffle(_list);
             

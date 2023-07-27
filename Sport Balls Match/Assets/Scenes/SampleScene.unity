@@ -346,7 +346,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 347668857}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
         m_MethodName: Switch
         m_Mode: 2
@@ -627,11 +627,6 @@ GameObject:
   - component: {fileID: 347668855}
   - component: {fileID: 347668854}
   - component: {fileID: 347668857}
-  - component: {fileID: 347668858}
-  - component: {fileID: 347668860}
-  - component: {fileID: 347668859}
-  - component: {fileID: 347668862}
-  - component: {fileID: 347668861}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -653,8 +648,6 @@ RectTransform:
   m_Children:
   - {fileID: 872092472}
   - {fileID: 553373602}
-  - {fileID: 1669569860}
-  - {fileID: 477233098}
   - {fileID: 1313897282}
   m_Father: {fileID: 519420032}
   m_RootOrder: 0
@@ -737,137 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e016358e752f84445a4fe9b30db4b2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _screens:
-  - {fileID: 872092471}
-  - {fileID: 1669569859}
-  - {fileID: 477233097}
-  - {fileID: 1313897281}
-  - {fileID: 553373601}
---- !u!114 &347668858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347668852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5ce154b1513f94aafa2b907d1e9cf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _correctAnswerEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 347668859}
-        m_TargetAssemblyTypeName: ScoreHandler, Assembly-CSharp
-        m_MethodName: IncreaseScore
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 347668861}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Spin
-          m_BoolArgument: 0
-        m_CallState: 2
-  _incorrectAnswerEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 347668857}
-        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
-        m_MethodName: Switch
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1313897281}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _keeper: {fileID: 0}
---- !u!114 &347668859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347668852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54516bc894c405349be3197843ecc507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &347668860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347668852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a711ed37207b7349990da88813f4a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sprites:
-  - {fileID: 21300000, guid: 60e2a402fb5827844ae7661ed6e46f75, type: 3}
-  - {fileID: 21300000, guid: 59ca3aa75cee8984d806278415fa6c48, type: 3}
-  - {fileID: 21300000, guid: 6869673f1e2b1c746a643b074fd38468, type: 3}
-  - {fileID: 21300000, guid: e8f8fdc0c644c6c4aaa1d73a932accda, type: 3}
-  - {fileID: 21300000, guid: e1a0916a00152b044b80b949260a065b, type: 3}
---- !u!95 &347668861
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347668852}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd8f4b9865ecee8459c1641c7aa21fe8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &347668862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347668852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221f10cde804a714ab4ec28e1859f71b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spots:
-  - {fileID: 2007956460000064425}
-  - {fileID: 1977928015}
-  - {fileID: 246941158}
-  _generator: {fileID: 347668860}
+  _screens: []
 --- !u!1 &372590369
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +814,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 347668857}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
         m_MethodName: Switch
         m_Mode: 2
@@ -963,7 +826,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 347668859}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScoreHandler, Assembly-CSharp
         m_MethodName: ResetScore
         m_Mode: 1
@@ -1023,7 +886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 477233098}
   m_Layer: 5
-  m_Name: AnswerScreen
+  m_Name: AnswerPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1044,8 +907,8 @@ RectTransform:
   - {fileID: 749276362}
   - {fileID: 1710272769}
   - {fileID: 844093499}
-  m_Father: {fileID: 347668853}
-  m_RootOrder: 3
+  m_Father: {fileID: 553373602}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1146,13 +1009,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 553373602}
+  - component: {fileID: 553373604}
+  - component: {fileID: 553373603}
+  - component: {fileID: 553373605}
+  - component: {fileID: 553373606}
   m_Layer: 5
   m_Name: GameScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &553373602
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1169,6 +1036,8 @@ RectTransform:
   - {fileID: 1496806396}
   - {fileID: 1894899201}
   - {fileID: 174547415}
+  - {fileID: 1669569860}
+  - {fileID: 477233098}
   m_Father: {fileID: 347668853}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1177,6 +1046,78 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &553373603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553373601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a711ed37207b7349990da88813f4a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sprites:
+  - {fileID: 21300000, guid: 60e2a402fb5827844ae7661ed6e46f75, type: 3}
+  - {fileID: 21300000, guid: 59ca3aa75cee8984d806278415fa6c48, type: 3}
+  - {fileID: 21300000, guid: 6869673f1e2b1c746a643b074fd38468, type: 3}
+  - {fileID: 21300000, guid: e8f8fdc0c644c6c4aaa1d73a932accda, type: 3}
+  - {fileID: 21300000, guid: e1a0916a00152b044b80b949260a065b, type: 3}
+--- !u!114 &553373604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553373601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5ce154b1513f94aafa2b907d1e9cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _correctAnswerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _incorrectAnswerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _keeper: {fileID: 0}
+--- !u!95 &553373605
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553373601}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ecb10944bd6df348a9acd0a051ac3a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &553373606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553373601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618a21e725a4e3b48b0fd2a0de189ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &630264983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,7 +1321,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1531,7 +1472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 347668858}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SequenceChecker, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 6
@@ -1596,7 +1537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &872092472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1704,7 +1645,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 347668857}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
         m_MethodName: Switch
         m_Mode: 2
@@ -1981,7 +1922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af78b78fb86d88418cacfc86243c99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _handler: {fileID: 347668859}
+  _handler: {fileID: 0}
   _text: {fileID: 1029121999}
 --- !u!1 &1074216741
 GameObject:
@@ -2090,7 +2031,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 347668861}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
         m_Mode: 5
@@ -2250,7 +2191,7 @@ RectTransform:
   - {fileID: 924280990}
   - {fileID: 372590370}
   m_Father: {fileID: 347668853}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2340,7 +2281,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 347668862}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SequenceKeeper, Assembly-CSharp
         m_MethodName: Setup
         m_Mode: 1
@@ -2352,7 +2293,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 347668857}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
         m_MethodName: Switch
         m_Mode: 2
@@ -2560,6 +2501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496806396}
+  - component: {fileID: 1496806397}
   m_Layer: 5
   m_Name: SpinnerParent
   m_TagString: Untagged
@@ -2588,6 +2530,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: 438, y: 436}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1496806397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496806395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221f10cde804a714ab4ec28e1859f71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spots:
+  - {fileID: 2007956460000064425}
+  - {fileID: 1977928015}
+  - {fileID: 246941158}
+  _generator: {fileID: 553373603}
 --- !u!1 &1501435897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,12 +2625,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1669569860}
   m_Layer: 5
-  m_Name: RememberScreen
+  m_Name: QuestionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1669569860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2686,8 +2645,8 @@ RectTransform:
   m_Children:
   - {fileID: 1454651604}
   - {fileID: 1074216742}
-  m_Father: {fileID: 347668853}
-  m_RootOrder: 2
+  m_Father: {fileID: 553373602}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2777,7 +2736,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 347668858}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SequenceChecker, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 6
@@ -2975,7 +2934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af78b78fb86d88418cacfc86243c99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _handler: {fileID: 347668859}
+  _handler: {fileID: 0}
   _text: {fileID: 1894899202}
 --- !u!1001 &1977928013
 PrefabInstance:
