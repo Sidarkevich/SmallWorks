@@ -5,7 +5,6 @@ using UnityEngine;
 public class SequenceGenerator : MonoBehaviour
 {
     [SerializeField] private List<Sprite> _sprites;
-    [SerializeField] private List<SequenceKeeper> _keepers;
 
     private List<Sprite> _list; 
 
@@ -14,24 +13,17 @@ public class SequenceGenerator : MonoBehaviour
         _list = new List<Sprite>(_sprites);
     }
 
-    private void OnEnable()
+    public List<Sprite> Generate()
     {
-        Generate();
-    }
-
-    private void Generate()
-    {
-        foreach (var keeper in _keepers)
+        var sequnce = new List<Sprite>();
+        Shuffle(_list);
+            
+        for (int i = 0; i < 3; i++)
         {
-            var sequnce = new List<Sprite>();
-            Shuffle(_list);
-            for (int i = 0; i < 3; i++)
-            {
-                sequnce.Add(_list[i]);
-            }
-
-            keeper.SetSequence(sequnce);
+            sequnce.Add(_list[i]);
         }
+
+        return sequnce;
     }
 
     private void Shuffle(List<Sprite> list)

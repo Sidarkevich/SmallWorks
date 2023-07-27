@@ -5,19 +5,41 @@ using UnityEngine;
 public class SequenceKeeper : MonoBehaviour
 {
     [SerializeField] private List<Spot> _spots;
+    [SerializeField] private SequenceGenerator _generator;
 
+    private List<Sprite> _questionSequence;
+    private List<Sprite> _answerSequence;
+    private List<Sprite> _currentSequence;
 
-    private List<Sprite> _sequence;
+    public List<Sprite> QuestionSequence => _questionSequence;
+    public List<Sprite> AnswerSequence => _answerSequence;
 
-    public List<Sprite> Sequence => _sequence;
-
-    public void SetSequence(List<Sprite> sequence)
+    private void Start()
     {
-        _sequence = sequence;
+        SetNewSequences();
+    }
 
-        for (int i = 0; i < sequence.Count; i++)
+    private void SetNewSequences()
+    {
+        _questionSequence = _generator.Generate();
+        _answerSequence = _generator.Generate();
+    }
+
+    public void Setup()
+    {
+        if (_currentSequence == _answerSequence)
         {
-            _spots[i].Setup(sequence[i]);
+            SetNewSequences();
+            _currentSequence = _questionSequence;
+        }
+        else
+        {
+            _currentSequence = _answerSequence;
+        }
+
+        for (int i = 0; i < _currentSequence.Count; i++)
+        {
+            _spots[i].Setup(_currentSequence[i]);
         }
     }
 }
