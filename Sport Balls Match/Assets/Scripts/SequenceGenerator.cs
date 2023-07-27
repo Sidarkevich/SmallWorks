@@ -26,7 +26,7 @@ public class SequenceGenerator : MonoBehaviour
         return sequnce;
     }
 
-    private void Shuffle(List<Sprite> list)
+    public void Shuffle(List<Sprite> list)
     {
         int n = list.Count;
         while (n > 1)

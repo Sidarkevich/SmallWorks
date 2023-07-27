@@ -6,6 +6,7 @@ public class SequenceKeeper : MonoBehaviour
 {
     [SerializeField] private List<Spot> _spots;
     [SerializeField] private SequenceGenerator _generator;
+    [SerializeField] private float _sameChance;
 
     private List<Sprite> _questionSequence;
     private List<Sprite> _answerSequence;
@@ -22,7 +23,16 @@ public class SequenceKeeper : MonoBehaviour
     private void SetNewSequences()
     {
         _questionSequence = _generator.Generate();
-        _answerSequence = _generator.Generate();
+
+        if (Random.Range(0f, 1f) < _sameChance)
+        {
+            _answerSequence = new List<Sprite>(_questionSequence);
+            _generator.Shuffle(_answerSequence);
+        }
+        else
+        {
+            _answerSequence = _generator.Generate();
+        }
     }
 
     public void Setup()

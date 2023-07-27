@@ -2626,6 +2626,7 @@ MonoBehaviour:
   - {fileID: 1977928015}
   - {fileID: 246941158}
   _generator: {fileID: 553373603}
+  _sameChance: 0.35
 --- !u!1 &1501435897
 GameObject:
   m_ObjectHideFlags: 0
