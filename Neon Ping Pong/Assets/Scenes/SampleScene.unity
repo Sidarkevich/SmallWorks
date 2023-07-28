@@ -234,7 +234,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -104}
+  m_SizeDelta: {x: 0, y: -110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &98404673
 GameObject:
@@ -526,7 +526,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -625,6 +625,7 @@ GameObject:
   - component: {fileID: 688547090}
   - component: {fileID: 688547092}
   - component: {fileID: 688547091}
+  - component: {fileID: 688547093}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -650,7 +651,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 96}
+  m_SizeDelta: {x: 4, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &688547091
 MonoBehaviour:
@@ -690,6 +691,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688547089}
   m_CullTransparentMesh: 1
+--- !u!70 &688547093
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688547089}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 14, y: 94}
+  m_Direction: 0
 --- !u!1 &729054626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1395,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1632,7 +1649,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -104}
+  m_SizeDelta: {x: 0, y: -110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1500876100
 GameObject:
@@ -1645,6 +1662,7 @@ GameObject:
   - component: {fileID: 1500876101}
   - component: {fileID: 1500876103}
   - component: {fileID: 1500876102}
+  - component: {fileID: 1500876104}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -1670,7 +1688,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 94, y: 0}
+  m_SizeDelta: {x: 94, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1500876102
 MonoBehaviour:
@@ -1710,6 +1728,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500876100}
   m_CullTransparentMesh: 1
+--- !u!70 &1500876104
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500876100}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 94, y: 14}
+  m_Direction: 1
 --- !u!1 &1575167302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,6 +1823,7 @@ GameObject:
   - component: {fileID: 1698088507}
   - component: {fileID: 1698088509}
   - component: {fileID: 1698088508}
+  - component: {fileID: 1698088510}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -1814,7 +1849,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 96}
+  m_SizeDelta: {x: 4, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1698088508
 MonoBehaviour:
@@ -1854,6 +1889,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698088506}
   m_CullTransparentMesh: 1
+--- !u!70 &1698088510
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698088506}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 14, y: 94}
+  m_Direction: 0
 --- !u!1 &1743406330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,7 +1990,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2108,7 +2159,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -104, y: 0}
+  m_SizeDelta: {x: -110, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1927982427 stripped
 RectTransform:
@@ -2241,7 +2292,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2256,6 +2307,7 @@ GameObject:
   - component: {fileID: 2046402628}
   - component: {fileID: 2046402630}
   - component: {fileID: 2046402629}
+  - component: {fileID: 2046402631}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -2281,7 +2333,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 94, y: 0}
+  m_SizeDelta: {x: 94, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2046402629
 MonoBehaviour:
@@ -2321,6 +2373,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046402627}
   m_CullTransparentMesh: 1
+--- !u!70 &2046402631
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046402627}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 94, y: 14}
+  m_Direction: 1
 --- !u!1 &2071622347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2356,7 +2424,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -104, y: 0}
+  m_SizeDelta: {x: -110, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2108497110
 GameObject:
