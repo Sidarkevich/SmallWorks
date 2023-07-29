@@ -6,12 +6,11 @@ using UnityEngine.Events;
 
 public class AudioPlayer : MonoBehaviour
 {
-    [SerializeField] private UnityEvent<bool, AudioMixerGroup> _soundStateChangedEvent;
+    [SerializeField] private UnityEvent<bool> _soundStateChangedEvent;
+    [SerializeField] private UnityEvent<AudioMixerGroup> _soundSettingsChangedEvent;
 
     [SerializeField] private AudioMixerGroup _mixer;
     [SerializeField] private AudioMixerGroup _mixerMuted;
-
-    [SerializeField] private AudioClip _clickClip;
 
     private int _soundSettings;
 
@@ -29,6 +28,7 @@ public class AudioPlayer : MonoBehaviour
         PlayerPrefs.SetInt("SoundSettings", newSettings);
         PlayerPrefs.Save();
 
-        _soundStateChangedEvent?.Invoke(value, mixer);
+        _soundStateChangedEvent?.Invoke(value);
+        _soundSettingsChangedEvent?.Invoke(mixer);
     }
 }

@@ -8,7 +8,7 @@ public class SoundActivator : MonoBehaviour
 {
     private AudioSource _source;
 
-    public void OnSoundStateChanged(bool state, AudioMixerGroup mixer)
+    public void OnSoundStateChanged(AudioMixerGroup mixer)
     {
         _source.outputAudioMixerGroup = mixer;
     }
