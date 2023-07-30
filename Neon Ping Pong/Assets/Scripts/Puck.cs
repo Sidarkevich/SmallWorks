@@ -5,30 +5,39 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Puck : MonoBehaviour
 {
+    [SerializeField] private float _speed;
+
     private Vector3 _startPosition;
     private Quaternion _startRotation;
 
     private Rigidbody2D _rigidbody;
 
-    private void Activate()
+    public void Activate()
     {
-        var _startDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-        _rigidbody.AddForce(_startDirection * 2.0f, ForceMode2D.Impulse);
+        gameObject.SetActive(true);
+        transform.position = _startPosition;
+        transform.rotation = _startRotation;
+
+        var _startDirection = GetRandomDirection();
+        _rigidbody.AddForce(_startDirection * _speed, ForceMode2D.Impulse);
     }
 
-    private void Start()
+    public void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
+
+    private void Awake()
     {
         _startPosition = transform.position;
         _startRotation = transform.rotation;
 
         _rigidbody = GetComponent<Rigidbody2D>();
-
-        Activate();
     }
 
-    // Update is called once per frame
-    void Update()
+    private Vector2 GetRandomDirection()
     {
-        
+        var angel = Random.Range(0f, 6.28319f);
+        return new Vector2(Mathf.Cos(angel), Mathf.Sin(angel));
     }
 }

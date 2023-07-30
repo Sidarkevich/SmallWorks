@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class ScoreHandler : MonoBehaviour
 {
     public UnityEvent LossEvent;
-    public UnityEvent ScoreIncreasedEvent;
 
     [HideInInspector] public UnityEvent<int> ScoreChangedEvent;
 
@@ -22,6 +21,11 @@ public class ScoreHandler : MonoBehaviour
         }
     }
 
+    public void Reset()
+    {
+        Score = 0;
+    }
+
     public void Loss()
     {
         SaveBestResult();
@@ -33,7 +37,6 @@ public class ScoreHandler : MonoBehaviour
         if (value > 0)
         {
             Score += value;
-            ScoreIncreasedEvent?.Invoke();
         }
     }
 
@@ -50,6 +53,6 @@ public class ScoreHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        Score = 0;
+        Reset();
     }
 }
