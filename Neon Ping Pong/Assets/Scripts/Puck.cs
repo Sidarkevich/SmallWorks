@@ -6,6 +6,7 @@ using UnityEngine;
 public class Puck : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float _rotationSpeed;
 
     private Vector3 _startPosition;
     private Quaternion _startRotation;
@@ -39,5 +40,10 @@ public class Puck : MonoBehaviour
     {
         var angel = Random.Range(0f, 6.28319f);
         return new Vector2(Mathf.Cos(angel), Mathf.Sin(angel));
+    }
+
+    private void FixedUpdate()
+    {
+        _rigidbody.MoveRotation(_rigidbody.rotation - _rigidbody.velocity.x * _rotationSpeed);
     }
 }
