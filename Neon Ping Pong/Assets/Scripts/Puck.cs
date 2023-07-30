@@ -13,7 +13,7 @@ public class Puck : MonoBehaviour
     private void Activate()
     {
         var _startDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-        _rigidbody.AddForce(_startDirection * 3.5f, ForceMode2D.Impulse);
+        _rigidbody.AddForce(_startDirection * 2.0f, ForceMode2D.Impulse);
     }
 
     private void Start()
