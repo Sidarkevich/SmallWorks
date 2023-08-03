@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Rigidbody2D _rigidbody;
+
+    private Vector3 _startPosition;
+    private Quaternion _startRotation;
+
+    private void Awake()
     {
-        
+        _startPosition = transform.position;
+        _startRotation = transform.rotation;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        _rigidbody.position = _startPosition;
+        _rigidbody.SetRotation(_startRotation);
     }
 }
