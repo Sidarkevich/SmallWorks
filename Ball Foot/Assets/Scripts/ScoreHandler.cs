@@ -28,7 +28,7 @@ public class ScoreHandler : MonoBehaviour
 
     public void Loss()
     {
-        //SaveBestResult();
+        SaveBestResult();
         LossEvent?.Invoke();
     }
 
@@ -37,6 +37,7 @@ public class ScoreHandler : MonoBehaviour
         if (value > 0)
         {
             Score += value;
+            IncreaseTotalResult(value);
         }
     }
 
@@ -49,6 +50,14 @@ public class ScoreHandler : MonoBehaviour
             PlayerPrefs.SetInt("BestScore", _score);
             PlayerPrefs.Save();
         }
+    }
+
+    private void IncreaseTotalResult(int value)
+    {
+        var total = PlayerPrefs.GetInt("TotalScore", 0);
+        total += value;
+        PlayerPrefs.SetInt("TotalScore", total);
+        PlayerPrefs.Save();
     }
 
     private void OnEnable()
