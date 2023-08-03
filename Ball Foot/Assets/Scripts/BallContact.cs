@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BallContact : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private UnityEvent _ballContactEvent;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        var puck = collision.gameObject.GetComponent<Ball>();
+
+        if (puck)
+        {
+            _ballContactEvent?.Invoke();
+        }
     }
 }
