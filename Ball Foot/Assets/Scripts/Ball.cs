@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody;
+    [SerializeField] private float _rotationSpeed;
 
     private Vector3 _startPosition;
     private Quaternion _startRotation;
@@ -19,5 +20,10 @@ public class Ball : MonoBehaviour
     {
         _rigidbody.position = _startPosition;
         _rigidbody.SetRotation(_startRotation);
+    }
+
+    private void FixedUpdate()
+    {
+        _rigidbody.MoveRotation(_rigidbody.rotation - _rigidbody.velocity.x * _rotationSpeed);
     }
 }

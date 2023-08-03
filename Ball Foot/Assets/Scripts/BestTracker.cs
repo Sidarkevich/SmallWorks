@@ -5,7 +5,7 @@ using TMPro;
 
 public class BestTracker : MonoBehaviour
 {
-    [SerializeField] TMP_Text _text;
+    [SerializeField] private TMP_Text _text;
 
     private void OnEnable()
     {
