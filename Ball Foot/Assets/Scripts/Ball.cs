@@ -22,6 +22,11 @@ public class Ball : MonoBehaviour
         _rigidbody.SetRotation(_startRotation);
     }
 
+    public void Kick(Vector3 forceVector)
+    {
+        _rigidbody.AddForce(forceVector, ForceMode2D.Impulse);
+    }
+
     private void FixedUpdate()
     {
         _rigidbody.MoveRotation(_rigidbody.rotation - _rigidbody.velocity.x * _rotationSpeed);

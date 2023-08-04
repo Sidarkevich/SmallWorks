@@ -1662,6 +1662,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _forceEffect: 0
 --- !u!82 &400588314
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4827,6 +4828,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _forceEffect: 0
 --- !u!82 &1098006570
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6492,6 +6494,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _forceEffect: 65
 --- !u!82 &1372421242
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6814,7 +6817,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 35
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
@@ -8262,6 +8265,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _forceEffect: 0
 --- !u!1 &1696952998
 GameObject:
   m_ObjectHideFlags: 0
