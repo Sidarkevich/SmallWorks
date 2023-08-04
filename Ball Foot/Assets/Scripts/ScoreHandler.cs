@@ -59,9 +59,4 @@ public class ScoreHandler : MonoBehaviour
         PlayerPrefs.SetInt("TotalScore", total);
         PlayerPrefs.Save();
     }
-
-    private void OnEnable()
-    {
-        Reset();
-    }
 }

@@ -16,7 +16,7 @@ public class Ball : MonoBehaviour
         _startRotation = transform.rotation;
     }
 
-    private void OnEnable()
+    public void Restart()
     {
         _rigidbody.position = _startPosition;
         _rigidbody.SetRotation(_startRotation);

@@ -17,13 +17,13 @@ public class DragInput : MonoBehaviour, IDragHandler
         }
     }
 
+    public void Restart()
+    {
+        transform.position = _startPosition;
+    }
+
     private void Awake()
     {
         _startPosition = transform.position;
-    }
-
-    private void OnEnable()
-    {
-        transform.position = _startPosition;
     }
 }
