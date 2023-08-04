@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
 
     private Vector3 _startPosition;
     private Quaternion _startRotation;
+    private Vector2 _velocity;
 
     private void Awake()
     {
@@ -25,6 +26,16 @@ public class Ball : MonoBehaviour
     public void Kick(Vector3 forceVector)
     {
         _rigidbody.AddForce(forceVector, ForceMode2D.Impulse);
+    }
+
+    public void SaveVelocity()
+    {
+        _velocity = _rigidbody.velocity;
+    }
+
+    public void SetVelocity()
+    {
+        _rigidbody.velocity = _velocity;
     }
 
     private void FixedUpdate()

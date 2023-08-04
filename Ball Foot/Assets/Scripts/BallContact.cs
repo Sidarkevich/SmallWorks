@@ -23,6 +23,6 @@ public class BallContact : MonoBehaviour
 
     private float GetRandomValue()
     {
-        return UnityEngine.Random.Range(-1f, 1f);
+        return UnityEngine.Random.Range(-0.5f, 0.5f);
     }
 }
