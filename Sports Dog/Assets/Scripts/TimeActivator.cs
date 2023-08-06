@@ -6,8 +6,8 @@ public class TimeActivator : MonoBehaviour
 {
     [SerializeField] private float _time;
     [SerializeField] [Range(0f, 1f)] private float _chance;
-    [SerializeField] private float _yOffset;
     [SerializeField] private ObjectPool _pool;
+    [SerializeField] private SpeedHandler _speedHandler;
 
     private void OnEnable()
     {
@@ -28,9 +28,9 @@ public class TimeActivator : MonoBehaviour
             if (Random.Range(0f, 1f) < _chance)
             {
                 var spawned = _pool.ActivateObject();
+                spawned.Init(_speedHandler);
 
-                var yPos = Random.Range(transform.position.y - _yOffset, transform.position.y + _yOffset);
-                spawned.transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
+                spawned.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
         }
     }

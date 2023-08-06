@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private GroundCheck _groundCheck;
+    [SerializeField] private HealthHandler _health; 
     [SerializeField] private float _jumpForce;
 
     private Vector3 _startPosition;

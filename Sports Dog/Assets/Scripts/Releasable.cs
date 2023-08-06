@@ -9,6 +9,11 @@ public class Releasable : MonoBehaviour
 
     private UnityEvent<Releasable> ReleasedEvent = new UnityEvent<Releasable>();
 
+    public void Init(SpeedHandler speedHandler)
+    {
+        _movement.Init(speedHandler);
+    }
+
     public void Activate()
     {
         gameObject.SetActive(true);

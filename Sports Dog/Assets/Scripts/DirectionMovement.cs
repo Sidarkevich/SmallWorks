@@ -9,12 +9,12 @@ public class DirectionMovement : MonoBehaviour
     [SerializeField] private Vector3 _moveDirection;
 
     private float _destroyValue;
-    /*    private SpeedHandler _handler;
+    private SpeedHandler _handler;
 
-        public void Init(SpeedHandler handler)
-        {
-            _handler = handler;
-        }*/
+    public void Init(SpeedHandler handler)
+    {
+        _handler = handler;
+    }
 
     private void Start()
     {
@@ -23,7 +23,7 @@ public class DirectionMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(_moveDirection * Time.deltaTime);
+        transform.Translate(_moveDirection * _handler.Speed * Time.deltaTime);
 
         if (transform.position.x < _destroyValue)
         {
