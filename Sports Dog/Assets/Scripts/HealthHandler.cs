@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int _maxHealth;
+
+    [HideInInspector] public UnityEvent<int, int> HealthChangedEvent;
+
+    private int _currentHealth;
+
+    public void Damage(int value)
     {
-        
+        _currentHealth -= value;
+        HealthChangedEvent?.Invoke(_currentHealth, _maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool IsAlive()
     {
-        
+        return (_currentHealth > 0);
+    }
+
+    private void OnEnable()
+    {
+        _currentHealth = _maxHealth;
     }
 }
