@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class HealthHandler : MonoBehaviour
 {
+    [SerializeField] private UnityEvent _gotDamageEvent;
     [SerializeField] private int _maxHealth;
 
     [HideInInspector] public UnityEvent<int, int> HealthChangedEvent;
@@ -15,6 +16,7 @@ public class HealthHandler : MonoBehaviour
     {
         _currentHealth -= value;
         HealthChangedEvent?.Invoke(_currentHealth, _maxHealth);
+        _gotDamageEvent?.Invoke();
     }
 
     public bool IsAlive()
