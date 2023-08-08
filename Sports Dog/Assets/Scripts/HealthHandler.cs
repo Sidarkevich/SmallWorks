@@ -22,8 +22,9 @@ public class HealthHandler : MonoBehaviour
         return (_currentHealth > 0);
     }
 
-    private void OnEnable()
+    public void Reset()
     {
         _currentHealth = _maxHealth;
+        HealthChangedEvent?.Invoke(_currentHealth, _maxHealth);
     }
 }

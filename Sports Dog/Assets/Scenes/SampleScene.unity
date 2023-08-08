@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83591983323470144820f796e943f447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parallaxSpeed: 0.15
+  _parallaxSpeed: 0.05
   _image: {fileID: 205124299}
 --- !u!114 &205124299
 MonoBehaviour:
@@ -655,7 +655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &231669892
 RectTransform:
   m_ObjectHideFlags: 0
@@ -874,7 +874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &363133560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -964,6 +964,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 032fc4db046b2a84bad63ad240100500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startSpeed: 5
+  _speedIncrease: 0.05
 --- !u!114 &363133565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,6 +997,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _scorePerSecond: 3
+  _speedHandler: {fileID: 363133564}
 --- !u!1 &379914998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,6 +2284,7 @@ GameObject:
   - component: {fileID: 1015710080}
   - component: {fileID: 1015710082}
   - component: {fileID: 1015710081}
+  - component: {fileID: 1015710083}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2405,6 +2409,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015710079}
   m_CullTransparentMesh: 1
+--- !u!114 &1015710083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015710079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896570108a2710849a6bd59b4ebbdc2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handler: {fileID: 363133565}
 --- !u!1 &1025614912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,8 +3177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34abf526e710f5c4290137f92bc88bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _time: 4
-  _chance: 0.8
+  _time: 1.2
+  _chance: 0.65
   _pool: {fileID: 1275844707}
   _speedHandler: {fileID: 363133564}
 --- !u!114 &1275844707
@@ -3178,6 +3195,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefabs:
   - {fileID: 6758756637707088016, guid: 6a43adc62085eb54a9b68879f99d17db, type: 3}
+  - {fileID: 54665604970055264, guid: aee97f743eb695a4aa0aa877beefbcfe, type: 3}
+  - {fileID: 54665604970055264, guid: f7cf1276e5b3f094e8da0b735db54e97, type: 3}
+  - {fileID: 54665604970055264, guid: b2ef7ccc4d9e66a47b00ae520b3ff581, type: 3}
+  - {fileID: 54665604970055264, guid: f5c902ebb196b944d85b17dacb2e66c2, type: 3}
+  - {fileID: 54665604970055264, guid: e08ded856590baa4a90c87dc88c9a66d, type: 3}
 --- !u!1 &1433283539
 GameObject:
   m_ObjectHideFlags: 0

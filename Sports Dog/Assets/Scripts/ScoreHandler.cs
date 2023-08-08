@@ -10,6 +10,7 @@ public class ScoreHandler : MonoBehaviour
     [HideInInspector] public UnityEvent<int> ScoreChangedEvent;
 
     [SerializeField] private int _scorePerSecond;
+    [SerializeField] private SpeedHandler _speedHandler;
 
     private int _score;
 
@@ -34,6 +35,7 @@ public class ScoreHandler : MonoBehaviour
         if (value > 0)
         {
             Score += value;
+            _speedHandler.Increase(value);
         }
     }
 
@@ -48,9 +50,10 @@ public class ScoreHandler : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    public void Reset()
     {
         Score = 0;
+        _speedHandler.Reset();
         StartCoroutine(ScoreCoroutine());
     }
 

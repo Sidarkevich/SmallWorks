@@ -38,5 +38,8 @@ public class Player : MonoBehaviour
     private void OnEnable()
     {
         transform.position = _startPosition;
+
+        _score.Reset();
+        _health.Reset();
     }
 }
