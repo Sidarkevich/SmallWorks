@@ -8,11 +8,11 @@ public class InputHandler : MonoBehaviour, IPointerDownHandler
 {
     public UnityEvent ClickedEvent;
 
-    //[SerializeField] private Cat _cat;
+    [SerializeField] private Comet _comet;
 
     public void OnPointerDown(PointerEventData eventData)
     {
         ClickedEvent?.Invoke();
-        //_cat.Jump();
+        _comet.ChangeColor();
     }
 }

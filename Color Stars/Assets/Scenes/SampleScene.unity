@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 116613217}
   - component: {fileID: 116613216}
   - component: {fileID: 116613218}
+  - component: {fileID: 116613219}
   m_Layer: 5
   m_Name: GameScreen
   m_TagString: Untagged
@@ -384,6 +385,23 @@ MonoBehaviour:
   ClickedEvent:
     m_PersistentCalls:
       m_Calls: []
+  _comet: {fileID: 1174005157}
+--- !u!114 &116613219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116613214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19f66b5da0b3144f816f488797004d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _allColors:
+  - {fileID: 21300000, guid: 5794290a09cfc6b4d837c1f79ef418cb, type: 3}
+  - {fileID: 21300000, guid: 214263424d0793c429310852fc4362eb, type: 3}
+  - {fileID: 21300000, guid: 4d818a0d643d5f04ea4b0fbe8457a3fe, type: 3}
 --- !u!1 &417224931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,6 +3182,7 @@ GameObject:
   - component: {fileID: 1174005154}
   - component: {fileID: 1174005156}
   - component: {fileID: 1174005155}
+  - component: {fileID: 1174005157}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -3229,6 +3248,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174005153}
   m_CullTransparentMesh: 1
+--- !u!114 &1174005157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174005153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc5bce48224f694bab85394a3fed060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1174005155}
+  _colors: {fileID: 116613219}
 --- !u!1 &1282746743
 GameObject:
   m_ObjectHideFlags: 0
