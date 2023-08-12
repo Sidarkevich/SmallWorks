@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Comet : MonoBehaviour
 {
+    [SerializeField] private SpeedHandler _speedHandler;
     [SerializeField] private Image _image;
     [SerializeField] private ColorHandler _colors;
 
@@ -17,6 +18,12 @@ public class Comet : MonoBehaviour
 
     private void OnEnable()
     {
+        _speedHandler.Reset();
         _image.sprite = _colors.GetRandom();
+    }
+
+    private void Update()
+    {
+        transform.parent.Rotate(Vector3.back * _speedHandler.CurrentSpeed, Space.World);
     }
 }

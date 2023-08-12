@@ -300,13 +300,14 @@ GameObject:
   - component: {fileID: 116613216}
   - component: {fileID: 116613218}
   - component: {fileID: 116613219}
+  - component: {fileID: 116613220}
   m_Layer: 5
   m_Name: GameScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &116613215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -402,6 +403,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5794290a09cfc6b4d837c1f79ef418cb, type: 3}
   - {fileID: 21300000, guid: 214263424d0793c429310852fc4362eb, type: 3}
   - {fileID: 21300000, guid: 4d818a0d643d5f04ea4b0fbe8457a3fe, type: 3}
+--- !u!114 &116613220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116613214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7dd643c9ed978740b31b19135ac89d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startSpeed: 0.5
 --- !u!1 &417224931
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,10 +449,10 @@ RectTransform:
   m_Father: {fileID: 1984030657}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 238.74666, y: -50}
-  m_SizeDelta: {x: 26.25, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &417224933
 MonoBehaviour:
@@ -1345,7 +1359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &693453333
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3260,6 +3274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc5bce48224f694bab85394a3fed060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speedHandler: {fileID: 116613220}
   _image: {fileID: 1174005155}
   _colors: {fileID: 116613219}
 --- !u!1 &1282746743
@@ -3295,10 +3310,10 @@ RectTransform:
   m_Father: {fileID: 1984030657}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 167.57666, y: -50}
-  m_SizeDelta: {x: 96.09, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282746745
 MonoBehaviour:
