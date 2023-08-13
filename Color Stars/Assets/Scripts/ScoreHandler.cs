@@ -6,8 +6,7 @@ using UnityEngine.Events;
 public class ScoreHandler : MonoBehaviour
 {
     [SerializeField] private UnityEvent _lossEvent;
-
-    [SerializeField] private SpeedHandler _speedHandler;
+    [SerializeField] private UnityEvent _scoreIncresedEvent;
 
     [HideInInspector] public UnityEvent<int> ScoreChangedEvent;
     [HideInInspector] public UnityEvent<int> BestScoreChangedEvent;
@@ -43,7 +42,7 @@ public class ScoreHandler : MonoBehaviour
         if (value > 0)
         {
             Score += value;
-            _speedHandler.IncreaseSpeed();
+            _scoreIncresedEvent?.Invoke();
 
             if (Score > _bestScore)
             {
