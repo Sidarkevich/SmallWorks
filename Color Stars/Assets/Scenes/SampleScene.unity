@@ -2543,6 +2543,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42bbf80f642b62f428dd36624061083b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _image: {fileID: 1031509649}
   _score: {fileID: 116613221}
 --- !u!58 &1031509652
@@ -3020,6 +3023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42bbf80f642b62f428dd36624061083b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _image: {fileID: 1116227169}
   _score: {fileID: 116613221}
 --- !u!58 &1116227172
@@ -3736,6 +3742,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42bbf80f642b62f428dd36624061083b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _image: {fileID: 1413257759}
   _score: {fileID: 116613221}
 --- !u!58 &1413257762
@@ -3977,6 +3986,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42bbf80f642b62f428dd36624061083b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _image: {fileID: 1677409985}
   _score: {fileID: 116613221}
 --- !u!58 &1677409988
@@ -4896,6 +4908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2083026574}
+  - component: {fileID: 2083026575}
   m_Layer: 5
   m_Name: Spots
   m_TagString: Untagged
@@ -4927,6 +4940,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 235, y: 235}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2083026575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083026573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230c68edb24850c4a9de54a3a9034199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spots:
+  - {fileID: 1677409987}
+  - {fileID: 1116227171}
+  - {fileID: 1413257761}
+  - {fileID: 1031509651}
+  _startIndex: 0
+  _colorHandler: {fileID: 116613219}
 --- !u!1 &2098035801
 GameObject:
   m_ObjectHideFlags: 0
