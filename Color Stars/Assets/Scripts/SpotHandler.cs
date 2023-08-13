@@ -21,14 +21,21 @@ public class SpotHandler : MonoBehaviour
     private void OnCollected()
     {
         _currentIndex++;
+
+        if (_currentIndex >= _spots.Count)
+        {
+            _currentIndex = 0;
+        }
+
         Setup(_currentIndex);
     }
 
     private void Setup(int index)
     {
+        _spots[_currentIndex].Setup(_colorHandler.GetRandom());
+
         for (int i = 0; i < _spots.Count; i++)
         {
-            _spots[i].Setup(_colorHandler.GetRandom());
             _spots[i].gameObject.SetActive(i != index);
         }
     }

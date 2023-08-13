@@ -8,8 +8,12 @@ public class ScoreHandler : MonoBehaviour
     public UnityEvent LossEvent;
 
     [HideInInspector] public UnityEvent<int> ScoreChangedEvent;
+    [HideInInspector] public UnityEvent<int> BestScoreChangedEvent;
 
     private int _score;
+    private int _bestScore;
+
+    public int BestScore => _bestScore;
 
     public int Score
     {
@@ -28,7 +32,7 @@ public class ScoreHandler : MonoBehaviour
 
     public void Loss()
     {
-        SaveBestResult();
+        SaveResult();
         LossEvent?.Invoke();
     }
 
@@ -37,26 +41,28 @@ public class ScoreHandler : MonoBehaviour
         if (value > 0)
         {
             Score += value;
-            IncreaseTotalResult(value);
+
+            if (Score > _bestScore)
+            {
+                _bestScore = Score;
+                BestScoreChangedEvent?.Invoke(_bestScore);
+            }
         }
     }
 
-    private void SaveBestResult()
+    private void SaveResult()
     {
         var lastBest = PlayerPrefs.GetInt("BestScore", 0);
 
-        if (_score > lastBest)
+        if (_bestScore > lastBest)
         {
-            PlayerPrefs.SetInt("BestScore", _score);
+            PlayerPrefs.SetInt("BestScore", _bestScore);
             PlayerPrefs.Save();
         }
     }
 
-    private void IncreaseTotalResult(int value)
+    private void Start()
     {
-        var total = PlayerPrefs.GetInt("TotalScore", 0);
-        total += value;
-        PlayerPrefs.SetInt("TotalScore", total);
-        PlayerPrefs.Save();
+        _bestScore = PlayerPrefs.GetInt("BestScore", 0);
     }
 }

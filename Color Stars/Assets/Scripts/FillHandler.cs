@@ -22,6 +22,7 @@ public class FillHandler : MonoBehaviour
 
         if (_value >= 1.0f)
         {
+            _scoreHandler.IncreaseScore(1);
             _value = 0;
         }
 
