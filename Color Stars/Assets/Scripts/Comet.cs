@@ -22,7 +22,7 @@ public class Comet : MonoBehaviour
         _image.sprite = _colors.GetRandom();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.parent.Rotate(Vector3.back * _speedHandler.CurrentSpeed, Space.World);
     }

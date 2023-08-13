@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpeedHandler : MonoBehaviour
 {
     [SerializeField] private float _startSpeed;
+    [SerializeField] private float _increaseValue;
 
     public float CurrentSpeed => _currentSpeed;
 
@@ -13,5 +14,10 @@ public class SpeedHandler : MonoBehaviour
     public void Reset()
     {
         _currentSpeed = _startSpeed;
+    }
+
+    public void IncreaseSpeed()
+    {
+        _currentSpeed += _increaseValue;
     }
 }
