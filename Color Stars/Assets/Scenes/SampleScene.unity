@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 116613218}
   - component: {fileID: 116613219}
   - component: {fileID: 116613220}
+  - component: {fileID: 116613221}
   m_Layer: 5
   m_Name: GameScreen
   m_TagString: Untagged
@@ -416,6 +417,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startSpeed: 0.5
+--- !u!114 &116613221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116613214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f46632759bdd5f4f971f0ee7f4df177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LossEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ScoreChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &417224931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,6 +2464,8 @@ GameObject:
   - component: {fileID: 1031509648}
   - component: {fileID: 1031509650}
   - component: {fileID: 1031509649}
+  - component: {fileID: 1031509651}
+  - component: {fileID: 1031509652}
   m_Layer: 5
   m_Name: Spot (3)
   m_TagString: Untagged
@@ -2510,6 +2531,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031509647}
   m_CullTransparentMesh: 1
+--- !u!114 &1031509651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031509647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bbf80f642b62f428dd36624061083b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1031509649}
+  _score: {fileID: 116613221}
+--- !u!58 &1031509652
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031509647}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 9
 --- !u!1 &1040748289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,6 +2941,8 @@ GameObject:
   - component: {fileID: 1116227168}
   - component: {fileID: 1116227170}
   - component: {fileID: 1116227169}
+  - component: {fileID: 1116227171}
+  - component: {fileID: 1116227172}
   m_Layer: 5
   m_Name: Spot (1)
   m_TagString: Untagged
@@ -2955,6 +3008,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116227167}
   m_CullTransparentMesh: 1
+--- !u!114 &1116227171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116227167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bbf80f642b62f428dd36624061083b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1116227169}
+  _score: {fileID: 116613221}
+--- !u!58 &1116227172
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116227167}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 9
 --- !u!1 &1146654867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,6 +3049,7 @@ GameObject:
   - component: {fileID: 1146654868}
   - component: {fileID: 1146654870}
   - component: {fileID: 1146654869}
+  - component: {fileID: 1146654871}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -3031,6 +3115,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146654867}
   m_CullTransparentMesh: 1
+--- !u!114 &1146654871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146654867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efbbd1437d9d54429d9386bea6f64f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1146654869}
+  _fillSpeed: 0.005
+  _scoreHandler: {fileID: 116613221}
 --- !u!1 &1160334086
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3296,8 @@ GameObject:
   - component: {fileID: 1174005156}
   - component: {fileID: 1174005155}
   - component: {fileID: 1174005157}
+  - component: {fileID: 1174005159}
+  - component: {fileID: 1174005158}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -3277,6 +3378,43 @@ MonoBehaviour:
   _speedHandler: {fileID: 116613220}
   _image: {fileID: 1174005155}
   _colors: {fileID: 116613219}
+--- !u!50 &1174005158
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174005153}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1174005159
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174005153}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 12
 --- !u!1 &1282746743
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,6 +3657,8 @@ GameObject:
   - component: {fileID: 1413257758}
   - component: {fileID: 1413257760}
   - component: {fileID: 1413257759}
+  - component: {fileID: 1413257761}
+  - component: {fileID: 1413257762}
   m_Layer: 5
   m_Name: Spot (2)
   m_TagString: Untagged
@@ -3584,6 +3724,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413257757}
   m_CullTransparentMesh: 1
+--- !u!114 &1413257761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413257757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bbf80f642b62f428dd36624061083b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1413257759}
+  _score: {fileID: 116613221}
+--- !u!58 &1413257762
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413257757}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 9
 --- !u!1 &1638667573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3728,6 +3898,8 @@ GameObject:
   - component: {fileID: 1677409984}
   - component: {fileID: 1677409986}
   - component: {fileID: 1677409985}
+  - component: {fileID: 1677409987}
+  - component: {fileID: 1677409988}
   m_Layer: 5
   m_Name: Spot (0)
   m_TagString: Untagged
@@ -3793,6 +3965,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677409983}
   m_CullTransparentMesh: 1
+--- !u!114 &1677409987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677409983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bbf80f642b62f428dd36624061083b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _image: {fileID: 1677409985}
+  _score: {fileID: 116613221}
+--- !u!58 &1677409988
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677409983}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 9
 --- !u!1 &1752739503
 GameObject:
   m_ObjectHideFlags: 0

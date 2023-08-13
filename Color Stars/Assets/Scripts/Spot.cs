@@ -25,7 +25,7 @@ public class Spot : MonoBehaviour
             }
             else
             {
-                _score.Loss();
+
             }
         }
     }
