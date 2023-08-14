@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpotHandler : MonoBehaviour
 {
+    [SerializeField] private UnityEvent _collectedEvent;
     [SerializeField] private List<Spot> _spots;
     [SerializeField] private int _startIndex;
     [SerializeField] private ColorHandler _colorHandler;
@@ -20,6 +22,7 @@ public class SpotHandler : MonoBehaviour
 
     private void OnCollected()
     {
+        _collectedEvent?.Invoke();
         _currentIndex++;
 
         if (_currentIndex >= _spots.Count)
