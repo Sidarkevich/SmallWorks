@@ -23,4 +23,14 @@ public class Spot : MonoBehaviour
         _title = title;
         _text.text = _title;
     }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        var spot = collider.GetComponent<Spot>();
+
+        if (spot)
+        {
+            Debug.Log("Contact!");
+        }
+    }
 }
