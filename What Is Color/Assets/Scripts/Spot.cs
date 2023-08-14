@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Spot : MonoBehaviour
 {
+    [HideInInspector] public UnityEvent<Color32, string> SpotTriggeredEvent = new UnityEvent<Color32, string>();
+
     [SerializeField] private Image _image;
     [SerializeField] private TMP_Text _text;
 
@@ -30,7 +33,7 @@ public class Spot : MonoBehaviour
 
         if (spot)
         {
-            Debug.Log("Contact!");
+            SpotTriggeredEvent?.Invoke(_color, spot._title);
         }
     }
 }

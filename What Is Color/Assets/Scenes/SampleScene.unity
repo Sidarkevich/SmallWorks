@@ -272,6 +272,8 @@ GameObject:
   - component: {fileID: 162997996}
   - component: {fileID: 162997995}
   - component: {fileID: 162997994}
+  - component: {fileID: 162997999}
+  - component: {fileID: 162997998}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -363,6 +365,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &162997998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162997993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74db9069ade43d0429038f162f82cc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BestScoreChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &162997999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162997993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993b3772f0f942542b7a420b79682671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screens:
+  - {fileID: 1690183666}
+  - {fileID: 2061203141}
+  - {fileID: 678952182}
+  _startScreen: {fileID: 1690183666}
 --- !u!1 &175478574
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +551,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 210005720}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162997999}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 678952182}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &210005720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,7 +749,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -55, y: 0}
@@ -728,6 +777,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ab1ce7e897b4545855ac8a7b9608da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpotTriggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _image: {fileID: 922647627}
   _text: {fileID: 234901666}
 --- !u!1 &260375348
@@ -1088,7 +1140,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 55, y: 0}
@@ -1116,6 +1168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ab1ce7e897b4545855ac8a7b9608da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpotTriggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _image: {fileID: 818997162}
   _text: {fileID: 353672780}
 --- !u!1 &385143942
@@ -1167,8 +1222,9 @@ GameObject:
   - component: {fileID: 392992668}
   - component: {fileID: 392992670}
   - component: {fileID: 392992669}
+  - component: {fileID: 392992671}
   m_Layer: 5
-  m_Name: Best
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1291,6 +1347,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392992667}
   m_CullTransparentMesh: 1
+--- !u!114 &392992671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392992667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0777019134da343a29fc0b37645594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handler: {fileID: 162997998}
+  _isBestScoreTracker: 0
 --- !u!1 &484026927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1577,7 @@ GameObject:
   - component: {fileID: 583759732}
   - component: {fileID: 583759734}
   - component: {fileID: 583759733}
+  - component: {fileID: 583759735}
   m_Layer: 5
   m_Name: Best
   m_TagString: Untagged
@@ -1631,6 +1702,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583759731}
   m_CullTransparentMesh: 1
+--- !u!114 &583759735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583759731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0777019134da343a29fc0b37645594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handler: {fileID: 162997998}
+  _isBestScoreTracker: 1
 --- !u!1 &604718039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,6 +2183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66152fe77421fb74989ae289ac65922b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sameColorsEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _differentColorsEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _colors:
   - serializedVersion: 2
     rgba: 4281479907
@@ -2493,7 +2584,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 932827842}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162997999}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1690183666}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &932827842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2758,7 +2861,7 @@ GameObject:
   - component: {fileID: 1062940551}
   - component: {fileID: 1062940550}
   m_Layer: 5
-  m_Name: RetartButton
+  m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2828,7 +2931,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1062940551}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 162997999}
+        m_TargetAssemblyTypeName: ScreenSwitcher, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 678952182}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1062940551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3052,7 +3167,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 25}
@@ -3080,6 +3195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ab1ce7e897b4545855ac8a7b9608da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpotTriggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _image: {fileID: 1961477561}
   _text: {fileID: 1287782313}
 --- !u!1 &1338823743
@@ -3364,7 +3482,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -25}
@@ -3392,6 +3510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ab1ce7e897b4545855ac8a7b9608da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpotTriggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _image: {fileID: 954706688}
   _text: {fileID: 1342837177}
 --- !u!1 &1566593790
@@ -3588,6 +3709,7 @@ GameObject:
   - component: {fileID: 1740639521}
   - component: {fileID: 1740639523}
   - component: {fileID: 1740639522}
+  - component: {fileID: 1740639524}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -3712,6 +3834,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740639520}
   m_CullTransparentMesh: 1
+--- !u!114 &1740639524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740639520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0777019134da343a29fc0b37645594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handler: {fileID: 162997998}
+  _isBestScoreTracker: 0
 --- !u!1 &1808864370
 GameObject:
   m_ObjectHideFlags: 0
@@ -3723,6 +3859,7 @@ GameObject:
   - component: {fileID: 1808864371}
   - component: {fileID: 1808864373}
   - component: {fileID: 1808864372}
+  - component: {fileID: 1808864374}
   m_Layer: 5
   m_Name: Best
   m_TagString: Untagged
@@ -3847,6 +3984,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808864370}
   m_CullTransparentMesh: 1
+--- !u!114 &1808864374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808864370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0777019134da343a29fc0b37645594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _handler: {fileID: 162997998}
+  _isBestScoreTracker: 1
 --- !u!1 &1898577267
 GameObject:
   m_ObjectHideFlags: 0
@@ -4589,6 +4740,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ab1ce7e897b4545855ac8a7b9608da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpotTriggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _image: {fileID: 2119830463}
   _text: {fileID: 0}
 --- !u!61 &2119830466

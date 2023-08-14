@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ColorsHandler : MonoBehaviour
 {
+    [SerializeField] private UnityEvent _sameColorsEvent;
+    [SerializeField] private UnityEvent _differentColorsEvent;
+
     [SerializeField] private List<Color32> _colors;
     [SerializeField] private List<string> _titles;
 
@@ -28,5 +32,28 @@ public class ColorsHandler : MonoBehaviour
         }
 
         _playerSpot.Setup(colors[Random.Range(0, colors.Count)]);
+    }
+
+    private void Awake()
+    {
+        foreach (var spot in _titleSpots)
+        {
+            spot.SpotTriggeredEvent.AddListener(OnSpotTriggered);
+        }
+    }
+
+    private void OnSpotTriggered(Color32 color, string title)
+    {
+        var colorIndex = _colors.FindIndex(a => ((a.r == color.r) && (a.g == color.g) && (a.b == color.b)));
+        var titleIndex = _titles.FindIndex(a => a == title);
+
+        if (colorIndex == titleIndex)
+        {
+            _sameColorsEvent?.Invoke();
+        }
+        else
+        {
+            _differentColorsEvent?.Invoke();
+        }
     }
 }
