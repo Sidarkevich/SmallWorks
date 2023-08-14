@@ -66,5 +66,6 @@ public class ScoreHandler : MonoBehaviour
     private void Start()
     {
         _bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        BestScoreChangedEvent?.Invoke(_bestScore);
     }
 }

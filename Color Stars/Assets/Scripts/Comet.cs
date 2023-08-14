@@ -7,7 +7,7 @@ public class Comet : MonoBehaviour
 {
     [SerializeField] private SpeedHandler _speedHandler;
     [SerializeField] private ScoreHandler _scoreHandler;
-    [SerializeField] private SpotHandler _spotHandler;
+    [SerializeField] private FillHandler _fillHandler;
     [SerializeField] private Image _image;
     [SerializeField] private ColorHandler _colors;
 
@@ -23,6 +23,8 @@ public class Comet : MonoBehaviour
     private void OnEnable()
     {
         _speedHandler.Reset();
+        _scoreHandler.Reset();
+        _fillHandler.Reset();
         _image.sprite = _colors.GetRandom();
         transform.parent.rotation = _startRotation;
     }
