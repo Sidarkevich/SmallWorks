@@ -33,7 +33,7 @@ public class Spot : MonoBehaviour
 
         if (spot)
         {
-            SpotTriggeredEvent?.Invoke(_color, spot._title);
+            SpotTriggeredEvent?.Invoke(spot._color, _title);
         }
     }
 }

@@ -17,7 +17,7 @@ public class DragInput : MonoBehaviour, IDragHandler
         }
     }
 
-    private void OnEnable()
+    public void Reset()
     {
         _rigidBody.MovePosition(_startPosition);
     }
