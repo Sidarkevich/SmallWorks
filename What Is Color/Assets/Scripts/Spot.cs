@@ -29,8 +29,12 @@ public class Spot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        var spot = collider.GetComponent<Spot>();
+        if (collider.isTrigger)
+        {
+            return;
+        }
 
+        var spot = collider.GetComponent<Spot>();
         if (spot)
         {
             SpotTriggeredEvent?.Invoke(spot._color, _title);

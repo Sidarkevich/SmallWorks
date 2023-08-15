@@ -47,6 +47,8 @@ public class ColorsHandler : MonoBehaviour
         var colorIndex = _colors.FindIndex(a => ((a.r == color.r) && (a.g == color.g) && (a.b == color.b)));
         var titleIndex = _titles.FindIndex(a => a == title);
 
+        Debug.Log(colorIndex + " : " + titleIndex);
+
         if (colorIndex == titleIndex)
         {
             _sameColorsEvent?.Invoke();

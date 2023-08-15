@@ -17,12 +17,12 @@ public class DragInput : MonoBehaviour, IDragHandler
         }
     }
 
-    public void Reset()
+    private void OnEnable()
     {
         _rigidBody.MovePosition(_startPosition);
     }
 
-    private void Awake()
+    private void Start()
     {
         _startPosition = transform.position;
     }
