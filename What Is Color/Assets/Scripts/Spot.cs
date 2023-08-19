@@ -14,11 +14,13 @@ public class Spot : MonoBehaviour
 
     private Color32 _color;
     private string _title;
+    private bool _isSetupped;
 
     public void Setup(Color32 color)
     {
         _color = color;
         _image.color = _color;
+        _isSetupped = true;
     }
 
     public void Setup(string title)
@@ -29,14 +31,16 @@ public class Spot : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.isTrigger)
-        {
+        if (!_isSetupped)
             return;
-        }
+
+        if (collider.isTrigger)
+            return;
 
         var spot = collider.GetComponent<Spot>();
         if (spot)
         {
+            _isSetupped = false;
             SpotTriggeredEvent?.Invoke(spot._color, _title);
         }
     }

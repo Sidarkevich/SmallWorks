@@ -15,7 +15,9 @@ public class ColorsHandler : MonoBehaviour
     [SerializeField] private List<Spot> _titleSpots;
     [SerializeField] private Spot _playerSpot;
 
-    private void OnEnable()
+    [SerializeField] private DragInput _input;
+
+    public void Setup()
     {
         var colors = new List<Color32>(_colors);
         colors.Shuffle();
@@ -46,8 +48,9 @@ public class ColorsHandler : MonoBehaviour
     {
         var colorIndex = _colors.FindIndex(a => ((a.r == color.r) && (a.g == color.g) && (a.b == color.b)));
         var titleIndex = _titles.FindIndex(a => a == title);
-
-        Debug.Log(colorIndex + " : " + titleIndex);
+        
+        _input.Setup();
+        Setup();
 
         if (colorIndex == titleIndex)
         {
