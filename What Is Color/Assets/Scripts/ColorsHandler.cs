@@ -17,6 +17,8 @@ public class ColorsHandler : MonoBehaviour
 
     [SerializeField] private SwipeInput _input;
 
+    public IEnumerable<Spot> Spots => _titleSpots;
+
     public void Setup()
     {
         var colors = new List<Color32>(_colors);
@@ -49,7 +51,7 @@ public class ColorsHandler : MonoBehaviour
         var colorIndex = _colors.FindIndex(a => ((a.r == color.r) && (a.g == color.g) && (a.b == color.b)));
         var titleIndex = _titles.FindIndex(a => a == title);
         
-        //_input.Setup();
+        _input.Setup();
         Setup();
 
         if (colorIndex == titleIndex)

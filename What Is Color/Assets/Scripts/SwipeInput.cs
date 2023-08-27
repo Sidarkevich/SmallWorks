@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 public class SwipeInput : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] private Rigidbody2D _rigidBody;
+    [SerializeField] private ColorsHandler _colorsHandler;
+    [SerializeField] private float _moveTime;
 
     private Vector3 _startPosition;
     private bool _isDragging;
@@ -30,12 +32,12 @@ public class SwipeInput : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     public void Setup()
     {
         _isDragging = false;
-        transform.position = _startPosition;
+        _rigidBody.MovePosition(_startPosition);
     }
 
     private void Start()
     {
-        _startPosition = transform.position;
+        _startPosition = _rigidBody.transform.position;
     }
 
     private void DetectDirection(Vector3 startPos, Vector3 endPos)
