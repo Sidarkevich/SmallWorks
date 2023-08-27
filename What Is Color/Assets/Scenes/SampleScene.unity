@@ -2018,6 +2018,7 @@ GameObject:
   - component: {fileID: 678952183}
   - component: {fileID: 678952185}
   - component: {fileID: 678952184}
+  - component: {fileID: 678952186}
   m_Layer: 5
   m_Name: GameScreen
   m_TagString: Untagged
@@ -2086,6 +2087,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678952182}
   m_CullTransparentMesh: 1
+--- !u!114 &678952186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678952182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418ba20f29fc87e428875031ccf19344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidBody: {fileID: 2119830468}
 --- !u!1 &721142231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,7 +2379,7 @@ MonoBehaviour:
   - {fileID: 1342837181}
   - {fileID: 234901670}
   _playerSpot: {fileID: 2119830465}
-  _input: {fileID: 2119830467}
+  _input: {fileID: 678952186}
 --- !u!1 &797572150
 GameObject:
   m_ObjectHideFlags: 0
@@ -4463,7 +4477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5436,7 +5450,6 @@ GameObject:
   - component: {fileID: 2119830464}
   - component: {fileID: 2119830463}
   - component: {fileID: 2119830465}
-  - component: {fileID: 2119830467}
   - component: {fileID: 2119830468}
   - component: {fileID: 2119830466}
   m_Layer: 5
@@ -5480,7 +5493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5547,19 +5560,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
---- !u!114 &2119830467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119830461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 906c2382c788d30408824d7bbb136eab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rigidBody: {fileID: 2119830468}
 --- !u!50 &2119830468
 Rigidbody2D:
   serializedVersion: 4
