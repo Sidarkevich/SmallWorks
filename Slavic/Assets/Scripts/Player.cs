@@ -6,6 +6,8 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 
 public class Player : MonoBehaviour
 {
@@ -19,7 +21,7 @@ public class Player : MonoBehaviour
     
     private bool _isFirstRun = true;
 
-    private Sequence _movingSequence;
+    private TweenerCore<Vector3,Vector3,VectorOptions> _movingTween;
     
     public void StepNext()
     {
@@ -42,34 +44,32 @@ public class Player : MonoBehaviour
 
     public void StepBack()
     {
-        if (_steps.Count < 2 )
+        if (_steps.Count == 0)
             return;
 
         _nextStep.View.SetFreeState();
-        currentCell.View.SetFreeState();
-        currentCell.IsFree = true;
-
-        _steps.Remove(currentCell);
-
-        currentCell.View.SetPlayerState();
-        currentCell.IsFree = false;
-
-        _nextStep = GetNextStep();
-        _nextStep.View.SetNextStepState();
+        
+        _movingTween.Kill();
+        _movingTween = transform.DOMove(currentCell.transform.position, 0.2f).OnComplete((() =>
+        {
+            _nextStep = GetNextStep();
+            _nextStep.View.SetNextStepState();
+            
+            _movingTween = transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move);
+        }));
     }
 
     private void Start()
     {
         Restart();
 
-        _movingSequence.Append(transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move));
+        _movingTween = transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move);
     }
 
     private void Move()
     {
-        Debug.LogError("Move");
         StepNext();
-        _movingSequence.Append(transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move));
+        _movingTween = transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move);
     }
     
     private Cell GetNextStep()
