@@ -16,17 +16,17 @@ public class CellMap : MonoBehaviour
 
     public void ClearMap()
     {
-        var playable = _cells.FindAll((x) => ((x.State == Cell.CellState.Filled) || (x.State == Cell.CellState.Player)));
+        /*var playable = _cells.FindAll((x) => ((x.State == Cell.CellState.Filled) || (x.State == Cell.CellState.Player)));
 
         foreach (var cell in playable)
         {
             cell.ChangeState(Cell.CellState.Free, false);
-        }
+        }*/
     }
 
     public void RandomFill()
     {
-        var free = _cells.FindAll((x) => x.State == Cell.CellState.Free);
+        /*var free = _cells.FindAll((x) => x.State == Cell.CellState.Free);
 
         var count = Mathf.Min(free.Count, Random.Range(_filledCount.x, _filledCount.y+1));
         for (int i = 0; i < count; i++)
@@ -34,14 +34,14 @@ public class CellMap : MonoBehaviour
             var filled = free[Random.Range(0, free.Count)];
             filled.ChangeState(Cell.CellState.Filled, false);
             free.Remove(filled);
-        }
+        }*/
     }
 
     public List<Cell> GetFreeNeighbors(Vector3 qrs)
     {
         var result = new List<Cell>();
 
-        foreach (var direction in _directionVectors)
+        /*foreach (var direction in _directionVectors)
         {
             var neighbor = GetCell(qrs + direction);
 
@@ -52,7 +52,7 @@ public class CellMap : MonoBehaviour
                     result.Add(neighbor);
                 }
             }
-        }
+        }*/
 
         return result;
     }
