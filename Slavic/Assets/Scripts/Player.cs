@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +17,13 @@ public class Player : MonoBehaviour
     
     public void StepNext()
     {
+        if (currentCell.IsObstacle)
+        {
+            Debug.LogError("Game over!");
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentSceneName);
+        }
+        
         currentCell.View.SetPrevState();
         
         _nextStep.View.SetPlayerState();

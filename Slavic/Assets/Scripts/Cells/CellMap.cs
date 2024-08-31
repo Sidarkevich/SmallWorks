@@ -15,7 +15,6 @@ public class CellMap : MonoBehaviour
     private void Awake()
     {
         _cells = new List<Cell>(GetComponentsInChildren<Cell>());
-        RandomFill();
     }
 
     public void ClearMap()
@@ -27,20 +26,7 @@ public class CellMap : MonoBehaviour
             cell.ChangeState(Cell.CellState.Free, false);
         }*/
     }
-
-    public void RandomFill()
-    {
-        //var free = _cells.FindAll((x) => x.State == Cell.CellState.Free);
-
-        var count = Mathf.Min(_cells.Count, Random.Range(filledCount.x, filledCount.y+1));
-        for (int i = 0; i < count; i++)
-        {
-            var obstacle = _cells[Random.Range(0, _cells.Count)];
-            obstacle.View.SetObstacleState();
-            obstacle.IsObstacle = true;
-        }
-    }
-
+    
     public List<Cell> GetFreeNeighbors(Vector3 qrs)
     {
         var result = new List<Cell>();
