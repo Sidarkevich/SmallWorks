@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Player : MonoBehaviour
 {
@@ -26,6 +28,15 @@ public class Player : MonoBehaviour
     public void StepBack()
     {
         
+    }
+
+    private void Start()
+    {
+        var startCell = map.StartCell;
+        _steps.Add(startCell);
+        startCell.View.SetPlayerState();
+        
+        _nextStep = GetNextStep();
     }
 
     private Cell GetNextStep()

@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class CellMap : MonoBehaviour
 {
-    [SerializeField] private Vector3[] _directionVectors;
-    [SerializeField] private Vector2Int _filledCount;
-    [SerializeField] private Cell _startCell;
+    public Cell StartCell => startCell;
+    
+    [SerializeField] private Vector3[] directionVectors;
+    [SerializeField] private Vector2Int filledCount;
+    [SerializeField] private Cell startCell;
+    
     private List<Cell> _cells;
 
     private void Awake()
@@ -61,7 +64,7 @@ public class CellMap : MonoBehaviour
     {
         var result = new List<List<Cell>>();
 
-        foreach (var direction in _directionVectors)
+        foreach (var direction in directionVectors)
         {
             var directionPath = new List<Cell>();
             var position = qrs;
