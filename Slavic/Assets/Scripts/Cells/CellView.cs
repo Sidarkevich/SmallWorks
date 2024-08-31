@@ -26,4 +26,9 @@ public class CellView : MonoBehaviour
     {
         renderer.color = Color.white;
     }
+
+    public void SetObstacleState()
+    {
+        renderer.color = Color.black;
+    }
 }

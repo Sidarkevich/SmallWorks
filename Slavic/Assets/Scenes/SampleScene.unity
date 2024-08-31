@@ -10222,7 +10222,7 @@ MonoBehaviour:
   - {x: 0, y: 1, z: -1}
   - {x: -1, y: 1, z: 0}
   - {x: -1, y: 0, z: 1}
-  filledCount: {x: 0, y: 0}
+  filledCount: {x: 30, y: 55}
   startCell: {fileID: 1896045416}
 --- !u!114 &1112499076
 MonoBehaviour:
@@ -10250,6 +10250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1112499076}
+  stepDuration: 1
 --- !u!1001 &1123778785
 PrefabInstance:
   m_ObjectHideFlags: 0

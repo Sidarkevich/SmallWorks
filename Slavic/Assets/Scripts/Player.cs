@@ -46,6 +46,17 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        Restart();
+    }
+
+    private Cell GetNextStep()
+    {
+        var possibleSteps = map.GetFreeNeighbors(currentCell.QRS);
+        return possibleSteps[Random.Range(0, possibleSteps.Count)];
+    }
+
+    private void Restart()
+    {
         var startCell = map.StartCell;
         _steps.Add(startCell);
         startCell.View.SetPlayerState();
@@ -53,11 +64,5 @@ public class Player : MonoBehaviour
         
         _nextStep = GetNextStep();
         _nextStep.View.SetNextStepState();
-    }
-
-    private Cell GetNextStep()
-    {
-        var possibleSteps = map.GetFreeNeighbors(currentCell.QRS);
-        return possibleSteps[Random.Range(0, possibleSteps.Count)];
     }
 }
