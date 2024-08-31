@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     
     private List<Cell> _steps = new List<Cell>();
     private Cell _nextStep;
+
+    private bool _stepped;
     
     public void StepNext()
     {
@@ -32,12 +34,16 @@ public class Player : MonoBehaviour
 
         _nextStep = GetNextStep();
         _nextStep.View.SetNextStepState();
+
+        _stepped = false;
     }
 
     public void StepBack()
     {
-        if (_steps.Count < 2)
+        if (_steps.Count < 2 || _stepped)
             return;
+
+        _stepped = true;
         
         _nextStep.View.SetFreeState();
         currentCell.View.SetFreeState();
