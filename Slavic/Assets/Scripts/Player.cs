@@ -16,9 +16,6 @@ public class Player : MonoBehaviour
     
     public void StepNext()
     {
-        if (_steps.Count > 2)
-            _steps[_steps.Count - 2].IsFree = true;
-        
         currentCell.View.SetPrevState();
         
         _nextStep.View.SetPlayerState();
@@ -31,7 +28,20 @@ public class Player : MonoBehaviour
 
     public void StepBack()
     {
+        if (_steps.Count < 2)
+            return;
         
+        _nextStep.View.SetFreeState();
+        currentCell.View.SetFreeState();
+        currentCell.IsFree = true;
+
+        _steps.Remove(currentCell);
+
+        currentCell.View.SetPlayerState();
+        currentCell.IsFree = false;
+
+        _nextStep = GetNextStep();
+        _nextStep.View.SetNextStepState();
     }
 
     private void Start()
@@ -42,6 +52,7 @@ public class Player : MonoBehaviour
         startCell.IsFree = false;
         
         _nextStep = GetNextStep();
+        _nextStep.View.SetNextStepState();
     }
 
     private Cell GetNextStep()
