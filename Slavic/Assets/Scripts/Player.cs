@@ -5,17 +5,21 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private CellMap map;
+    [SerializeField] private float stepDuration;
 
     private Cell currentCell => _steps.LastOrDefault();
-    
+
     private List<Cell> _steps = new List<Cell>();
     private Cell _nextStep;
+    
+    private bool _isFirstRun = true;
 
-    private bool _stepped;
+    private Sequence _movingSequence;
     
     public void StepNext()
     {
@@ -34,17 +38,13 @@ public class Player : MonoBehaviour
 
         _nextStep = GetNextStep();
         _nextStep.View.SetNextStepState();
-
-        _stepped = false;
     }
 
     public void StepBack()
     {
-        if (_steps.Count < 2 || _stepped)
+        if (_steps.Count < 2 )
             return;
 
-        _stepped = true;
-        
         _nextStep.View.SetFreeState();
         currentCell.View.SetFreeState();
         currentCell.IsFree = true;
@@ -61,8 +61,17 @@ public class Player : MonoBehaviour
     private void Start()
     {
         Restart();
+
+        _movingSequence.Append(transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move));
     }
 
+    private void Move()
+    {
+        Debug.LogError("Move");
+        StepNext();
+        _movingSequence.Append(transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move));
+    }
+    
     private Cell GetNextStep()
     {
         var possibleSteps = map.GetFreeNeighbors(currentCell.QRS);
