@@ -44,18 +44,18 @@ public class CellMap : MonoBehaviour
     {
         var result = new List<Cell>();
 
-        /*foreach (var direction in _directionVectors)
+        foreach (var direction in directionVectors)
         {
             var neighbor = GetCell(qrs + direction);
 
             if (neighbor)
             {
-                if (neighbor.State == Cell.CellState.Free)
+                if (neighbor.IsFree)
                 {
                     result.Add(neighbor);
                 }
             }
-        }*/
+        }
 
         return result;
     }

@@ -16,10 +16,14 @@ public class Player : MonoBehaviour
     
     public void StepNext()
     {
+        if (_steps.Count > 2)
+            _steps[_steps.Count - 2].IsFree = true;
+        
         currentCell.View.SetPrevState();
         
         _nextStep.View.SetPlayerState();
         _steps.Add(_nextStep);
+        _nextStep.IsFree = false;
 
         _nextStep = GetNextStep();
         _nextStep.View.SetNextStepState();
@@ -35,6 +39,7 @@ public class Player : MonoBehaviour
         var startCell = map.StartCell;
         _steps.Add(startCell);
         startCell.View.SetPlayerState();
+        startCell.IsFree = false;
         
         _nextStep = GetNextStep();
     }
