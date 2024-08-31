@@ -5,25 +5,25 @@ using UnityEngine.UI;
 
 public class CellView : MonoBehaviour
 {
-    [SerializeField] private Image image;
+    [SerializeField] private SpriteRenderer renderer;
 
     public void SetPlayerState()
     {
-        image.color = Color.red;
+        renderer.color = Color.red;
     }
 
     public void SetNextStepState()
     {
-        image.color = Color.yellow;
+        renderer.color = Color.yellow;
     }
 
     public void SetPrevState()
     {
-        image.color = Color.gray;
+        renderer.color = Color.gray;
     }
 
     public void SetFreeState()
     {
-        image.color = Color.white;
+        renderer.color = Color.white;
     }
 }
