@@ -376,13 +376,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2063589855}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (13)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -428,6 +432,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 6
@@ -439,6 +451,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -536,13 +552,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1327317488}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (5)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -592,6 +616,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -1
@@ -606,6 +638,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: isObstacle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2859,13 +2895,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2063589855}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -2911,6 +2951,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -5
@@ -2922,6 +2970,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -3781,13 +3833,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851825264}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (6)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -3833,6 +3893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 1
@@ -3844,6 +3908,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -4916,13 +4984,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 621380555}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (7)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -4980,6 +5052,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -1
@@ -4991,6 +5071,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -5006,13 +5090,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1504678080}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (12)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -5070,6 +5158,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 5
@@ -5077,6 +5173,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -5678,13 +5778,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1327317488}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (10)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -5742,6 +5850,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 4
@@ -5753,6 +5869,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -5768,13 +5888,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2027498083}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (9)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -5820,6 +5944,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -1
@@ -5831,6 +5963,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -5846,13 +5982,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851825264}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (12)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -5910,6 +6054,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 7
@@ -5921,6 +6069,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -6010,13 +6162,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 621380555}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (4)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -6074,6 +6230,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -4
@@ -6085,6 +6249,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -6237,6 +6405,14 @@ PrefabInstance:
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
@@ -6752,13 +6928,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2060618481}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (10)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -6816,6 +7000,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 4
@@ -6827,6 +7019,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -7955,6 +8151,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8763702791240894989, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8305,13 +8505,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851825264}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (8)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -8369,6 +8577,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 3
@@ -8380,6 +8592,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -8773,13 +8989,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851825264}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (9)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -8837,6 +9061,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 4
@@ -8848,6 +9076,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -9206,13 +9438,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2027498083}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (3)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -9270,6 +9506,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -7
@@ -9281,6 +9525,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -9296,6 +9544,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851825264}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (4)
@@ -10854,13 +11106,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1504678080}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (5)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -10918,6 +11174,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -2
@@ -10925,6 +11189,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -10940,13 +11208,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851825264}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (7)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -11004,6 +11280,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 2
@@ -11015,6 +11295,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -11116,13 +11400,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1504678080}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (9)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -11180,6 +11468,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 2
@@ -11187,6 +11483,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -11745,13 +12045,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610802595}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (5)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -11809,6 +12113,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -4
@@ -11820,6 +12132,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -12309,13 +12625,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2027498083}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (12)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -12361,6 +12681,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 2
@@ -12372,6 +12700,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -13068,13 +13400,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1610802595}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (10)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -13120,6 +13456,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 1
@@ -13131,6 +13475,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -13474,13 +13822,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2027498083}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (7)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -13538,6 +13890,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -3
@@ -13549,6 +13909,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -13736,13 +14100,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2060618481}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (7)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -13800,6 +14172,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 1
@@ -13811,6 +14191,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -14435,13 +14819,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2027498083}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (8)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -14499,6 +14887,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -2
@@ -14510,6 +14906,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -14599,13 +14999,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851825264}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (3)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -14663,6 +15071,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -2
@@ -14674,6 +15086,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -15071,13 +15487,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 328333925}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -15123,6 +15543,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -6
@@ -15134,6 +15562,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -15149,13 +15581,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 328333925}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (13)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -15201,6 +15637,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 5
@@ -15212,6 +15656,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -15757,13 +16205,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1504678080}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -15821,6 +16273,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -5
@@ -15828,6 +16288,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -16391,13 +16855,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2060618481}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06a907c1e593d39439c93935ff93d084, type: 3}
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (4)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -16447,6 +16919,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -2
@@ -16463,6 +16943,10 @@ PrefabInstance:
       propertyPath: isObstacle
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
 --- !u!4 &1911293790 stripped
@@ -16477,13 +16961,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 621380555}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (10)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -16529,6 +17017,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: 2
@@ -16540,6 +17036,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
@@ -17096,13 +17596,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2027498083}
     m_Modifications:
+    - target: {fileID: 2694505931879349742, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_Name
       value: Cell (6)
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929702, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929703, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: m_RootOrder
@@ -17160,6 +17664,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: stepColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030705206981929705, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: defaultColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.x
       value: -4
@@ -17171,6 +17683,10 @@ PrefabInstance:
     - target: {fileID: 5030705206981929706, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
       propertyPath: qrs.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783506791268959827, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847b9e6483503734bb97b696fb9b5568, type: 3}
