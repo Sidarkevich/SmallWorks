@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(currentSceneName);
         }
         
-        currentCell.View.SetPrevState();
+        //currentCell.View.SetPrevState();
         
         _nextStep.View.SetPlayerState();
         _steps.Add(_nextStep);

@@ -146,7 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8d4e0705d6e8c49b36fba9ea8b825d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 2694505931879349742}
+  topRenderer: {fileID: 2694505931879349742}
+  stepColor: {r: 0.023529412, g: 0.7058824, b: 0.39215687, a: 1}
+  defaultColor: {r: 0.003921569, g: 0.9764706, b: 0.5294118, a: 1}
 --- !u!1 &6262826984752938776
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,29 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CellView : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer renderer;
+    [SerializeField] private SpriteRenderer topRenderer;
 
+    [SerializeField] private Color stepColor;
+    [SerializeField] private Color defaultColor;
+    
     public void SetPlayerState()
     {
-        //renderer.color = Color.red;
-    }
+        topRenderer.color = stepColor;
 
+        transform.DOMoveY(transform.position.y - 0.07f, 0.3f);
+    }
+    
     public void SetNextStepState()
     {
-        //renderer.color = Color.yellow;
+        topRenderer.color = Color.yellow;
     }
-
-    public void SetPrevState()
-    {
-        //renderer.color = Color.gray;
-    }
-
+    
     public void SetFreeState()
     {
-        //renderer.color = Color.white;
+        topRenderer.color = defaultColor;
     }
 }
