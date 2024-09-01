@@ -9,21 +9,21 @@ public class CellView : MonoBehaviour
 
     public void SetPlayerState()
     {
-        renderer.color = Color.red;
+        //renderer.color = Color.red;
     }
 
     public void SetNextStepState()
     {
-        renderer.color = Color.yellow;
+        //renderer.color = Color.yellow;
     }
 
     public void SetPrevState()
     {
-        renderer.color = Color.gray;
+        //renderer.color = Color.gray;
     }
 
     public void SetFreeState()
     {
-        renderer.color = Color.white;
+        //renderer.color = Color.white;
     }
 }
