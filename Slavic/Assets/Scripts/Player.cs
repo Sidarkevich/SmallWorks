@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private CellMap map;
     [SerializeField] private float stepDuration;
+    [SerializeField] private Animation animation;
 
     private Cell currentCell => _steps.LastOrDefault();
 
@@ -49,13 +50,16 @@ public class Player : MonoBehaviour
 
         _nextStep.View.SetFreeState();
         
+        animation.Stop();
         _movingTween.Kill();
         _movingTween = transform.DOMove(currentCell.transform.position, 0.2f).OnComplete((() =>
         {
             _nextStep = GetNextStep();
             _nextStep.View.SetNextStepState();
             
+            animation.Stop();
             _movingTween = transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move);
+            animation.Play("Jump");
         }));
     }
 
@@ -64,12 +68,16 @@ public class Player : MonoBehaviour
         Restart();
 
         _movingTween = transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move);
+        animation.Stop();
+        animation.Play("Jump");
     }
 
     private void Move()
     {
         StepNext();
         _movingTween = transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move);
+        animation.Stop();
+        animation.Play("Jump");
     }
     
     private Cell GetNextStep()

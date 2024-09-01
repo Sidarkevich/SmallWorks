@@ -15841,6 +15841,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921138308}
   - component: {fileID: 1921138309}
+  - component: {fileID: 1921138310}
   m_Layer: 0
   m_Name: Slavic
   m_TagString: Untagged
@@ -15878,6 +15879,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 1112499075}
   stepDuration: 1
+  animation: {fileID: 1921138310}
+--- !u!111 &1921138310
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921138306}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7fdcd167a1657754c849818593c01436, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7fdcd167a1657754c849818593c01436, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &1943016765
 PrefabInstance:
   m_ObjectHideFlags: 0
