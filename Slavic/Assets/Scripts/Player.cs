@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using DG.Tweening;
 using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
+using Unity.Collections.LowLevel.Unsafe;
 
 public class Player : MonoBehaviour
 {
@@ -68,6 +69,9 @@ public class Player : MonoBehaviour
         Restart();
 
         _movingTween = transform.DOMove(_nextStep.transform.position, stepDuration).OnComplete(Move);
+        
+        animation["Jump"].speed = 1 / stepDuration;
+        
         animation.Stop();
         animation.Play("Jump");
     }
